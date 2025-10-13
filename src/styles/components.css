@@ -121,6 +121,37 @@
 }
 
 /* --------------------------
+   Status: Error / Success / Warning
+   Solid background, semantic colors; text uses fg tokens
+-------------------------- */
+/* Error */
+.btn--error { background-color: var(--error-bg); color: var(--fg-text); }
+.btn--error:hover,
+.btn--error.is-hover { background-color: var(--error-bg-hover); color: var(--fg-text); }
+.btn--error:focus,
+.btn--error.is-focus { background-color: var(--error-bg-hover); color: var(--fg-text); }
+.btn--error:active,
+.btn--error.is-active { background-color: var(--error-bg-active); color: var(--fg-text-contrast); transform: translateY(0.5px); }
+
+/* Success */
+.btn--success { background-color: var(--success-bg); color: var(--fg-text); }
+.btn--success:hover,
+.btn--success.is-hover { background-color: var(--success-bg-hover); color: var(--fg-text); }
+.btn--success:focus,
+.btn--success.is-focus { background-color: var(--success-bg-hover); color: var(--fg-text); }
+.btn--success:active,
+.btn--success.is-active { background-color: var(--success-bg-active); color: var(--fg-text-contrast); transform: translateY(0.5px); }
+
+/* Warning */
+.btn--warning { background-color: var(--warning-bg); color: var(--fg-text); }
+.btn--warning:hover,
+.btn--warning.is-hover { background-color: var(--warning-bg-hover); color: var(--fg-text); }
+.btn--warning:focus,
+.btn--warning.is-focus { background-color: var(--warning-bg-hover); color: var(--fg-text); }
+.btn--warning:active,
+.btn--warning.is-active { background-color: var(--warning-bg-active); color: var(--fg-text-contrast); transform: translateY(0.5px); }
+
+/* --------------------------
    Surface (Subtle background)
 -------------------------- */
 .btn--surface {

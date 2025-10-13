@@ -1443,10 +1443,10 @@
 
   /* BRAND */
   --primary-bg-subtle: var(--blue-50);
-  --primary-bg: var(--blue-200);
-  --primary-bg-hover: var(--blue-300);
-  --primary-bg-active: var(--blue-400);
-  --primary-line: var(--blue-500);
+  --primary-bg: var(--blue-300);
+  --primary-bg-hover: var(--blue-400);
+  --primary-bg-active: var(--blue-500);
+  --primary-line: var(--blue-600);
   --primary-border: var(--blue-500);
   --primary-border-hover: var(--blue-600);
   --primary-solid: var(--blue-500);
@@ -1496,10 +1496,10 @@
   --disabled-on-disabled: var(--gray-400);
 
   --success-bg-subtle: var(--green-50);
-  --success-bg: var(--green-100);
-  --success-bg-hover: var(--green-300);
-  --success-bg-active: var(--green-400);
-  --success-line: var(--green-500);
+  --success-bg: var(--green-300);
+  --success-bg-hover: var(--green-400);
+  --success-bg-active: var(--green-500);
+  --success-line: var(--green-600);
   --success-border: var(--green-300);
   --success-border-hover: var(--green-400);
   --success-solid: var(--green-500);
@@ -1547,10 +1547,10 @@
 
   
   --warning-bg-subtle: var(--orange-50);
-  --warning-bg: var(--orange-200);
-  --warning-bg-hover: var(--orange-300);
-  --warning-bg-active: var(--orange-400);
-  --warning-line: var(--orange-500);
+  --warning-bg: var(--orange-300);
+  --warning-bg-hover: var(--orange-400);
+  --warning-bg-active: var(--orange-500);
+  --warning-line: var(--orange-600);
   --warning-border: var(--orange-400);
   --warning-border-hover: var(--orange-400);
   --warning-solid: var(--orange-400);
@@ -1559,10 +1559,10 @@
   --warning-on-warning: var(--white);
 
   --error-bg-subtle: var(--colors-red-50);
-  --error-bg: var(--colors-red-100);
-  --error-bg-hover: var(--colors-red-300);
-  --error-bg-active: var(--colors-red-400);
-  --error-line: var(--colors-red-500);
+  --error-bg: var(--colors-red-300);
+  --error-bg-hover: var(--colors-red-400);
+  --error-bg-active: var(--colors-red-500);
+  --error-line: var(--colors-red-600);
   --error-border: var(--colors-red-300);
   --error-border-hover: var(--colors-red-400);
   --error-solid: var(--colors-red-500);
