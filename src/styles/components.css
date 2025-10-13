@@ -42,16 +42,24 @@
 
 /* Icon support */
 .btn i {
-    width: var(--sizing-4-rem);
-    height: var(--sizing-4-rem);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
 }
 
-.icon--leading { margin-right: var(--spacing-2-rem); }
-.icon--trailing { margin-left: var(--spacing-2-rem); }
+.icon--leading {
+    width: var(--sizing-6-rem);  /* 24px */
+    height: var(--sizing-6-rem); /* 24px */
+    margin-right: var(--spacing-2-rem);
+}
+
+.icon--trailing {
+    /* TODO: VERIFY: No 18px sizing token found; using 1.125rem literal to match Figma */
+    width: 1.125rem;  /* 18px */
+    height: 1.125rem; /* 18px */
+    margin-left: var(--spacing-2-rem);
+}
 
 /* --------------------------
    Default (Neutral Solid)
@@ -65,14 +73,20 @@
 .btn--default.is-hover {
     background-color: var(--bg-bg-solid-hover);
     color: var(--fg-text-inverse);
-    box-shadow: var(--drop-shadow-drop-shadow-lg);
+    box-shadow: var(--drop-shadow-drop-shadow);
+}
+
+.btn--default:focus,
+.btn--default.is-focus {
+    background-color: var(--bg-bg-solid-hover);
+    box-shadow: var(--drop-shadow-drop-shadow);
 }
 
 .btn--default:active,
 .btn--default.is-active {
     background-color: var(--bg-bg-solid-active);
     color: var(--fg-text-inverse);
-    box-shadow: var(--drop-shadow-drop-shadow-md);
+    box-shadow: var(--drop-shadow-drop-shadow);
     transform: translateY(0.5px);
 }
 
@@ -80,22 +94,29 @@
    Color (Primary Solid)
 -------------------------- */
 .btn--color {
-    background-color: var(--primary-solid);
+    background-color: var(--primary-bg);
     color: var(--primary-on-primary);
 }
 
 .btn--color:hover,
 .btn--color.is-hover {
-    background-color: var(--primary-solid-hover);
+    background-color: var(--primary-bg-hover);
     color: var(--primary-on-primary);
-    box-shadow: var(--drop-shadow-drop-shadow-lg);
+    box-shadow: var(--drop-shadow-drop-shadow);
+}
+
+.btn--color:focus,
+.btn--color.is-focus {
+    background-color: var(--primary-bg-hover);
+    color: var(--primary-on-primary);
+    box-shadow: var(--drop-shadow-drop-shadow);
 }
 
 .btn--color:active,
 .btn--color.is-active {
-    background-color: var(--primary-solid-hover);
+    background-color: var(--primary-bg-active);
     color: var(--primary-on-primary);
-    box-shadow: var(--drop-shadow-drop-shadow-md);
+    box-shadow: var(--drop-shadow-drop-shadow);
     transform: translateY(0.5px);
 }
 
@@ -105,6 +126,7 @@
 .btn--surface {
     background-color: var(--bg-bg);
     color: var(--fg-text);
+    border: var(--borderwidth-width-1) solid var(--fg-border);
 }
 
 .btn--surface:hover,
@@ -113,10 +135,18 @@
     color: var(--fg-text);
 }
 
+.btn--surface:focus,
+.btn--surface.is-focus {
+    background-color: var(--bg-bg-hover);
+    color: var(--fg-text);
+    border-color: var(--fg-border-hover);
+}
+
 .btn--surface:active,
 .btn--surface.is-active {
     background-color: var(--bg-bg-active);
     color: var(--fg-text);
+    border-color: var(--fg-border-strong);
     transform: translateY(0.5px);
 }
 
@@ -133,12 +163,21 @@
 .btn--outline.is-hover {
     border-color: var(--fg-border-hover);
     background-color: var(--overlays-light-200);
+    color: var(--primary-text);
+}
+
+.btn--outline:focus,
+.btn--outline.is-focus {
+    border-color: var(--fg-border-hover);
+    background-color: var(--overlays-light-200);
+    color: var(--primary-text);
 }
 
 .btn--outline:active,
 .btn--outline.is-active {
     border-color: var(--fg-border-strong);
     background-color: var(--overlays-light-300);
+    color: var(--primary-text);
 }
 
 /* --------------------------
@@ -152,10 +191,18 @@
 .btn--ghost:hover,
 .btn--ghost.is-hover {
     background-color: var(--overlays-light-200);
+    color: var(--primary-text);
+}
+
+.btn--ghost:focus,
+.btn--ghost.is-focus {
+    background-color: var(--overlays-light-200);
+    color: var(--primary-text);
 }
 
 .btn--ghost:active,
 .btn--ghost.is-active {
     background-color: var(--overlays-light-300);
+    color: var(--primary-text);
     transform: translateY(0.5px);
 }
