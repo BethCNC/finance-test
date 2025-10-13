@@ -21,42 +21,27 @@
     color: var(--fg-text-inverse);
     border: none;
     box-shadow: var(--drop-shadow-drop-shadow)
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
-/* Hover */
-.btn:hover,
-.btn.is-hover {
-    background-color: var(bg-bg-solid-hover);
-    transform: translateY(-1px);
+/* --------------------------
+   Default Button
+-------------------------- */
+.btn--default {
+    background-color: var(--bg-bg-solid);
+    color: var(--fg-text-inverse);
+    box-shadow: var(--drop-shadow-drop-shadow);
 }
 
-/* Focus */
-.btn:focus,
-.btn.is-focus {
-    outline: 2px solid var(--brand-primary-border);
+.btn--default:hover {
+    background-color: var(--bg-bg-solid-hover);
+    color: var(--fg-text-inverse);
+    box-shadow: var(--drop-shadow-drop-shadow);
 }
 
-/* Active */
-.btn:active,
-.btn.is-active {
-    background-color: var(bg-bg-solid-active);
-    transform: translateY(0);
-}
-
-/* Icon Support */
-.btn i{
-    width: var(--sizing-4-rem);
-    height: var(--sizing-4-rem);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-
-.icon-leading {
-    margin-right: var(--spacing-2-rem);
-}
-
-.icon-trailing {
-    margin-left: var(--spacing-2-rem);
-}
+.btn--default:active {
+    background-color: var(--bg-bg-solid-active);
+    color: var(--fg-text-inverse);
+    box-shadow: var(--drop-shadow-drop-shadow);
 }

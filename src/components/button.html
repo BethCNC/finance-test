@@ -1,108 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Buttons</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Buttons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../styles/global.css" />
-  <link rel="stylesheet" href="../styles/utilities.css" />
-  <link rel="stylesheet" href="../styles/components.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/utilities.css" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
 
-<body>
-  <main>
-    <!-- Default -->
-    <section class="button-group">
+  <body>
+    <main>
+      <!-- Default -->
+      <section class="button-group">
         <h2>Default</h2>
         <button class="btn btn--default"><span>Button</span></button>
         <button class="btn btn--default is-hover"><span>Button</span></button>
         <button class="btn btn--default is-active"><span>Button</span></button>
 
-  <!-- 🔹 Test Button with Icons -->
-        <button 
-        class="btn btn--default" 
-        data-icon-leading="eye" 
-        data-icon-trailing="chevron-down">
-        <span>View</span>
-    </button>
-    </section>
+        <!-- 🔹 Test Button with Icons -->
+        <button
+          class="btn btn--default"
+          data-icon-leading="eye"
+          data-icon-trailing="chevron-down"
+        >
+          <span>View</span>
+        </button>
+      </section>
 
-    <!-- Color -->
-    <section class="button-group">
-      <h2>Color</h2>
-      <button class="btn btn--color"><span>Button</span></button>
-      <button class="btn btn--color is-hover"><span>Button</span></button>
-      <button class="btn btn--color is-active"><span>Button</span></button>
-    </section>
+      <!-- Color -->
+      <section class="button-group">
+        <h2>Color</h2>
+        <button class="btn btn--color"><span>Button</span></button>
+        <button class="btn btn--color is-hover"><span>Button</span></button>
+        <button class="btn btn--color is-active"><span>Button</span></button>
+      </section>
 
-    <!-- Surface -->
-    <section class="button-group">
-      <h2>Surface</h2>
-      <button class="btn btn--surface"><span>Button</span></button>
-      <button class="btn btn--surface is-hover"><span>Button</span></button>
-      <button class="btn btn--surface is-active"><span>Button</span></button>
-    </section>
+      <!-- Surface -->
+      <section class="button-group">
+        <h2>Surface</h2>
+        <button class="btn btn--surface"><span>Button</span></button>
+        <button class="btn btn--surface is-hover"><span>Button</span></button>
+        <button class="btn btn--surface is-active"><span>Button</span></button>
+      </section>
 
-    <!-- Outline -->
-    <section class="button-group">
-      <h2>Outline</h2>
-      <button class="btn btn--outline"><span>Button</span></button>
-      <button class="btn btn--outline is-hover"><span>Button</span></button>
-      <button class="btn btn--outline is-active"><span>Button</span></button>
-    </section>
+      <!-- Outline -->
+      <section class="button-group">
+        <h2>Outline</h2>
+        <button class="btn btn--outline"><span>Button</span></button>
+        <button class="btn btn--outline is-hover"><span>Button</span></button>
+        <button class="btn btn--outline is-active"><span>Button</span></button>
+      </section>
 
-    <!-- Ghost -->
-    <section class="button-group">
-      <h2>Ghost</h2>
-      <button class="btn btn--ghost"><span>Button</span></button>
-      <button class="btn btn--ghost is-hover"><span>Button</span></button>
-      <button class="btn btn--ghost is-active"><span>Button</span></button>
-    </section>
-  </main>
+      <!-- Ghost -->
+      <section class="button-group">
+        <h2>Ghost</h2>
+        <button class="btn btn--ghost"><span>Button</span></button>
+        <button class="btn btn--ghost is-hover"><span>Button</span></button>
+        <button class="btn btn--ghost is-active"><span>Button</span></button>
+      </section>
+    </main>
 
-  <!-- Icons -->
-  <script type="module">
-    import { createIcons } from "https://unpkg.com/lucide@latest?module";
+    <!-- Icons Script -->
+    <script>
+      // Safely initialize Lucide icons for all buttons
+      const buttons = document.querySelectorAll(".btn");
 
-    const buttons = document.querySelectorAll(".btn");
+      buttons.forEach((button) => {
+        const leadingIcon = button.dataset.iconLeading;
+        const trailingIcon = button.dataset.iconTrailing;
 
-    buttons.forEach(button => {
-      const leadingIcon = button.dataset.iconLeading;
-      const trailingIcon = button.dataset.iconTrailing;
+        const text = button.querySelector("span") || document.createElement("span");
+        if (!text.textContent) {
+          text.textContent = button.textContent.trim();
+          button.textContent = "";
+          button.appendChild(text);
+        }
 
-      const text = button.querySelector("span") || document.createElement("span");
-      if (!text.textContent) {
-        text.textContent = button.textContent.trim();
-        button.textContent = "";
-        button.appendChild(text);
+        if (leadingIcon) {
+          const icon = document.createElement("i");
+          icon.setAttribute("data-lucide", leadingIcon);
+          icon.classList.add("icon--leading");
+          button.prepend(icon);
+        }
+
+        if (trailingIcon) {
+          const icon = document.createElement("i");
+          icon.setAttribute("data-lucide", trailingIcon);
+          icon.classList.add("icon--trailing");
+          button.appendChild(icon);
+        }
+      });
+
+      // Initialize Lucide globally (safe for local use)
+      if (window.lucide && typeof lucide.createIcons === "function") {
+        lucide.createIcons();
+      } else {
+        console.warn("Lucide library failed to load.");
       }
-
-      if (leadingIcon) {
-        const icon = document.createElement("i");
-        icon.setAttribute("data-lucide", leadingIcon);
-        icon.classList.add("icon--leading");
-        button.prepend(icon);
-      }
-
-      if (trailingIcon) {
-        const icon = document.createElement("i");
-        icon.setAttribute("data-lucide", trailingIcon);
-        icon.classList.add("icon--trailing");
-        button.appendChild(icon);
-      }
-    });
-
-    createIcons();
-  </script>
-</body>
+    </script>
+  </body>
 </html>

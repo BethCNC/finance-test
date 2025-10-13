@@ -1,7 +1,26 @@
-/* Global design tokens generated from Figma exports. */
+/* =========================================
+   GLOBAL DESIGN TOKENS
+   Source: Figma Token Studio Export
+   Units: rem (1rem = 16px)
+   Author: Beth’s Design System
+========================================= */
 :root {
   /* Base font family shared across all typography tokens */
   --font-family-base: "Figtree", "Helvetica Neue", Arial, sans-serif;
+
+  /* TYPOGRAPHY META */
+  --fontfamilies-figtree: Figtree;
+  --fontweights-figtree-0: Black;
+  --fontweights-figtree-1: Bold;
+  --fontweights-figtree-2: ExtraBold;
+  --fontweights-figtree-3: Medium Italic;
+  --fontweights-figtree-4: Italic;
+  --fontweights-figtree-5: Medium;
+  --fontweights-figtree-6: Regular;
+  --fontweights-figtree-7: SemiBold;
+  --textcase-none: none;
+  --textdecoration-none: none;
+  --paragraphindent-0: 0px;
 
   /* TYPOGRAPHY */
   /* Text XS */
@@ -38,6 +57,7 @@
   --text-xs-light-size-rem: 0.75rem;
   --text-xs-light-size: 12px;
   --text-xs-light-style: italic;
+  --text-xs-light-weight: var(--text-xs-regular-weight);
 
   /* XS – Medium */
   --text-xs-medium-family: var(--font-family-base);
@@ -101,6 +121,7 @@
   --text-sm-light-size-rem: 0.875rem;
   --text-sm-light-size: 14px;
   --text-sm-light-style: italic;
+  --text-sm-light-weight: var(--text-sm-regular-weight);
 
   /* SM – Medium */
   --text-sm-medium-family: var(--font-family-base);
@@ -164,6 +185,7 @@
   --text-base-light-size-rem: 1rem;
   --text-base-light-size: 16px;
   --text-base-light-style: italic;
+  --text-base-light-weight: var(--text-base-regular-weight);
 
   /* BASE – Medium */
   --text-base-medium-family: var(--font-family-base);
@@ -227,6 +249,7 @@
   --text-lg-light-size-rem: 1.125rem;
   --text-lg-light-size: 18px;
   --text-lg-light-style: italic;
+  --text-lg-light-weight: var(--text-lg-regular-weight);
 
   /* LG – Medium */
   --text-lg-medium-family: var(--font-family-base);
@@ -290,6 +313,7 @@
   --text-xl-light-size-rem: 1.25rem;
   --text-xl-light-size: 20px;
   --text-xl-light-style: italic;
+  --text-xl-light-weight: var(--text-xl-regular-weight);
 
   /* XL – Medium */
   --text-xl-medium-family: var(--font-family-base);
@@ -353,6 +377,7 @@
   --text-2xl-light-size-rem: 1.5rem;
   --text-2xl-light-size: 24px;
   --text-2xl-light-style: italic;
+  --text-2xl-light-weight: var(--text-2xl-regular-weight);
 
   /* 2XL – Medium */
   --text-2xl-medium-family: var(--font-family-base);
@@ -416,6 +441,7 @@
   --text-3xl-light-size-rem: 1.875rem;
   --text-3xl-light-size: 30px;
   --text-3xl-light-style: italic;
+  --text-3xl-light-weight: var(--text-3xl-regular-weight);
 
   /* 3XL – Medium */
   --text-3xl-medium-family: var(--font-family-base);
@@ -479,6 +505,7 @@
   --text-4xl-light-size-rem: 2.25rem;
   --text-4xl-light-size: 36px;
   --text-4xl-light-style: italic;
+  --text-4xl-light-weight: var(--text-4xl-regular-weight);
 
   /* 4XL – Medium */
   --text-4xl-medium-family: var(--font-family-base);
@@ -542,6 +569,7 @@
   --text-5xl-light-size-rem: 3rem;
   --text-5xl-light-size: 48px;
   --text-5xl-light-style: italic;
+  --text-5xl-light-weight: var(--text-5xl-regular-weight);
 
   /* 5XL – Medium */
   --text-5xl-medium-family: var(--font-family-base);
@@ -605,6 +633,7 @@
   --text-6xl-light-size-rem: 3.75rem;
   --text-6xl-light-size: 60px;
   --text-6xl-light-style: italic;
+  --text-6xl-light-weight: var(--text-6xl-regular-weight);
 
   /* 6XL – Medium */
   --text-6xl-medium-family: var(--font-family-base);
@@ -668,6 +697,7 @@
   --text-7xl-light-size-rem: 4.5rem;
   --text-7xl-light-size: 72px;
   --text-7xl-light-style: italic;
+  --text-7xl-light-weight: var(--text-7xl-regular-weight);
 
   /* 7XL – Medium */
   --text-7xl-medium-family: var(--font-family-base);
@@ -731,6 +761,7 @@
   --text-8xl-light-size-rem: 6rem;
   --text-8xl-light-size: 96px;
   --text-8xl-light-style: italic;
+  --text-8xl-light-weight: var(--text-8xl-regular-weight);
 
   /* 8XL – Medium */
   --text-8xl-medium-family: var(--font-family-base);
@@ -794,6 +825,7 @@
   --text-9xl-light-size-rem: 8rem;
   --text-9xl-light-size: 128px;
   --text-9xl-light-style: italic;
+  --text-9xl-light-weight: var(--text-9xl-regular-weight);
 
   /* 9XL – Medium */
   --text-9xl-medium-family: var(--font-family-base);
@@ -824,36 +856,23 @@
   --text-9xl-thin-style: normal;
 
   /* GRADIENTS */
-  --rainbow-gradient-stop-1-color: #fef08a;
-  --rainbow-gradient-stop-1-position: 0%;
-  --rainbow-gradient-stop-2-color: #a7f3d0;
-  --rainbow-gradient-stop-2-position: 17%;
-  --rainbow-gradient-stop-3-color: #a5f3fc;
-  --rainbow-gradient-stop-3-position: 33%;
-  --rainbow-gradient-stop-4-color: #bfdbfe;
-  --rainbow-gradient-stop-4-position: 50%;
-  --rainbow-gradient-stop-5-color: #ddd6fe;
-  --rainbow-gradient-stop-5-position: 66%;
-  --rainbow-gradient-stop-6-color: #f5d0fe;
-  --rainbow-gradient-stop-6-position: 83%;
-  --rainbow-gradient-stop-7-color: #fbcfe8;
-  --rainbow-gradient-stop-7-position: 100%;
+  --rainbow-gradient: linear-gradient(-43deg, #fef08a 0%, #a7f3d0 17%, #a5f3fc 33%, #bfdbfe 50%, #ddd6fe 66%, #f5d0fe 83%, #fbcfe8 100%);
 
   /* SHADOWS */
-  --back-shadow: 0 -1px 2px -2px rgba(0 0 0 / 0.1), 0 -2px 4px -1px rgba(0 0 0 / 0.1);
-  --box-shadow-shadow-inner: inset 0 2px 4px 0 rgba(0 0 0 / 0.05);
-  --box-shadow-shadow-2xl: 0 25px 50px -12px rgba(0 0 0 / 0.25);
-  --box-shadow-shadow-xl: 0 8px 10px -6px rgba(0 0 0 / 0.1), 0 20px 25px -5px rgba(0 0 0 / 0.1);
-  --box-shadow-shadow-lg: 0 4px 6px -4px rgba(0 0 0 / 0.1), 0 10px 15px -3px rgba(0 0 0 / 0.1);
-  --box-shadow-shadow-md: 0 2px 4px -2px rgba(0 0 0 / 0.1), 0 4px 6px -1px rgba(0 0 0 / 0.1);
-  --box-shadow-shadow: 0 1px 2px -1px rgba(0 0 0 / 0.1), 0 1px 3px 0 rgba(0 0 0 / 0.1);
-  --box-shadow-shadow-sm: 0 1px 2px 0 rgba(0 0 0 / 0.05);
-  --drop-shadow-drop-shadow-2xl: 0 25px 25px 0 rgba(0 0 0 / 0.15);
-  --drop-shadow-drop-shadow-xl: 0 8px 5px 0 rgba(0 0 0 / 0.08), 0 20px 13px 0 rgba(0 0 0 / 0.03);
-  --drop-shadow-drop-shadow-lg: 0 4px 3px 0 rgba(0 0 0 / 0.1), 0 10px 8px 0 rgba(0 0 0 / 0.04);
-  --drop-shadow-drop-shadow-md: 0 2px 2px 0 rgba(0 0 0 / 0.06), 0 4px 3px 0 rgba(0 0 0 / 0.07);
-  --drop-shadow-drop-shadow: 0 1px 1px 0 rgba(0 0 0 / 0.06), 0 1px 2px 0 rgba(0 0 0 / 0.1);
-  --drop-shadow-drop-shadow-sm: 0 1px 1px 0 rgba(0 0 0 / 0.05);
+  --back-shadow: 0 -2px 4px -1px #0000001a, 0 -1px 2px -2px #0000001a;
+  --box-shadow-shadow-inner: inset 0 2px 4px 0 #0000000d;
+  --box-shadow-shadow-2xl: 0 25px 50px -12px #00000040;
+  --box-shadow-shadow-xl: 0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
+  --box-shadow-shadow-lg: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+  --box-shadow-shadow-md: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+  --box-shadow-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
+  --box-shadow-shadow-sm: 0 1px 2px 0 #0000000d;
+  --drop-shadow-drop-shadow-2xl: 0 25px 25px #00000026;
+  --drop-shadow-drop-shadow-xl: 0 20px 13px #00000008, 0 8px 5px #00000014;
+  --drop-shadow-drop-shadow-lg: 0 10px 8px #0000000a, 0 4px 3px #0000001a;
+  --drop-shadow-drop-shadow-md: 0 4px 3px #00000012, 0 2px 2px #0000000f;
+  --drop-shadow-drop-shadow: 0 1px 2px #0000001a, 0 1px 1px #0000000f;
+  --drop-shadow-drop-shadow-sm: 0 1px 1px #0000000d;
 
   /* GRIDS */
   --desktop-columns: 12;
@@ -1107,6 +1126,124 @@
   --black: #030303;
 
   /* DIMENSIONS */
+  /* Raw font size table from tokens (px units kept for reference) */
+  --fontsize-0: 12px;
+  --fontsize-1: 12px;
+  --fontsize-2: 12px;
+  --fontsize-3: 12px;
+  --fontsize-4: 12px;
+  --fontsize-5: 12px;
+  --fontsize-6: 12px;
+  --fontsize-7: 12px;
+  --fontsize-8: 12px;
+  --fontsize-9: 14px;
+  --fontsize-10: 14px;
+  --fontsize-11: 14px;
+  --fontsize-12: 14px;
+  --fontsize-13: 14px;
+  --fontsize-14: 14px;
+  --fontsize-15: 14px;
+  --fontsize-16: 14px;
+  --fontsize-17: 14px;
+  --fontsize-18: 16px;
+  --fontsize-19: 16px;
+  --fontsize-20: 16px;
+  --fontsize-21: 16px;
+  --fontsize-22: 16px;
+  --fontsize-23: 16px;
+  --fontsize-24: 16px;
+  --fontsize-25: 16px;
+  --fontsize-26: 16px;
+  --fontsize-27: 18px;
+  --fontsize-28: 18px;
+  --fontsize-29: 18px;
+  --fontsize-30: 18px;
+  --fontsize-31: 18px;
+  --fontsize-32: 18px;
+  --fontsize-33: 18px;
+  --fontsize-34: 18px;
+  --fontsize-35: 18px;
+  --fontsize-36: 20px;
+  --fontsize-37: 20px;
+  --fontsize-38: 20px;
+  --fontsize-39: 20px;
+  --fontsize-40: 20px;
+  --fontsize-41: 20px;
+  --fontsize-42: 20px;
+  --fontsize-43: 20px;
+  --fontsize-44: 20px;
+  --fontsize-45: 24px;
+  --fontsize-46: 24px;
+  --fontsize-47: 24px;
+  --fontsize-48: 24px;
+  --fontsize-49: 24px;
+  --fontsize-50: 24px;
+  --fontsize-51: 24px;
+  --fontsize-52: 24px;
+  --fontsize-53: 24px;
+  --fontsize-54: 30px;
+  --fontsize-55: 30px;
+  --fontsize-56: 30px;
+  --fontsize-57: 30px;
+  --fontsize-58: 30px;
+  --fontsize-59: 30px;
+  --fontsize-60: 30px;
+  --fontsize-61: 30px;
+  --fontsize-62: 30px;
+  --fontsize-63: 36px;
+  --fontsize-64: 36px;
+  --fontsize-65: 36px;
+  --fontsize-66: 36px;
+  --fontsize-67: 36px;
+  --fontsize-68: 36px;
+  --fontsize-69: 36px;
+  --fontsize-70: 36px;
+  --fontsize-71: 36px;
+  --fontsize-72: 48px;
+  --fontsize-73: 48px;
+  --fontsize-74: 48px;
+  --fontsize-75: 48px;
+  --fontsize-76: 48px;
+  --fontsize-77: 48px;
+  --fontsize-78: 48px;
+  --fontsize-79: 48px;
+  --fontsize-80: 48px;
+  --fontsize-81: 60px;
+  --fontsize-82: 60px;
+  --fontsize-83: 60px;
+  --fontsize-84: 60px;
+  --fontsize-85: 60px;
+  --fontsize-86: 60px;
+  --fontsize-87: 60px;
+  --fontsize-88: 60px;
+  --fontsize-89: 60px;
+  --fontsize-90: 72px;
+  --fontsize-91: 72px;
+  --fontsize-92: 72px;
+  --fontsize-93: 72px;
+  --fontsize-94: 72px;
+  --fontsize-95: 72px;
+  --fontsize-96: 72px;
+  --fontsize-97: 72px;
+  --fontsize-98: 72px;
+  --fontsize-99: 96px;
+  --fontsize-100: 96px;
+  --fontsize-101: 96px;
+  --fontsize-102: 96px;
+  --fontsize-103: 96px;
+  --fontsize-104: 96px;
+  --fontsize-105: 96px;
+  --fontsize-106: 96px;
+  --fontsize-107: 96px;
+  --fontsize-108: 128px;
+  --fontsize-109: 128px;
+  --fontsize-110: 128px;
+  --fontsize-111: 128px;
+  --fontsize-112: 128px;
+  --fontsize-113: 128px;
+  --fontsize-114: 128px;
+  --fontsize-115: 128px;
+  --fontsize-116: 128px;
   --borderradius-rounded-full: 9999px;
   --borderradius-rounded-full-rem: 624.9375rem;
   --borderradius-rounded-4xl: 32px;
@@ -1300,9 +1437,13 @@
   --borderwidth-width-6: 6px;
   --borderwidth-width-6-rem: 0.375rem;
 
+  /* META: letter/paragraph spacing are 0 in tokens; add explicit vars for completeness */
+  --letterspacing-0: 0%;
+  --paragraphspacing-0: 0;
+
   /* BRAND */
   --primary-bg-subtle: var(--blue-50);
-  --primary-bg: var(--blue-100);
+  --primary-bg: var(--blue-200);
   --primary-bg-hover: var(--blue-300);
   --primary-bg-active: var(--blue-400);
   --primary-line: var(--blue-500);
@@ -1318,11 +1459,11 @@
   --secondary-text: var(--fuchsia-600);
   --secondary-solid-hover: var(--fuchsia-500);
   --secondary-solid: var(--fuchsia-400);
-  --secondary-border-hover: var(--fuchsia-400);
-  --secondary-border: var(--fuchsia-300);
-  --secondary-line: var(--fuchsia-500);
-  --secondary-bg-active: var(--fuchsia-400);
-  --secondary-bg-hover: var(--fuchsia-300);
+  --secondary-border-hover: var(--fuchsia-500);
+  --secondary-border: var(--fuchsia-400);
+  --secondary-line: var(--fuchsia-700);
+  --secondary-bg-active: var(--fuchsia-300);
+  --secondary-bg-hover: var(--fuchsia-200);
   --secondary-bg: var(--fuchsia-100);
   --secondary-bg-subtle: var(--fuchsia-50);
 
@@ -1338,17 +1479,18 @@
 
   --fg-default-fg: var(--neutral-600);
   --fg-line: var(--neutral-300);
-  --fg-border: var(--neutral-300);
-  --fg-border-hover: var(--neutral-400);
+  --fg-border: var(--neutral-400);
+  --fg-border-hover: var(--neutral-500);
   --fg-border-strong: var(--neutral-600);
   --fg-solid: var(--neutral-400);
   --fg-solid-hover: var(--neutral-500);
   --fg-text: var(--neutral-700);
   --fg-text-contrast: var(--neutral-800);
-  --fg-text-inverse-hover: var(--neutral-100);
+  --fg-text-inverse-hover: var(--neutral-50);
   --fg-text-inverse: var(--white);
-  --fg-invisible: rgba(0 0 0 / 0);
-  --fg-button-transparent: rgba(255 255 255 / 0.01);
+  --fg-text-inverse-strong: var(--neutral-100);
+  --fg-invisible: #00000000;
+  --fg-button-transparent: #ffffff03;
 
   --disabled-disabled: var(--gray-300);
   --disabled-on-disabled: var(--gray-400);
@@ -1365,31 +1507,31 @@
   --success-text: var(--green-700);
   --success-on-success: var(--white);
 
-  --overlays-dark-100: rgba(0 0 0 / 0.01);
-  --overlays-dark-200: rgba(0 0 0 / 0.03);
-  --overlays-dark-300: rgba(0 0 0 / 0.05);
-  --overlays-dark-400: rgba(0 0 0 / 0.07);
-  --overlays-dark-500: rgba(0 0 0 / 0.09);
-  --overlays-dark-600: rgba(0 0 0 / 0.11);
-  --overlays-dark-700: rgba(0 0 0 / 0.14);
-  --overlays-dark-800: rgba(0 0 0 / 0.22);
-  --overlays-dark-900: rgba(0 0 0 / 0.44);
-  --overlays-dark-1000: rgba(0 0 0 / 0.48);
-  --overlays-dark-1100: rgba(0 0 0 / 0.56);
-  --overlays-dark-1200: rgba(0 0 0 / 0.91);
+  --overlays-dark-100: #00000003;
+  --overlays-dark-200: #00000008;
+  --overlays-dark-300: #0000000d;
+  --overlays-dark-400: #00000012;
+  --overlays-dark-500: #00000017;
+  --overlays-dark-600: #0000001c;
+  --overlays-dark-700: #00000024;
+  --overlays-dark-800: #00000038;
+  --overlays-dark-900: #00000070;
+  --overlays-dark-1000: #0000007a;
+  --overlays-dark-1100: #0000008f;
+  --overlays-dark-1200: #000000e8;
 
-  --overlays-light-100: rgba(255 255 255 / 0);
-  --overlays-light-200: rgba(255 255 255 / 0.01);
-  --overlays-light-300: rgba(255 255 255 / 0.04);
-  --overlays-light-400: rgba(255 255 255 / 0.05);
-  --overlays-light-500: rgba(255 255 255 / 0.09);
-  --overlays-light-600: rgba(255 255 255 / 0.13);
-  --overlays-light-700: rgba(255 255 255 / 0.18);
-  --overlays-light-800: rgba(255 255 255 / 0.25);
-  --overlays-light-900: rgba(255 255 255 / 0.38);
-  --overlays-light-1000: rgba(255 255 255 / 0.45);
-  --overlays-light-1100: rgba(255 255 255 / 0.59);
-  --overlays-light-1200: rgba(255 255 255 / 0.92);
+  --overlays-light-100: #ffffff00;
+  --overlays-light-200: #ffffff03;
+  --overlays-light-300: #ffffff0a;
+  --overlays-light-400: #ffffff0d;
+  --overlays-light-500: #ffffff17;
+  --overlays-light-600: #ffffff21;
+  --overlays-light-700: #ffffff2e;
+  --overlays-light-800: #ffffff40;
+  --overlays-light-900: #ffffff61;
+  --overlays-light-1000: #ffffff73;
+  --overlays-light-1100: #ffffff96;
+  --overlays-light-1200: #ffffffeb;
 
   --data-default-fees: var(--gray-300);
   --data-default-personal: var(--pink-300);
@@ -2418,14 +2560,5 @@ body {
 }
 
 .bg-rainbow {
-  background-image: linear-gradient(
-    90deg,
-    var(--rainbow-gradient-stop-1-color) var(--rainbow-gradient-stop-1-position),
-    var(--rainbow-gradient-stop-2-color) var(--rainbow-gradient-stop-2-position),
-    var(--rainbow-gradient-stop-3-color) var(--rainbow-gradient-stop-3-position),
-    var(--rainbow-gradient-stop-4-color) var(--rainbow-gradient-stop-4-position),
-    var(--rainbow-gradient-stop-5-color) var(--rainbow-gradient-stop-5-position),
-    var(--rainbow-gradient-stop-6-color) var(--rainbow-gradient-stop-6-position),
-    var(--rainbow-gradient-stop-7-color) var(--rainbow-gradient-stop-7-position)
-  );
+  background-image: var(--rainbow-gradient);
 }
