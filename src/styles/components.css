@@ -161,22 +161,21 @@
 
 .btn--outline:hover,
 .btn--outline.is-hover {
-    border-color: var(--fg-border-hover);
-    background-color: var(--overlays-light-200);
-    color: var(--primary-text);
+    border-color: var(--primary-bg-active);
+    color: var(--primary-bg-active);
 }
 
 .btn--outline:focus,
 .btn--outline.is-focus {
-    border-color: var(--fg-border-hover);
-    background-color: var(--overlays-light-200);
-    color: var(--primary-text);
+    border-color: var(--primary-border);
+    background-color: transparent;
+    color: var(--primary-border);
 }
 
 .btn--outline:active,
 .btn--outline.is-active {
-    border-color: var(--fg-border-strong);
-    background-color: var(--overlays-light-300);
+    border-color: var(--primary-text);
+    background-color: transparent;
     color: var(--primary-text);
 }
 
@@ -190,19 +189,19 @@
 
 .btn--ghost:hover,
 .btn--ghost.is-hover {
-    background-color: var(--overlays-light-200);
-    color: var(--primary-text);
+    background-color: transparent;
+    color: var(--primary-bg-active);
 }
 
 .btn--ghost:focus,
 .btn--ghost.is-focus {
-    background-color: var(--overlays-light-200);
-    color: var(--primary-text);
+    background-color: transparent;
+    color: var(--primary-border);
 }
 
 .btn--ghost:active,
 .btn--ghost.is-active {
-    background-color: var(--overlays-light-300);
+    background-color: transparent;
     color: var(--primary-text);
     transform: translateY(0.5px);
 }
