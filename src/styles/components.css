@@ -3,6 +3,14 @@
    Variant: Default / Default
 ====================== */
 
+/* Demo layout: align rows */
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-6-rem);
+    flex-wrap: wrap;
+}
+
 /* Base Button */
 .btn {
     display: inline-flex;
@@ -22,6 +30,7 @@
     box-shadow: var(--drop-shadow-drop-shadow);
     cursor: pointer;
     transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+    vertical-align: middle; /* align inline buttons in rows if not using .button-group */
 }
 
 /* Focus ring */
@@ -55,11 +64,13 @@
 }
 
 .icon--trailing {
-    /* TODO: VERIFY: No 18px sizing token found; using 1.125rem literal to match Figma */
-    width: 1.125rem;  /* 18px */
-    height: 1.125rem; /* 18px */
+    width: var(--sizing-6-rem);  /* 24px */
+    height: var(--sizing-6-rem); /* 24px */
     margin-left: var(--spacing-2-rem);
 }
+
+/* Remove baseline gap inside icon wrappers */
+.btn i svg { display: block; }
 
 /* --------------------------
    Default (Neutral Solid)
