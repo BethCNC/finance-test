@@ -1,0 +1,62 @@
+/* ======================
+   BUTTON COMPONENT
+   Variant: Default / Default
+====================== */
+
+/* Base Button */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2-rem);
+    padding: var(--spacing-3-rem) var(--spacing-6-rem);
+    border-radius: var(--borderradius-rounded-md-rem);
+    font-family: var(--font-family-base;
+    font-size: var(--text-base-medium-size-rem);
+    font-weight: var(--text-base-medium-weight);
+    line-height: 1.25;
+    letter-spacing: 0;
+    background-color: var(--bg-bg-solid);
+    color: var(--fg-text-inverse);
+    border: none;
+    box-shadow: var(--drop-shadow-drop-shadow)
+}
+
+/* Hover */
+.btn:hover,
+.btn.is-hover {
+    background-color: var(bg-bg-solid-hover);
+    transform: translateY(-1px);
+}
+
+/* Focus */
+.btn:focus,
+.btn.is-focus {
+    outline: 2px solid var(--brand-primary-border);
+}
+
+/* Active */
+.btn:active,
+.btn.is-active {
+    background-color: var(bg-bg-solid-active);
+    transform: translateY(0);
+}
+
+/* Icon Support */
+.btn i{
+    width: var(--sizing-4-rem);
+    height: var(--sizing-4-rem);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+.icon-leading {
+    margin-right: var(--spacing-2-rem);
+}
+
+.icon-trailing {
+    margin-left: var(--spacing-2-rem);
+}
+}
