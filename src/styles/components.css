@@ -20,21 +20,21 @@
 }
 
 .header-bar {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* left | center | right */
     align-items: center;
-    justify-content: space-between;
     gap: var(--spacing-6-rem);
     padding: var(--spacing-3-rem) var(--spacing-6-rem);
     background-color: var(--bg-bg);
 }
 
-.brand { display: inline-flex; align-items: center; gap: var(--spacing-2-rem); }
+.brand { display: inline-flex; align-items: center; gap: var(--spacing-2-rem); justify-self: start; }
 .brand__logo { height: var(--sizing-6-rem); display: block; }
 .brand__logo--symbol { width: var(--sizing-6-rem); }
 .brand__logo--full { width: auto; height: var(--sizing-6-rem); }
 .brand__name { font-weight: 700; }
 
-.header-actions { display: inline-flex; align-items: center; gap: var(--spacing-3-rem); }
+.header-actions { display: inline-flex; align-items: center; gap: var(--spacing-3-rem); justify-self: end; }
 
 .icon-button {
     display: inline-flex;
@@ -105,7 +105,7 @@
 
 .icon-button[disabled] { opacity: 0.6; cursor: not-allowed; box-shadow: none; }
 
-.header-title { font-weight: 600; text-align: center; flex: 1; }
+.header-title { text-align: center; justify-self: center; }
 
 /* Header: Connect Bank responsive button */
 .btn--sm { padding: var(--spacing-2-rem) var(--spacing-3-rem); font-size: var(--text-sm-medium-size-rem); }
@@ -114,7 +114,6 @@
 
 @media (max-width: 640px) {
   /* Mobile: brand centered, symbol only */
-  .header-bar { justify-content: center; }
   .brand__logo--full { display: none; }
 }
 
