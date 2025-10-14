@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/components.css">
+</head>
+<body style="padding: 0; margin: 0; background-color: var(--bg-base); height: 100vh; display: flex; flex-direction: column;">
+
+    <!-- More Menu Overlay -->
+    <div class="more-menu-overlay" id="more-menu-overlay"></div>
+
+    <!-- More Menu Bottom Sheet -->
+    <div class="more-menu" id="more-menu" role="dialog" aria-modal="true" aria-labelledby="more-menu-title">
+        <div class="more-menu__handle"></div>
+        <div class="more-menu__header">
+            <h2 id="more-menu-title" class="more-menu__title">More</h2>
+            <button class="more-menu__close" aria-label="Close menu" id="close-more-menu">
+                <i data-lucide="x" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="more-menu__content">
+            <button class="more-menu__item" data-page="subscriptions">
+                <i data-lucide="repeat" class="more-menu__item-icon" aria-hidden="true"></i>
+                <span class="more-menu__item-text">Subscriptions</span>
+            </button>
+            <button class="more-menu__item" data-page="monthly-bills">
+                <i data-lucide="calendar" class="more-menu__item-icon" aria-hidden="true"></i>
+                <span class="more-menu__item-text">Monthly Bills</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Navigation Bar - Fixed to bottom -->
+    <nav class="navbar">
+        <!-- Home -->
+        <button class="nav-item" aria-label="Home" data-page="home">
+            <i data-lucide="home" class="nav-item__icon" aria-hidden="true"></i>
+            <span class="nav-item__text">Home</span>
+        </button>
+
+        <!-- Transactions -->
+        <button class="nav-item" aria-label="Transactions" data-page="transactions">
+            <i data-lucide="circle-dollar-sign" class="nav-item__icon" aria-hidden="true"></i>
+            <span class="nav-item__text">Transactions</span>
+        </button>
+
+        <!-- Budget -->
+        <button class="nav-item" aria-label="Budget" data-page="budget">
+            <i data-lucide="pie-chart" class="nav-item__icon" aria-hidden="true"></i>
+            <span class="nav-item__text">Budget</span>
+        </button>
+
+        <!-- Advisor -->
+        <button class="nav-item" aria-label="Advisor" data-page="advisor">
+            <i data-lucide="message-circle" class="nav-item__icon" aria-hidden="true"></i>
+            <span class="nav-item__text">Advisor</span>
+        </button>
+
+        <!-- More -->
+        <button class="nav-item" aria-label="More" id="more-button">
+            <i data-lucide="menu" class="nav-item__icon" aria-hidden="true"></i>
+            <span class="nav-item__text">More</span>
+        </button>
+    </nav>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        console.log('Lucide icons initialized');
+
+        const moreButton = document.getElementById('more-button');
+        const moreMenu = document.getElementById('more-menu');
+        const moreMenuOverlay = document.getElementById('more-menu-overlay');
+        const closeMoreMenu = document.getElementById('close-more-menu');
+
+        // Open more menu
+        function openMoreMenu() {
+            moreMenu.classList.add('is-open');
+            moreMenuOverlay.classList.add('is-visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close more menu
+        function closeMenu() {
+            moreMenu.classList.remove('is-open');
+            moreMenuOverlay.classList.remove('is-visible');
+            document.body.style.overflow = '';
+        }
+
+        // Event listeners for more menu
+        moreButton.addEventListener('click', openMoreMenu);
+        closeMoreMenu.addEventListener('click', closeMenu);
+        moreMenuOverlay.addEventListener('click', closeMenu);
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && moreMenu.classList.contains('is-open')) {
+                closeMenu();
+            }
+        });
+
+        // Handle navigation for main nav items (not "More")
+        document.querySelectorAll('.nav-item:not(#more-button)').forEach(item => {
+            item.addEventListener('click', function() {
+                const page = this.getAttribute('data-page');
+                console.log('Navigate to:', page);
+
+                // Remove active class from all items
+                document.querySelectorAll('.nav-item').forEach(i => {
+                    i.classList.remove('is-active');
+                    i.removeAttribute('aria-current');
+                });
+                // Add active class to clicked item
+                this.classList.add('is-active');
+                this.setAttribute('aria-current', 'page');
+
+                // Here you would handle actual page navigation
+                // Example: window.location.href = `/${page}.html`;
+            });
+        });
+
+        // Handle navigation for more menu items
+        document.querySelectorAll('.more-menu__item').forEach(item => {
+            item.addEventListener('click', function() {
+                const page = this.getAttribute('data-page');
+                console.log('Navigate to:', page);
+
+                closeMenu();
+
+                // Remove active from navbar items
+                document.querySelectorAll('.nav-item').forEach(i => {
+                    i.classList.remove('is-active');
+                    i.removeAttribute('aria-current');
+                });
+
+                // Here you would handle actual page navigation
+                // Example: window.location.href = `/${page}.html`;
+            });
+        });
+    </script>
+
+</body>
+</html>

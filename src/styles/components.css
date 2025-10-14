@@ -358,3 +358,399 @@
     color: var(--primary-text);
     transform: translateY(0.5px);
 }
+
+/* ======================
+   ACCOUNT BALANCE CARD
+====================== */
+
+.account-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 168px; /* min-width 168px from Figma */
+    width: 100%; /* fill width */
+    background-color: var(--bg-bg-solid);
+    border-radius: var(--borderradius-rounded-xl-rem); /* 12px */
+    border: var(--borderwidth-width-4) solid var(--primary-bg-active); /* 4px border */
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1), 0px 1px 1px 0px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.account-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2-rem); /* 8px */
+    padding: var(--spacing-6-rem) var(--spacing-3-rem); /* 24px vertical, 12px horizontal */
+    flex: 1;
+}
+
+.account-card__name {
+    display: flex;
+    gap: var(--spacing-1-rem); /* 4px */
+}
+
+.account-card__owner {
+    font-family: var(--font-family-base);
+    font-size: var(--text-xl-semi-bold-size-rem); /* text-xl from Figma */
+    font-weight: var(--text-xl-semi-bold-weight); /* semi-bold */
+    line-height: 1;
+    margin: 0;
+}
+
+.account-card__balance {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2-rem); /* 8px */
+}
+
+.account-card__type {
+    font-family: var(--font-family-base);
+    font-size: var(--text-base-medium-size-rem); /* 16px */
+    font-weight: var(--text-base-medium-weight); /* medium */
+    line-height: 1;
+    color: var(--white); /* #fcfcfc */
+    margin: 0;
+}
+
+.account-card__amount {
+    font-family: var(--font-family-base);
+    font-size: var(--text-3xl-bold-size-rem); /* text-3xl from Figma */
+    font-weight: var(--text-3xl-bold-weight); /* bold */
+    line-height: 1;
+    color: var(--success-bg-active);
+    margin: 0;
+}
+
+/* Bryan variant - blue theme */
+.account-card--bryan {
+    border-color: var(--primary-bg-active);
+}
+
+.account-card--bryan .account-card__owner {
+    color: var(--primary-bg-active);
+}
+
+/* Beth variant - fuchsia theme */
+.account-card--beth {
+    border-color: var(--secondary-bg-active);
+}
+
+.account-card--beth .account-card__owner {
+    color: var(--secondary-bg-active);
+}
+
+/* Hover states */
+.account-card--bryan:hover,
+.account-card--bryan.is-hover {
+    border-color: var(--primary-border-strong);
+    background-color: var(--primary-solid);
+}
+
+.account-card--bryan:hover .account-card__owner,
+.account-card--bryan.is-hover .account-card__owner,
+.account-card--bryan:hover .account-card__type,
+.account-card--bryan.is-hover .account-card__type {
+    color: var(--fg-text-inverse-hover);
+}
+
+.account-card--bryan:hover .account-card__amount,
+.account-card--bryan.is-hover .account-card__amount {
+    color: var(--fg-text-inverse);
+}
+
+.account-card--beth:hover,
+.account-card--beth.is-hover {
+    border-color: var(--secondary-border-hover);
+    background-color: var(--secondary-solid);
+}
+
+.account-card--beth:hover .account-card__owner,
+.account-card--beth.is-hover .account-card__owner,
+.account-card--beth:hover .account-card__type,
+.account-card--beth.is-hover .account-card__type {
+    color: var(--fg-text-inverse-hover);
+}
+
+.account-card--beth:hover .account-card__amount,
+.account-card--beth.is-hover .account-card__amount {
+    color: var(--fg-text-inverse);
+}
+
+/* Focus state */
+.account-card:focus {
+    outline: var(--borderwidth-width-2) solid var(--primary-border);
+    outline-offset: 2px;
+}
+
+/* ======================
+   NAVBAR COMPONENT
+   Based on Figma design: node-id=43-13904
+====================== */
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-bg); /* slate-100 */
+    border-top: var(--borderwidth-width-1) solid var(--neutral-400);
+    box-shadow: 0px -1px 2px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  /* Each nav item gets equal width */
+  .navbar .nav-item {
+    flex: 1 0 0;
+    min-width: 0;
+  }
+
+  /* ======================
+     MORE MENU (Bottom Sheet)
+  ====================== */
+
+  /* Overlay */
+  .more-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+  }
+
+  .more-menu-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Bottom Sheet */
+  .more-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-bg);
+    border-radius: var(--borderradius-rounded-xl-rem) var(--borderradius-rounded-xl-rem) 0 0;
+    box-shadow: 0px -4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .more-menu.is-open {
+    transform: translateY(0);
+  }
+
+  /* Handle (drag indicator) */
+  .more-menu__handle {
+    width: 32px;
+    height: 4px;
+    background-color: var(--neutral-300);
+    border-radius: 2px;
+    margin: var(--spacing-3-rem) auto var(--spacing-2-rem);
+  }
+
+  /* Header */
+  .more-menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--spacing-6-rem) var(--spacing-4-rem);
+    border-bottom: var(--borderwidth-width-1) solid var(--neutral-200);
+  }
+
+  .more-menu__title {
+    font-family: var(--font-family-base);
+    font-size: var(--text-xl-semi-bold-size-rem);
+    font-weight: var(--text-xl-semi-bold-weight);
+    line-height: 1;
+    color: var(--fg-text);
+    margin: 0;
+  }
+
+  .more-menu__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    border-radius: var(--borderradius-rounded-md-rem);
+    cursor: pointer;
+    color: var(--fg-text);
+    transition: background-color 0.2s ease;
+  }
+
+  .more-menu__close:hover {
+    background-color: var(--bg-bg-hover);
+  }
+
+  .more-menu__close i {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Content */
+  .more-menu__content {
+    padding: var(--spacing-4-rem) var(--spacing-6-rem);
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  /* Menu Items */
+  .more-menu__item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4-rem);
+    width: 100%;
+    padding: var(--spacing-4-rem);
+    background: transparent;
+    border: none;
+    border-radius: var(--borderradius-rounded-md-rem);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: left;
+  }
+
+  .more-menu__item:hover {
+    background-color: var(--bg-bg-hover);
+  }
+
+  .more-menu__item:active {
+    background-color: var(--bg-bg-active);
+  }
+
+  .more-menu__item + .more-menu__item {
+    margin-top: var(--spacing-2-rem);
+  }
+
+  .more-menu__item-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--fg-text);
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    flex-shrink: 0;
+  }
+
+  .more-menu__item-text {
+    font-family: var(--text-base-medium-family);
+    font-size: var(--text-base-medium-size-rem);
+    font-weight: var(--text-base-medium-weight);
+    line-height: 1.5;
+    color: var(--fg-text);
+  }
+  
+  /* ======================
+     NAV ITEM COMPONENT
+     Based on Figma design: node-id=43-13875
+  ====================== */
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-2-rem); /* 8px gap between icon and text */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-3-rem) var(--spacing-6-rem) var(--spacing-4-rem); /* 12px top, 24px horizontal, 16px bottom */
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* icon from Lucide - will be replaced with SVG */
+  .nav-item__icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: var(--fg-text); /* neutral-700 */
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    transition: color 0.2s ease;
+  }
+
+  /* text label */
+  .nav-item__text {
+    font-family: var(--text-xs-medium-family);
+    font-size: var(--text-xs-medium-size-rem); /* 12px */
+    font-weight: var(--text-xs-medium-weight); /* 500 */
+    line-height: 1;
+    color: var(--fg-text); /* neutral-700 */
+    text-align: center;
+    white-space: nowrap;
+    transition: font-weight 0.2s ease, color 0.2s ease;
+  }
+
+  /* --------------------------
+     HOVER state
+  -------------------------- */
+  .nav-item:hover,
+  .nav-item.is-hover {
+    background-color: var(--primary-bg);
+  }
+
+  .nav-item:hover .nav-item__icon,
+  .nav-item.is-hover .nav-item__icon {
+    color: var(--fg-text);
+  }
+
+  .nav-item:hover .nav-item__text,
+  .nav-item.is-hover .nav-item__text {
+    font-family: var(--text-xs-semi-bold-family);
+    font-size: var(--text-xs-semi-bold-size-rem); /* 12px */
+    font-weight: var(--text-xs-semi-bold-weight); /* 600 */
+    color: var(--fg-text);
+  }
+
+  /* --------------------------
+     FOCUS state
+  -------------------------- */
+  .nav-item:focus,
+  .nav-item.is-focus {
+    outline: none;
+    background-color: var(--primary-bg-hover);
+  }
+
+  .nav-item:focus .nav-item__icon,
+  .nav-item.is-focus .nav-item__icon {
+    color: var(--primary-border-strong);
+  }
+
+  .nav-item:focus .nav-item__text,
+  .nav-item.is-focus .nav-item__text {
+    font-family: var(--text-xs-semi-bold-family);
+    font-size: var(--text-xs-semi-bold-size-rem); /* 12px */
+    font-weight: var(--text-xs-semi-bold-weight); /* 600 */
+    color: var(--primary-border-strong);
+  }
+
+  /* --------------------------
+     ACTIVE state
+  -------------------------- */
+  .nav-item.is-active,
+  .nav-item[aria-current="page"] {
+    background-color: var(--primary-solid);
+  }
+
+  .nav-item.is-active .nav-item__icon,
+  .nav-item[aria-current="page"] .nav-item__icon {
+    color: var(--primary-on-primary);
+  }
+
+  .nav-item.is-active .nav-item__text,
+  .nav-item[aria-current="page"] .nav-item__text {
+    font-family: var(--text-xs-semi-bold-family);
+    font-size: var(--text-xs-semi-bold-size-rem); /* 12px */
+    font-weight: var(--text-xs-semi-bold-weight); /* 600 */
+    color: var(--primary-on-primary);
+  }
