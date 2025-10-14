@@ -754,3 +754,383 @@
     font-weight: var(--text-xs-semi-bold-weight); /* 600 */
     color: var(--primary-on-primary);
   }
+
+  /* ======================
+     ALERT CIRCLE ICONS
+     Based on Figma design: node-id=39-12093
+  ====================== */
+
+  .alert-circle {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .alert-circle i,
+  .alert-circle svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+    stroke-width: 2;
+    fill: none;
+  }
+
+  /* Default state - all use fg-border */
+  .alert-circle {
+    color: var(--fg-border);
+  }
+
+  .alert-circle i,
+  .alert-circle svg {
+    stroke: currentColor;
+  }
+
+  /* Active states - colored */
+  .alert-circle--success.alert-circle--active {
+    color: var(--success-text); /* rgba(34, 197, 94, 1) - green-500 */
+  }
+
+  .alert-circle--warning.alert-circle--active {
+    color: var(--warning-text); /* rgba(251, 146, 60, 1) - orange-400 */
+  }
+
+  .alert-circle--alert.alert-circle--active {
+    color: var(--error-text); /* rgba(220, 38, 38, 1) - red-600 */
+  }
+
+  /* ======================
+     ALERT GROUP
+     Based on Figma design: node-id=39-12127
+  ====================== */
+
+  .alert-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1-rem); /* 4px */
+  }
+
+/* progress bar — use global data tokens (default / active) */
+/* Tracks use the 'default' (muted) token; fills and accents use 'active' token */
+
+.progress-bar {
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+  padding:0.75rem;
+  background:var(--bg-bg-subtle);
+  border-radius:var(--borderradius-rounded-md);
+  width:100%;
+  font-family:var(--font-family-base);
+}
+
+/* Track & fill basics */
+.progress-track {
+  width:100%;
+  height:10px;
+  background:var(--neutral-100);
+  border-radius:999px;
+  overflow:hidden;
+  position:relative;
+}
+
+.progress-fill {
+  height:100%;
+  width:0%;
+  border-radius:999px;
+  transition:width 420ms cubic-bezier(.22,.9,.2,1);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+  background:var(--data-active-personal); /* fallback — overridden by modifiers below */
+}
+
+/* category icon accent */
+.progress-bar .category-icons {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;
+  height:32px;
+  border-radius:8px;
+  color:var(--fg-text);
+}
+
+/* percent, alerts, etc. (kept compact) */
+.budget-detail { display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+
+/* -------- Per-category mappings (use global tokens) --------
+   Use HTML like: <section class="progress-bar progress-bar--personal"> */
+.progress-bar--personal  .progress-fill  { background: var(--data-active-personal); }
+.progress-bar--personal  .progress-track  { background: var(--data-default-personal); }
+.progress-bar--personal  .category-icons { color: var(--data-active-personal); }
+
+.progress-bar--software  .progress-fill  { background: var(--data-active-software); }
+.progress-bar--software  .progress-track  { background: var(--data-default-software); }
+.progress-bar--software  .category-icons { color: var(--data-active-software); }
+
+.progress-bar--health    .progress-fill  { background: var(--data-active-health); }
+.progress-bar--health    .progress-track  { background: var(--data-default-health); }
+.progress-bar--health    .category-icons { color: var(--data-active-health); }
+
+.progress-bar--entertainment  .progress-fill  { background: var(--data-active-entertainment); }
+.progress-bar--entertainment  .progress-track  { background: var(--data-default-entertainment); }
+.progress-bar--entertainment  .category-icons { color: var(--data-active-entertainment); }
+
+.progress-bar--auto      .progress-fill  { background: var(--data-active-auto); }
+.progress-bar--auto      .progress-track  { background: var(--data-default-auto); }
+.progress-bar--auto      .category-icons { color: var(--data-active-auto); }
+
+.progress-bar--food      .progress-fill  { background: var(--data-active-food); }
+.progress-bar--food      .progress-track  { background: var(--data-default-food); }
+.progress-bar--food      .category-icons { color: var(--data-active-food); }
+
+.progress-bar--george    .progress-fill  { background: var(--data-active-george); }
+.progress-bar--george    .progress-track  { background: var(--data-default-george); }
+.progress-bar--george    .category-icons { color: var(--data-active-george); }
+
+.progress-bar--home      .progress-fill  { background: var(--data-active-home); }
+.progress-bar--home      .progress-track  { background: var(--data-default-home); }
+.progress-bar--home      .category-icons { color: var(--data-active-home); }
+
+.progress-bar--utilites  .progress-fill  { background: var(--data-active-utilites); }
+.progress-bar--utilites  .progress-track  { background: var(--data-default-utilites); }
+.progress-bar--utilites  .category-icons { color: var(--data-active-utilites); }
+
+.progress-bar--mortgage  .progress-fill  { background: var(--data-active-mortgage); }
+.progress-bar--mortgage  .progress-track  { background: var(--data-default-mortgage); }
+.progress-bar--mortgage  .category-icons { color: var(--data-active-mortgage); }
+
+/* ======================
+   CATEGORY ICONS
+   Based on Figma design: node-id=46-22702
+====================== */
+
+/* Base category icon */
+.category-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Icon wrapper and SVG styling */
+.category-icon i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.category-icon svg {
+  display: block;
+  stroke-width: 2px;
+  fill: none;
+}
+
+/* Ensure Lucide paths inherit stroke from the parent SVG color mapping */
+.category-icon svg * {
+  stroke: inherit !important;
+}
+
+/* --------------------------
+   Circle Style (30×30px container, 18×18px icon)
+-------------------------- */
+.category-icon--circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  /* Create a new stacking context so mix-blend-mode blends against the circle only */
+  isolation: isolate;
+}
+
+.category-icon--circle i {
+  width: 18px;
+  height: 18px;
+}
+
+.category-icon--circle svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Blend the icon stroke with the circle background: prefer plus-darker; fallback to multiply */
+@supports (mix-blend-mode: plus-darker) {
+  .category-icon--circle svg { mix-blend-mode: plus-darker; }
+}
+@supports not (mix-blend-mode: plus-darker) {
+  .category-icon--circle svg { mix-blend-mode: multiply; }
+}
+
+/* --------------------------
+   Icon-Only Style (18×18px icon)
+-------------------------- */
+.category-icon--icon-only {
+  width: 18px;
+  height: 18px;
+}
+
+.category-icon--icon-only i {
+  width: 18px;
+  height: 18px;
+}
+
+.category-icon--icon-only svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* --------------------------
+   Category-specific colors (Circle style)
+   Using data-default tokens for circle background, data-active for icon color
+-------------------------- */
+
+/* Mortgage - Red/Coral */
+.category-icon--circle[data-category="mortgage"] {
+  background-color: var(--data-default-mortgage);
+}
+
+.category-icon--circle[data-category="mortgage"] svg {
+  stroke: var(--data-active-mortgage) !important;
+}
+
+/* Utilities - Orange */
+.category-icon--circle[data-category="utilities"] {
+  background-color: var(--data-default-utilites);
+}
+
+.category-icon--circle[data-category="utilities"] svg {
+  stroke: var(--data-active-utilites) !important;
+}
+
+/* Home Reno - Yellow */
+.category-icon--circle[data-category="home-reno"] {
+  background-color: var(--data-default-home);
+}
+
+.category-icon--circle[data-category="home-reno"] svg {
+  stroke: var(--data-active-home) !important;
+}
+
+/* George - Lime */
+.category-icon--circle[data-category="george"] {
+  background-color: var(--data-default-george);
+}
+
+.category-icon--circle[data-category="george"] svg {
+  stroke: var(--data-active-george) !important;
+}
+
+/* Food - Emerald */
+.category-icon--circle[data-category="food"] {
+  background-color: var(--data-default-food);
+}
+
+.category-icon--circle[data-category="food"] svg {
+  stroke: var(--data-active-food) !important;
+}
+
+/* Auto - Cyan */
+.category-icon--circle[data-category="auto"] {
+  background-color: var(--data-default-auto);
+}
+
+.category-icon--circle[data-category="auto"] svg {
+  stroke: var(--data-active-auto) !important;
+}
+
+/* Entertainment - Blue */
+.category-icon--circle[data-category="entertainment"] {
+  background-color: var(--data-default-entertainment);
+}
+
+.category-icon--circle[data-category="entertainment"] svg {
+  stroke: var(--data-active-entertainment) !important;
+}
+
+/* Health - Purple */
+.category-icon--circle[data-category="health"] {
+  background-color: var(--data-default-health);
+}
+
+.category-icon--circle[data-category="health"] svg {
+  stroke: var(--data-active-health) !important;
+}
+
+/* Software - Magenta */
+.category-icon--circle[data-category="software"] {
+  background-color: var(--data-default-software);
+}
+
+.category-icon--circle[data-category="software"] svg {
+  stroke: var(--data-active-software) !important;
+}
+
+/* Personal - Pink */
+.category-icon--circle[data-category="personal"] {
+  background-color: var(--data-default-personal);
+}
+
+.category-icon--circle[data-category="personal"] svg {
+  stroke: var(--data-active-personal) !important;
+}
+
+/* Fees - Gray */
+.category-icon--circle[data-category="fees"] {
+  background-color: var(--data-default-fees);
+}
+
+.category-icon--circle[data-category="fees"] svg {
+  stroke: var(--data-active-fees) !important;
+}
+
+/* --------------------------
+   Category-specific colors (Icon-only style)
+   Using data-default tokens for icon color (lighter 300 shades)
+-------------------------- */
+
+.category-icon--icon-only[data-category="mortgage"] svg {
+  stroke: var(--data-default-mortgage) !important;
+}
+
+.category-icon--icon-only[data-category="utilities"] svg {
+  stroke: var(--data-default-utilites) !important;
+}
+
+.category-icon--icon-only[data-category="home-reno"] svg {
+  stroke: var(--data-default-home) !important;
+}
+
+.category-icon--icon-only[data-category="george"] svg {
+  stroke: var(--data-default-george) !important;
+}
+
+.category-icon--icon-only[data-category="food"] svg {
+  stroke: var(--data-default-food) !important;
+}
+
+.category-icon--icon-only[data-category="auto"] svg {
+  stroke: var(--data-default-auto) !important;
+}
+
+.category-icon--icon-only[data-category="entertainment"] svg {
+  stroke: var(--data-default-entertainment) !important;
+}
+
+.category-icon--icon-only[data-category="health"] svg {
+  stroke: var(--data-default-health) !important;
+}
+
+.category-icon--icon-only[data-category="software"] svg {
+  stroke: var(--data-default-software) !important;
+}
+
+.category-icon--icon-only[data-category="personal"] svg {
+  stroke: var(--data-default-personal) !important;
+}
+
+.category-icon--icon-only[data-category="fees"] svg {
+  stroke: var(--data-default-fees) !important;
+}

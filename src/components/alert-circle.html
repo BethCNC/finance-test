@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Circle Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/components.css">
+</head>
+<body style="padding: 2rem; background-color: var(--bg-base); display: flex; flex-direction: column; gap: 2rem;">
+
+    <h1 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">Alert Circle Icons</h1>
+
+    <!-- Active States -->
+    <div>
+        <h2 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Active States</h2>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <!-- Success Active -->
+            <div class="alert-circle alert-circle--success alert-circle--active">
+                <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+
+            <!-- Warning Active -->
+            <div class="alert-circle alert-circle--warning alert-circle--active">
+                <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+
+            <!-- Alert Active -->
+            <div class="alert-circle alert-circle--alert alert-circle--active">
+                <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Default States (Gray) -->
+    <div>
+        <h2 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Default States (Inactive)</h2>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <!-- Success Default -->
+            <div class="alert-circle alert-circle--success">
+                <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+
+            <!-- Warning Default -->
+            <div class="alert-circle alert-circle--warning">
+                <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+
+            <!-- Alert Default -->
+            <div class="alert-circle alert-circle--alert">
+                <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Group -->
+    <div>
+        <h2 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Alert Group (3 icons together)</h2>
+        <div class="alert-group">
+            <div class="alert-circle alert-circle--success">
+                <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--warning alert-circle--active">
+                <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--alert">
+                <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        console.log('Alert circle icons initialized');
+    </script>
+
+</body>
+</html>

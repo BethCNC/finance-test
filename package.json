@@ -1,0 +1,16 @@
+{
+  "name": "finance-practice-figma-integration",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Utilities to fetch rich Figma file details and export to figma-export/",
+  "type": "module",
+  "scripts": {
+    "figma:fetch": "node ./scripts/figma-fetch.js",
+    "figma:fetch:nodes": "node ./scripts/figma-fetch.js --nodes"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "minimist": "^1.2.8",
+    "node-fetch": "^3.3.2"
+  }
+}
