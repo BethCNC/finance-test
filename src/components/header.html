@@ -21,27 +21,32 @@
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <header class="app-header">
+    <header class="app-header" role="banner" aria-label="FinanceAI Header">
       <div class="header-bar">
-        <div class="brand">
-          <img class="brand__logo" src="../../assets/logo/symbol.svg" alt="FinanceAI" />
-          <span class="brand__name">FinanceAI</span>
+        <div class="brand" aria-hidden="false">
+            <!-- Mobile: show logo symbol -->
+          <img class="brand__logo brand__logo--symbol" 
+          src="../../assets/logo/symbol.svg" 
+          alt="FinanceAI"
+          width="48" height="48" 
+          aria-hidden="true"
+        />
+
+           <!-- Desktop: show full logo -->
+          <img class="brand__logo brand__logo--full" 
+          src="../../assets/logo/full.svg" 
+          alt="FinanceAI"
+          width="192" height="48" 
+          aria-hidden="true"
+        />
+
         </div>
+        <div class="header-title">Dashboard</div>
         <div class="header-actions">
-          <button class="btn btn--default btn--sm" data-icon-leading="banknote">
-            <span>Connect Bank</span>
-          </button>
           <button class="icon-button" aria-label="Open menu"><i data-lucide="menu"></i></button>
         </div>
       </div>
 
-      <div class="subheader">
-        <div class="page-chip">
-          <img class="page-chip__icon" src="../../assets/logo/symbol.svg" alt="" aria-hidden="true" />
-          <span>Dashboard</span>
-        </div>
-        <button class="icon-button" aria-label="Page menu"><i data-lucide="menu"></i></button>
-      </div>
     </header>
 
     <script>

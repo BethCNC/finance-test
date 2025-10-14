@@ -29,7 +29,9 @@
 }
 
 .brand { display: inline-flex; align-items: center; gap: var(--spacing-2-rem); }
-.brand__logo { width: var(--sizing-6-rem); height: var(--sizing-6-rem); display: block; }
+.brand__logo { height: var(--sizing-6-rem); display: block; }
+.brand__logo--symbol { width: var(--sizing-6-rem); }
+.brand__logo--full { width: auto; height: var(--sizing-6-rem); }
 .brand__name { font-weight: 700; }
 
 .header-actions { display: inline-flex; align-items: center; gap: var(--spacing-3-rem); }
@@ -51,17 +53,27 @@
 .icon-button:focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
 .icon-button i { width: var(--sizing-6-rem); height: var(--sizing-6-rem); display: inline-flex; align-items: center; justify-content: center; }
 
-.subheader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--spacing-6-rem);
-    padding: var(--spacing-3-rem) var(--spacing-6-rem);
-    background-color: var(--bg-bg-subtle);
+/* Icon-only button sizes */
+.icon-button--sm { width: var(--sizing-6-rem); height: var(--sizing-6-rem); }
+.icon-button--lg { width: var(--sizing-10-rem); height: var(--sizing-10-rem); }
+
+.header-title { font-weight: 600; text-align: center; flex: 1; }
+
+/* Header: Connect Bank responsive button */
+.btn--sm { padding: var(--spacing-2-rem) var(--spacing-3-rem); font-size: var(--text-sm-medium-size-rem); }
+.btn--connect { gap: var(--spacing-2-rem); }
+.btn--connect .btn__icon { width: var(--sizing-6-rem); height: var(--sizing-6-rem); display: block; }
+
+@media (max-width: 640px) {
+  /* Mobile: brand centered, symbol only */
+  .header-bar { justify-content: center; }
+  .brand__logo--full { display: none; }
 }
 
-.page-chip { display: inline-flex; align-items: center; gap: var(--spacing-2-rem); padding: var(--spacing-2-rem) var(--spacing-3-rem); border-radius: var(--borderradius-rounded-md-rem); background: var(--bg-bg); border: var(--borderwidth-width-1) solid var(--fg-border); }
-.page-chip__icon { width: var(--sizing-6-rem); height: var(--sizing-6-rem); display: block; }
+@media (min-width: 641px) {
+  /* Desktop: show full logo, hide symbol */
+  .brand__logo--symbol { display: none; }
+}
 
 /* Base Button */
 .btn {

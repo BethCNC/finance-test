@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Icon Button</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <main class="button-group">
+      <button class="icon-button" aria-label="Menu"><i data-lucide="menu"></i></button>
+      <button class="icon-button icon-button--sm" aria-label="Menu small"><i data-lucide="menu"></i></button>
+      <button class="icon-button icon-button--lg" aria-label="Menu large"><i data-lucide="menu"></i></button>
+    </main>
+    <script>
+      if (window.lucide && typeof lucide.createIcons === "function") {
+        lucide.createIcons();
+      }
+    </script>
+  </body>
+  </html>
+
+
