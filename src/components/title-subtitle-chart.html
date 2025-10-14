@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title Subtitle Chart Card</title>
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="./title-subtitle-chart.css">
+</head>
+<body>
+  <div class="title-subtitle-chart">
+    <div class="chart-header">
+      <h2 class="chart-title">Your $83 under budget this month.</h2>
+      <p class="chart-subtitle">Transaction Trends by Month</p>
+    </div>
+    
+    <div class="pie-chart">
+      <img src="../../assets/charts/chart = pie.png" alt="Monthly spending breakdown pie chart" class="chart-image">
+    </div>
+    
+    <div class="chart-legend">
+      <div class="legend-row">
+        <div class="legend-item">
+          <div class="legend-color" style="background: var(--colors-red-300);"></div>
+          <span class="legend-label">Mortgage</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: var(--emerald-300);"></div>
+          <span class="legend-label">Food</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: var(--orange-300);"></div>
+          <span class="legend-label">Utilities</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: var(--blue-300);"></div>
+          <span class="legend-label">Fun</span>
+        </div>
+      </div>
+      <div class="legend-row">
+        <div class="legend-item">
+          <div class="legend-color" style="background: var(--pink-300);"></div>
+          <span class="legend-label">Personal</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: var(--purple-300);"></div>
+          <span class="legend-label">Health</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: var(--yellow-300);"></div>
+          <span class="legend-label">Home Reno</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: var(--gray-300);"></div>
+          <span class="legend-label">Fees</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script type="module">
+  import { createIcons } from "https://unpkg.com/lucide@latest?module";
+  createIcons();
+</script>
+</body>
+</html>

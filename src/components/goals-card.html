@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goals Card</title>
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="./goals-card.css">
+</head>
+<body>
+  <div class="goals-card">
+    <div class="circular-progress">
+      <svg viewBox="0 0 100 100" class="progress-svg">
+        <!-- Background circle -->
+        <circle cx="50" cy="50" r="45" fill="none" stroke="var(--gray-200)" stroke-width="8"/>
+        <!-- Progress circle -->
+        <circle cx="50" cy="50" r="45" fill="none" stroke="var(--blue-500)" stroke-width="8" 
+                stroke-dasharray="283" stroke-dashoffset="70.75" 
+                transform="rotate(-90 50 50)" stroke-linecap="round"/>
+      </svg>
+      <div class="progress-text">75%</div>
+    </div>
+    <div class="goal-label">Emergency Fund</div>
+  </div>
+
+<script type="module">
+  import { createIcons } from "https://unpkg.com/lucide@latest?module";
+  createIcons();
+</script>
+</body>
+</html>

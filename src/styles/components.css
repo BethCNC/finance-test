@@ -1134,3 +1134,291 @@
 .category-icon--icon-only[data-category="fees"] svg {
   stroke: var(--data-default-fees) !important;
 }
+
+/* ======================
+   FINANCE CARDS (per-card blocks)
+   Based on Figma nodes listed in plan
+====================== */
+
+/* Shared card element slots */
+.card__header { display:flex; align-items:center; justify-content:space-between; gap: var(--spacing-3-rem); margin-bottom: var(--spacing-3-rem); }
+.card__meta { margin: 0; color: var(--fg-text); opacity: 0.85; }
+.card__content { display:block; }
+.card__chart { display:block; width:100%; height:auto; border-radius: var(--borderradius-rounded-md-rem); }
+.card__footer { margin-top: var(--spacing-3-rem); }
+
+/* Card 43-18265 */
+.card-43-18265 {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.card-43-18265:hover, .card-43-18265.is-hover { background-color: var(--bg-bg-hover); }
+.card-43-18265:focus, .card-43-18265.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-43-18265:active, .card-43-18265.is-active { background-color: var(--bg-bg-active); }
+
+/* Card 66-2636 */
+.card-66-2636 {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.card-66-2636:hover, .card-66-2636.is-hover { background-color: var(--bg-bg-hover); }
+.card-66-2636:focus, .card-66-2636.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-66-2636:active, .card-66-2636.is-active { background-color: var(--bg-bg-active); }
+
+/* Card 46-22834 */
+.card-46-22834 {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.card-46-22834:hover, .card-46-22834.is-hover { background-color: var(--bg-bg-hover); }
+.card-46-22834:focus, .card-46-22834.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-46-22834:active, .card-46-22834.is-active { background-color: var(--bg-bg-active); }
+
+/* Card 144-7024 */
+.card-144-7024 {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.card-144-7024:hover, .card-144-7024.is-hover { background-color: var(--bg-bg-hover); }
+.card-144-7024:focus, .card-144-7024.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-144-7024:active, .card-144-7024.is-active { background-color: var(--bg-bg-active); }
+
+/* Card 43-18321 */
+.card-43-18321 {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.card-43-18321:hover, .card-43-18321.is-hover { background-color: var(--bg-bg-hover); }
+.card-43-18321:focus, .card-43-18321.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-43-18321:active, .card-43-18321.is-active { background-color: var(--bg-bg-active); }
+
+/* Card 66-2591 */
+.card-66-2591 {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.card-66-2591:hover, .card-66-2591.is-hover { background-color: var(--bg-bg-hover); }
+.card-66-2591:focus, .card-66-2591.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-66-2591:active, .card-66-2591.is-active { background-color: var(--bg-bg-active); }
+
+/* Card 56-6822 */
+.card-56-6822 {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.card-56-6822:hover, .card-56-6822.is-hover { background-color: var(--bg-bg-hover); }
+.card-56-6822:focus, .card-56-6822.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-56-6822:active, .card-56-6822.is-active { background-color: var(--bg-bg-active); }
+
+/* Card 143-5813 */
+.card-143-5813 {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.card-143-5813:hover, .card-143-5813.is-hover { background-color: var(--bg-bg-hover); }
+.card-143-5813:focus, .card-143-5813.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-143-5813:active, .card-143-5813.is-active { background-color: var(--bg-bg-active); }
+
+/* Card 21-5359 */
+.card-21-5359 {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.card-21-5359:hover, .card-21-5359.is-hover { background-color: var(--bg-bg-hover); }
+.card-21-5359:focus, .card-21-5359.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-21-5359:active, .card-21-5359.is-active { background-color: var(--bg-bg-active); }
+
+/* Card 21-6109 */
+.card-21-6109 {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.card-21-6109:hover, .card-21-6109.is-hover { background-color: var(--bg-bg-hover); }
+.card-21-6109:focus, .card-21-6109.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-21-6109:active, .card-21-6109.is-active { background-color: var(--bg-bg-active); }
+
+/* Card 21-5361 */
+.card-21-5361 {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.card-21-5361:hover, .card-21-5361.is-hover { background-color: var(--bg-bg-hover); }
+.card-21-5361:focus, .card-21-5361.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-21-5361:active, .card-21-5361.is-active { background-color: var(--bg-bg-active); }
+
+/* ======================
+   NON-CHART CARDS
+====================== */
+
+/* KPI / Stat */
+.card-stat-kpi {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+}
+.card-stat-kpi .card__value { margin: 0; }
+.card-stat-kpi:hover, .card-stat-kpi.is-hover { background-color: var(--bg-bg-hover); }
+.card-stat-kpi:focus, .card-stat-kpi.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-stat-kpi:active, .card-stat-kpi.is-active { background-color: var(--bg-bg-active); }
+
+/* Account Summary */
+.card-account-summary {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+}
+.card-account-summary .card__type { margin: 0 0 var(--spacing-2-rem) 0; opacity: 0.9; }
+.card-account-summary .card__value { margin: 0; }
+.card-account-summary:hover, .card-account-summary.is-hover { background-color: var(--bg-bg-hover); }
+.card-account-summary:focus, .card-account-summary.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-account-summary:active, .card-account-summary.is-active { background-color: var(--bg-bg-active); }
+
+/* Upcoming Bill / Due */
+.card-bill-due {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--warning-bg-subtle);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--warning-border);
+}
+.card-bill-due .card__value { margin: 0 0 var(--spacing-2-rem) 0; color: var(--warning-text); }
+.card-bill-due:hover, .card-bill-due.is-hover { background-color: var(--warning-bg-hover); }
+.card-bill-due:focus, .card-bill-due.is-focus { outline: var(--borderwidth-width-2) solid var(--warning-border-hover); outline-offset: 2px; }
+.card-bill-due:active, .card-bill-due.is-active { background-color: var(--warning-bg-active); }
+
+/* Goal Progress */
+.card-goal-progress {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--success-bg-subtle);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--success-border);
+}
+.card-goal-progress .goal-track { width:100%; height:10px; border-radius:999px; background: var(--success-bg); overflow:hidden; }
+.card-goal-progress .goal-fill { height:100%; background: var(--success-solid); }
+.card-goal-progress:hover, .card-goal-progress.is-hover { background-color: var(--success-bg-hover); }
+.card-goal-progress:focus, .card-goal-progress.is-focus { outline: var(--borderwidth-width-2) solid var(--success-border-hover); outline-offset: 2px; }
+.card-goal-progress:active, .card-goal-progress.is-active { background-color: var(--success-bg-active); }
+
+/* Advisor Tip */
+.card-advisor-tip {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+}
+.card-advisor-tip:hover, .card-advisor-tip.is-hover { background-color: var(--bg-bg-hover); }
+.card-advisor-tip:focus, .card-advisor-tip.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-advisor-tip:active, .card-advisor-tip.is-active { background-color: var(--bg-bg-active); }
+
+/* Transaction Item */
+.card-transaction-item {
+  display:flex; flex-direction:column;
+  min-width:168px; width:100%;
+  padding: var(--spacing-4-rem) var(--spacing-6-rem);
+  border-radius: var(--borderradius-rounded-xl-rem);
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  box-shadow: var(--drop-shadow-drop-shadow);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+}
+.card-transaction-item:hover, .card-transaction-item.is-hover { background-color: var(--bg-bg-hover); }
+.card-transaction-item:focus, .card-transaction-item.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
+.card-transaction-item:active, .card-transaction-item.is-active { background-color: var(--bg-bg-active); }

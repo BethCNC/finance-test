@@ -1,0 +1,26 @@
+/* Double Chart Component Styles */
+.double-chart {
+  width: 100%;
+  max-width: 400px;
+  background: var(--white);
+  border: var(--borderwidth-width-1) solid var(--gray-200);
+  border-radius: var(--borderradius-rounded-lg-rem);
+  padding: var(--spacing-6-rem);
+  display: flex;
+  gap: var(--spacing-6-rem);
+  align-items: center;
+}
+
+.pie-chart,
+.bar-chart {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}

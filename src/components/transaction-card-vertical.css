@@ -1,0 +1,62 @@
+/* Transaction Card Vertical Component Styles */
+.transaction-card-vertical {
+  width: 100%;
+  max-width: 200px;
+  background: var(--white);
+  border: var(--borderwidth-width-1) solid var(--gray-200);
+  border-radius: var(--borderradius-rounded-lg-rem);
+  padding: var(--spacing-4-rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3-rem);
+  align-items: flex-start;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.transaction-card-vertical:hover {
+  border-color: var(--gray-300);
+  box-shadow: var(--box-shadow-shadow-sm);
+}
+
+.transaction-icon {
+  align-self: flex-start;
+}
+
+.icon-background {
+  width: 40px;
+  height: 40px;
+  background: var(--purple-200);
+  border-radius: var(--borderradius-rounded-full-rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pink-500);
+}
+
+.category,
+.timestamp {
+  font-family: var(--font-family-base);
+  font-size: var(--text-sm-regular-size-rem);
+  font-weight: var(--text-sm-regular-weight);
+  color: var(--gray-500);
+  line-height: 1.4;
+}
+
+.merchant-name {
+  font-family: var(--font-family-base);
+  font-size: var(--text-lg-medium-size-rem);
+  font-weight: var(--text-lg-medium-weight);
+  color: var(--gray-800);
+  line-height: 1.4;
+  margin-top: var(--spacing-2-rem);
+}
+
+.amount {
+  font-family: var(--font-family-base);
+  font-size: var(--text-2xl-bold-size-rem);
+  font-weight: var(--text-2xl-bold-weight);
+  color: var(--gray-800);
+  line-height: 1.2;
+  margin-top: auto;
+  padding-top: var(--spacing-2-rem);
+}

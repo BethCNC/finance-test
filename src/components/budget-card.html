@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Card</title>
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="./budget-card.css">
+</head>
+<body>
+  <div class="budget-card">
+    <div class="budget-header">
+      <h2 class="budget-title">Total Budget</h2>
+      <div class="budget-amount">$4533.00</div>
+    </div>
+    
+    <div class="budget-progress">
+      <div class="progress-header">
+        <span class="progress-label">Overall Progress</span>
+        <span class="progress-percentage">85%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 85%"></div>
+      </div>
+    </div>
+    
+    <div class="budget-summary">
+      <div class="summary-card spent">
+        <div class="summary-label">Spent</div>
+        <div class="summary-amount">$3060</div>
+      </div>
+      <div class="summary-card remaining">
+        <div class="summary-label">Remaining</div>
+        <div class="summary-amount">$511</div>
+      </div>
+    </div>
+  </div>
+
+<script type="module">
+  import { createIcons } from "https://unpkg.com/lucide@latest?module";
+  createIcons();
+</script>
+</body>
+</html>

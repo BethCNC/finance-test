@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction Card - Horizontal</title>
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="./transaction-card-horizontal.css">
+</head>
+<body>
+  <div class="transaction-card-horizontal">
+    <div class="transaction-icon">
+        <div class="icon-background">
+          <i data-lucide="receipt"></i>
+        </div>
+    </div>
+    
+    <div class="transaction-details">
+      <div class="merchant-name">Shell Gas Station</div>
+      <div class="category">Auto</div>
+    </div>
+    
+    <div class="transaction-amount">
+      <div class="amount">-$40.88</div>
+      <div class="timestamp">Yesterday, 5:53 PM</div>
+    </div>
+  </div>
+
+<script type="module">
+  import { createIcons } from "https://unpkg.com/lucide@latest?module";
+  createIcons();
+</script>
+</body>
+</html>

@@ -1,16 +1,18 @@
 {
-  "name": "finance-practice-figma-integration",
-  "private": true,
-  "version": "0.1.0",
-  "description": "Utilities to fetch rich Figma file details and export to figma-export/",
+  "name": "finance-practice",
+  "version": "1.0.0",
+  "description": "Finance dashboard with Figma-extracted card components",
   "type": "module",
   "scripts": {
-    "figma:fetch": "node ./scripts/figma-fetch.js",
-    "figma:fetch:nodes": "node ./scripts/figma-fetch.js --nodes"
+    "start": "python3 -m http.server 5501",
+    "extract-figma": "node scripts/extract-figma-cards.js",
+    "extract-figma:file": "node scripts/extract-figma-cards.js $FILE_ID"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "minimist": "^1.2.8",
     "node-fetch": "^3.3.2"
-  }
+  },
+  "devDependencies": {},
+  "keywords": ["finance", "dashboard", "figma", "components"],
+  "author": "Beth",
+  "license": "MIT"
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insight Card</title>
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="./insight-card.css">
+</head>
+<body>
+  <div class="insight-card">
+    <div class="insight-icon">
+      <div class="icon-background">
+        <i data-lucide="sparkles"></i>
+      </div>
+    </div>
+    
+    <div class="insight-content">
+      <h3 class="insight-title">Your $83 under budget this month.</h3>
+      <p class="insight-question">Move that to savings?</p>
+      <button class="insight-cta">I can help you do that. Click Here!</button>
+    </div>
+  </div>
+
+<script type="module">
+  import { createIcons } from "https://unpkg.com/lucide@latest?module";
+  createIcons();
+</script>
+</body>
+</html>
