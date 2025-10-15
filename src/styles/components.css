@@ -762,8 +762,8 @@
 
   .alert-circle {
     position: relative;
-    width: 16px;
-    height: 16px;
+    width: var(--sizing-4-rem); /* Figma: 16px */
+    height: var(--sizing-4-rem); /* Figma: 16px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -772,10 +772,10 @@
 
   .alert-circle i,
   .alert-circle svg {
-    width: 16px;
-    height: 16px;
+    width: var(--sizing-4-rem); /* Figma: 16px */
+    height: var(--sizing-4-rem); /* Figma: 16px */
     display: block;
-    stroke-width: 2;
+    stroke-width: var(--borderwidth-width-2); /* Figma: 2px */
     fill: none;
   }
 
@@ -816,40 +816,51 @@
 /* ======================
    PROGRESS BAR COMPONENT
    Based on Figma design: node-id=41-12448
+   Component: "account progress bar" (category=personal variant)
+   Specs: 382px width, column layout with 4px gap
 ====================== */
 
-/* Main progress bar container */
+/* Main progress bar container
+   Figma: 382px width, 4px vertical gap between rows */
 .progress-bar {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-1-rem); /* 4px between rows */
-  width: 100%;
+  gap: var(--spacing-1-rem); /* Figma: 4px between rows */
+  width: var(--sizing-96-rem); /* Figma: 384px (closest to 382px) */
+  max-width: 100%;
   font-family: var(--font-family-base);
 }
 
-/* Top Row: Category label (left) and budget totals (right) */
+/* Top Row: Category label (left) and budget totals (right)
+   Figma: space-between layout with 77px gap */
 .progress-bar .top-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--spacing-2-rem);
+  gap: var(--spacing-20-rem); /* Figma: 77px (using 80px - closest available) */
 }
 
+/* Label section: icon + category title
+   Figma: 8px gap between icon and text */
 .progress-bar .progress-label {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2-rem); /* 8px between icon and text */
+  gap: var(--spacing-2-rem); /* Figma: 8px between icon and text */
 }
 
+/* Category title
+   Figma: text-base/semi bold (16px, 600 weight, 1.2em line-height), color #404040 */
 .progress-bar .category-title {
   margin: 0;
-  color: var(--fg-text);
+  color: var(--fg-text); /* Figma: #404040 */
 }
 
+/* Budget totals (right side of top row)
+   Figma: text-xs/regular (12px, 400 weight), 2px gap between elements */
 .progress-bar .budget-total {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: var(--spacing-0-5-rem); /* Figma: 2px gap */
   color: var(--fg-text);
 }
 
@@ -858,95 +869,102 @@
   width: 100%;
 }
 
-/* Progress track (background bar) */
+/* Progress track (background bar) 
+   Figma specs: 16px height, 9999px border-radius (fully rounded)
+   Background: #CBD5E1, Border: #525252 1px
+   Shadow: 0px 1px 1px rgba(0,0,0,0.06), 0px 1px 2px rgba(0,0,0,0.1) */
 .progress-track {
   width: 100%;
-  height: 16px;
-  background: var(--bg-bg-active); /* Light gray/blue background */
-  border: var(--borderwidth-width-1) solid var(--fg-border-strong);
-  border-radius: var(--borderradius-rounded-full-rem); /* Fully rounded */
+  height: var(--sizing-4-rem); /* Figma: 16px fixed height */
+  background: var(--bg-bg-active); /* Figma: #CBD5E1 (gray) for all categories */
+  border: var(--borderwidth-width-1) solid var(--fg-border-strong); /* Figma: 1px #525252 */
+  border-radius: var(--borderradius-rounded-full-rem); /* Figma: 9999px (fully rounded) */
   overflow: hidden;
   position: relative;
+  filter: var(--drop-shadow-drop-shadow); /* Figma drop shadow */
 }
 
-/* Progress fill (colored bar showing progress) */
+/* Progress fill (the colored portion) */
 .progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 0%;
-  background: var(--data-active-personal); /* fallback — overridden by category modifiers */
-  border: var(--borderwidth-width-1) solid var(--fg-border-strong);
   border-radius: var(--borderradius-rounded-full-rem);
-  transition: width 420ms cubic-bezier(.22,.9,.2,1);
+  transition: width 0.3s ease;
+  background: var(--data-active-personal); /* fallback — overridden by category modifiers */
 }
 
-/* Bottom Row: Percentage and remaining amount */
+
+/* Bottom Row: Percentage and remaining amount
+   Figma: space-between layout, 4px gap */
 .progress-bar .budget-detail {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--spacing-2-rem);
+  gap: var(--spacing-1-rem); /* Figma: 4px gap */
 }
 
+/* Left detail: percentage + alert icons
+   Figma: 4px gap between percentage and alert group */
 .progress-bar .left-detail {
   display: flex;
   align-items: center;
-  gap: var(--spacing-1-rem); /* 4px between percentage and alert icons */
+  gap: var(--spacing-1-rem); /* Figma: 4px between percentage and alert icons */
 }
 
+/* Percentage display
+   Figma: text-xs/medium (12px, 500 weight), color #404040 */
 .progress-bar .percentage {
   display: flex;
   align-items: baseline;
-  color: var(--fg-text);
+  color: var(--fg-text); /* Figma: #404040 */
 }
 
+/* Right detail: amount remaining
+   Figma: text-xs/regular (12px, 400 weight), 2px gap */
 .progress-bar .right-detail {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: var(--spacing-0-5-rem); /* Figma: 2px gap */
   color: var(--fg-text);
 }
 
 /* -------- Per-category mappings (use global tokens) --------
-   Use HTML like: <section class="progress-bar progress-bar--personal"> */
+   Use HTML like: <section class="progress-bar progress-bar--personal">
+   Note: All progress tracks use the same gray background (#CBD5E1) per Figma design.
+   Only the progress-fill color and category icon color change per category. */
+
 .progress-bar--personal  .progress-fill  { background: var(--data-active-personal); }
-.progress-bar--personal  .progress-track  { background: var(--data-default-personal); }
-.progress-bar--personal  .category-icons { color: var(--data-active-personal); }
+.progress-bar--personal  .category-icon svg { stroke: var(--data-active-personal) !important; }
 
 .progress-bar--software  .progress-fill  { background: var(--data-active-software); }
-.progress-bar--software  .progress-track  { background: var(--data-default-software); }
-.progress-bar--software  .category-icons { color: var(--data-active-software); }
+.progress-bar--software  .category-icon svg { stroke: var(--data-active-software) !important; }
 
 .progress-bar--health    .progress-fill  { background: var(--data-active-health); }
-.progress-bar--health    .progress-track  { background: var(--data-default-health); }
-.progress-bar--health    .category-icons { color: var(--data-active-health); }
+.progress-bar--health    .category-icon svg { stroke: var(--data-active-health) !important; }
 
 .progress-bar--entertainment  .progress-fill  { background: var(--data-active-entertainment); }
-.progress-bar--entertainment  .progress-track  { background: var(--data-default-entertainment); }
-.progress-bar--entertainment  .category-icons { color: var(--data-active-entertainment); }
+.progress-bar--entertainment  .category-icon svg { stroke: var(--data-active-entertainment) !important; }
 
 .progress-bar--auto      .progress-fill  { background: var(--data-active-auto); }
-.progress-bar--auto      .progress-track  { background: var(--data-default-auto); }
-.progress-bar--auto      .category-icons { color: var(--data-active-auto); }
+.progress-bar--auto      .category-icon svg { stroke: var(--data-active-auto) !important; }
 
 .progress-bar--food      .progress-fill  { background: var(--data-active-food); }
-.progress-bar--food      .progress-track  { background: var(--data-default-food); }
-.progress-bar--food      .category-icons { color: var(--data-active-food); }
+.progress-bar--food      .category-icon svg { stroke: var(--data-active-food) !important; }
 
 .progress-bar--george    .progress-fill  { background: var(--data-active-george); }
-.progress-bar--george    .progress-track  { background: var(--data-default-george); }
-.progress-bar--george    .category-icons { color: var(--data-active-george); }
+.progress-bar--george    .category-icon svg { stroke: var(--data-active-george) !important; }
 
 .progress-bar--home      .progress-fill  { background: var(--data-active-home); }
-.progress-bar--home      .progress-track  { background: var(--data-default-home); }
-.progress-bar--home      .category-icons { color: var(--data-active-home); }
+.progress-bar--home      .category-icon svg { stroke: var(--data-active-home) !important; }
 
-.progress-bar--utilites  .progress-fill  { background: var(--data-active-utilites); }
-.progress-bar--utilites  .progress-track  { background: var(--data-default-utilites); }
-.progress-bar--utilites  .category-icons { color: var(--data-active-utilites); }
+.progress-bar--utilities  .progress-fill  { background: var(--data-active-utilites); }
+.progress-bar--utilities  .category-icon svg { stroke: var(--data-active-utilites) !important; }
 
 .progress-bar--mortgage  .progress-fill  { background: var(--data-active-mortgage); }
-.progress-bar--mortgage  .progress-track  { background: var(--data-default-mortgage); }
-.progress-bar--mortgage  .category-icons { color: var(--data-active-mortgage); }
+.progress-bar--mortgage  .category-icon svg { stroke: var(--data-active-mortgage) !important; }
 
 /* ======================
    CATEGORY ICONS
@@ -985,21 +1003,21 @@
    Circle Style (30×30px container, 18×18px icon)
 -------------------------- */
 .category-icon--circle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  width: var(--sizing-8-rem); /* Figma: 30px (using 32px - closest available) */
+  height: var(--sizing-8-rem);
+  border-radius: var(--borderradius-rounded-full-rem); /* Fully rounded circle */
   /* Create a new stacking context so mix-blend-mode blends against the circle only */
   isolation: isolate;
 }
 
 .category-icon--circle i {
-  width: 18px;
-  height: 18px;
+  width: var(--sizing-4-rem); /* Figma: 18px (using 16px - closest available) */
+  height: var(--sizing-4-rem);
 }
 
 .category-icon--circle svg {
-  width: 18px;
-  height: 18px;
+  width: var(--sizing-4-rem);
+  height: var(--sizing-4-rem);
 }
 
 /* Blend the icon stroke with the circle background: prefer plus-darker; fallback to multiply */
@@ -1014,18 +1032,18 @@
    Icon-Only Style (18×18px icon)
 -------------------------- */
 .category-icon--icon-only {
-  width: 18px;
-  height: 18px;
+  width: var(--sizing-4-rem); /* Figma: 18px (using 16px - closest available) */
+  height: var(--sizing-4-rem);
 }
 
 .category-icon--icon-only i {
-  width: 18px;
-  height: 18px;
+  width: var(--sizing-4-rem);
+  height: var(--sizing-4-rem);
 }
 
 .category-icon--icon-only svg {
-  width: 18px;
-  height: 18px;
+  width: var(--sizing-4-rem);
+  height: var(--sizing-4-rem);
 }
 
 /* --------------------------

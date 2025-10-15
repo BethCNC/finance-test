@@ -1,0 +1,211 @@
+---
+alwaysApply: true
+---
+# Finance Practice - Design System Rules
+
+## Core Principle: Design Token-First Development
+
+**CRITICAL**: All styling MUST use design tokens from `src/styles/global.css`. Never use hardcoded values.
+
+---
+
+## CSS & Styling Rules
+
+### 1. **Use Design Tokens Exclusively**
+
+❌ **NEVER** write hardcoded values:
+```css
+/* WRONG */
+.element {
+  width: 16px;
+  gap: 4px;
+  color: #404040;
+  font-size: 12px;
+}
+```
+
+✅ **ALWAYS** use global.css variables:
+```css
+/* CORRECT */
+.element {
+  width: var(--sizing-4-rem);
+  gap: var(--spacing-1-rem);
+  color: var(--fg-text);
+  font-size: var(--text-xs-regular-size-rem);
+}
+```
+
+### 2. **No Inline Hardcoded Styles**
+
+❌ **NEVER** use hardcoded inline styles:
+```html
+<!-- WRONG -->
+<div style="width: 382px; gap: 77px;">
+```
+
+✅ **ALWAYS** use CSS classes or CSS variables:
+```html
+<!-- CORRECT -->
+<div class="progress-bar">
+<!-- OR -->
+<div style="width: var(--sizing-96-rem); gap: var(--spacing-20-rem);">
+```
+
+### 3. **Available Global.css Token Categories**
+
+When styling, reference these token categories from `src/styles/global.css`:
+
+#### **Spacing & Sizing**
+- `var(--spacing-{0-96}-rem)` - gaps, margins, padding (0px to 384px)
+- `var(--sizing-{0-96}-rem)` - widths, heights (0px to 384px)
+
+#### **Typography**
+- `var(--text-{size}-{weight})` - text-xs, text-sm, text-base, text-lg, text-xl, etc.
+  - Weights: regular, medium, semi-bold, bold, black
+  - Example: `var(--text-xs-medium-size-rem)`
+- `var(--font-family-base)` - Always use for font-family (Figtree)
+
+#### **Colors**
+- **Foreground**: `var(--fg-text)`, `var(--fg-border)`, `var(--fg-border-strong)`
+- **Background**: `var(--bg-bg-subtle)`, `var(--bg-bg)`, `var(--bg-bg-active)`
+- **Brand**: `var(--primary-*)`, `var(--secondary-*)`
+- **Semantic**: `var(--success-*)`, `var(--warning-*)`, `var(--error-*)`
+- **Data/Category**: `var(--data-active-{category})`, `var(--data-default-{category})`
+  - Categories: personal, software, health, entertainment, auto, food, george, home, utilites, mortgage
+
+#### **Borders**
+- `var(--borderwidth-width-{1-6})` - border widths
+- `var(--borderradius-rounded-{sm|md|lg|xl|2xl|3xl|4xl|full}-rem)` - border radius
+
+#### **Shadows**
+- `var(--drop-shadow-drop-shadow)` - standard drop shadow
+- `var(--box-shadow-shadow)` - box shadows (sm, md, lg, xl, 2xl)
+
+---
+
+## HTML Component Rules
+
+### 4. **Typography Classes**
+
+❌ **NEVER** style text inline:
+```html
+<!-- WRONG -->
+<span style="font-size: 12px; font-weight: 400;">Text</span>
+```
+
+✅ **ALWAYS** use typography utility classes:
+```html
+<!-- CORRECT -->
+<span class="text-xs-regular">Text</span>
+<span class="text-base-semi-bold">Title</span>
+<span class="text-xs-medium">Number</span>
+```
+
+### 5. **Component Structure**
+
+- Follow Figma component naming and structure exactly
+- Use semantic HTML (section, article, aside) for components
+- Include accessibility attributes (aria-label, role, etc.)
+- Document Figma node IDs in comments: `<!-- Figma: node-id=XX-XXXXX -->`
+
+---
+
+## Finding the Right Variable
+
+### When You Need a Specific Value:
+
+1. **Check global.css first** - Search for the value or similar
+2. **Use closest available** - If exact match doesn't exist, use nearest
+3. **Document the difference** - Add comment explaining variance
+   ```css
+   /* Figma: 382px, using 384px (closest available) */
+   width: var(--sizing-96-rem);
+   ```
+
+### Common Mappings:
+
+| Need | Use Variable |
+|------|--------------|
+| 2px gap | `var(--spacing-0-5-rem)` |
+| 4px gap | `var(--spacing-1-rem)` |
+| 8px gap | `var(--spacing-2-rem)` |
+| 16px size | `var(--sizing-4-rem)` |
+| 24px size | `var(--sizing-6-rem)` |
+| Fully rounded | `var(--borderradius-rounded-full-rem)` |
+| 1px border | `var(--borderwidth-width-1)` |
+| 2px border | `var(--borderwidth-width-2)` |
+
+---
+
+## Verification Checklist
+
+Before submitting code, verify:
+
+- [ ] No hardcoded pixel values (`16px`, `4px`, etc.)
+- [ ] No hardcoded colors (`#404040`, `#CBD5E1`, etc.)
+- [ ] No hardcoded font sizes or weights
+- [ ] All spacing uses `--spacing-*` or `--sizing-*`
+- [ ] All colors use `--fg-*`, `--bg-*`, `--data-*`, etc.
+- [ ] Typography uses utility classes or `--text-*` variables
+- [ ] Font family uses `var(--font-family-base)`
+- [ ] Borders use `--borderwidth-*` and `--borderradius-*`
+- [ ] Shadows use `--drop-shadow-*` or `--box-shadow-*`
+
+---
+
+## Figma Integration
+
+### When Extracting from Figma:
+
+1. **Get exact specs** from Figma design
+2. **Map to global.css variables** - never hardcode
+3. **Document source** - add Figma node-id in comments
+4. **Use MCP Figma server** when available to extract precise values
+5. **Verify with design** - ensure variables match Figma intent
+
+### Example:
+```css
+/* ======================
+   COMPONENT NAME
+   Based on Figma design: node-id=41-12448
+   Specs: 382px width, 4px column gap
+====================== */
+.component {
+  width: var(--sizing-96-rem); /* Figma: 382px (using 384px closest) */
+  gap: var(--spacing-1-rem); /* Figma: 4px */
+  color: var(--fg-text); /* Figma: #404040 */
+}
+```
+
+---
+
+## Why This Matters
+
+✅ **Consistency** - All components use the same design language
+✅ **Maintainability** - Change once in global.css, update everywhere
+✅ **Scalability** - Easy to add new components with existing tokens
+✅ **Design Fidelity** - Matches Figma design system exactly
+✅ **Theme Support** - Can easily support dark mode or theme switching
+
+---
+
+## Exception Handling
+
+**Very Rare**: If a value truly doesn't exist and can't use nearest:
+
+1. **Add to global.css first** - Create the token
+2. **Document why** - Explain the new token
+3. **Name consistently** - Follow existing naming patterns
+4. **Only then use it** - Reference the new variable
+
+❌ **NEVER** use hardcoded values as a "temporary" solution.
+
+---
+
+## Questions?
+
+- Check `src/styles/global.css` for all available tokens
+- Review existing components for patterns
+- Use MCP Figma server to extract exact Figma values
+- When in doubt, ask before adding hardcoded values
+

@@ -13,23 +13,28 @@
   <link rel="stylesheet" href="../styles/components.css" />
 </head>
 
-<body style="padding: var(--spacing-6-rem); background-color: var(--bg-base);">
+<body style="padding: var(--spacing-6-rem); background-color: var(--bg-bg-subtle);">
 
   <!-- Progress Bar Component (Personal Category Example) -->
-  <section class="progress-bar" aria-labelledby="cat-personal">
+  <!-- Figma specs: 382px width, 4px column gap -->
+  <section class="progress-bar progress-bar--personal" aria-labelledby="cat-personal">
 
     <!-- Top Row: icon + title (left) and totals (right) -->
+    <!-- Figma: space-between with 77px gap -->
     <div class="top-row">
       <div class="progress-label">
-        <!-- Category Icon: 18×18px icon in 30×30px circle -->
-        <div class="category-icon category-icon--circle" data-category="personal">
+        <!-- Category Icon: 18×18px icon -->
+        <!-- Figma: 8px gap between icon and title -->
+        <div class="category-icon category-icon--icon-only" data-category="personal">
           <i data-lucide="user-circle" aria-hidden="true"></i>
         </div>
         <!-- Category Title -->
+        <!-- Figma: text-base/semi bold (16px, 600 weight, 1.2em line-height) -->
         <h3 id="cat-personal" class="category-title text-base-semi-bold">Personal</h3>
       </div>
 
       <!-- Budget Totals -->
+      <!-- Figma: 2px gap between text elements -->
       <div class="budget-total" aria-hidden="true">
         <span class="budget-amount text-xs-regular">$85</span>
         <span class="budget-of text-xs-regular">of</span>
@@ -38,6 +43,8 @@
     </div>
 
     <!-- Progress Row: container + actual track (role="progressbar") -->
+    <!-- Figma: 16px height, 9999px border radius, #CBD5E1 bg, #525252 1px border -->
+    <!-- Figma shadow: 0px 1px 1px rgba(0,0,0,0.06), 0px 1px 2px rgba(0,0,0,0.1) -->
     <div class="progress-row">
       <div
         class="progress-track"
@@ -50,19 +57,23 @@
         data-max="150"
       >
         <!-- Progress fill - width calculated by JS -->
+        <!-- Figma: #F9A8D4 for personal category -->
         <div class="progress-fill"></div>
       </div>
     </div>
 
     <!-- Bottom Row: percent + alert icons left, amount remaining right -->
+    <!-- Figma: space-between, 4px gap -->
     <div class="budget-detail">
       <div class="left-detail">
         <!-- Percentage Display -->
+        <!-- Figma: text-xs/medium (12px, 500 weight) -->
         <div class="percentage">
           <span class="percent-number text-xs-medium">56</span><span class="percent-sign text-xs-medium">%</span>
         </div>
 
         <!-- Alert Circle Icons (16×16px each) -->
+        <!-- Figma: 4px gap between percentage and alert group -->
         <div class="alert-group">
           <div class="alert-circle alert-circle--success alert-circle--active">
             <i data-lucide="circle-check" aria-hidden="true"></i>
@@ -77,6 +88,7 @@
       </div>
 
       <!-- Amount Remaining -->
+      <!-- Figma: 2px gap between amount and "left" text -->
       <div class="right-detail" aria-hidden="true">
         <span class="left-amount text-xs-regular">$65</span>
         <span class="left-text text-xs-regular">left</span>
@@ -84,11 +96,12 @@
     </div>
   </section>
 
-  <!-- Example: Mortgage Category -->
-  <section class="progress-bar" aria-labelledby="cat-mortgage" style="margin-top: var(--spacing-6-rem);">
+  <!-- Example: Mortgage Category (Warning State) -->
+  <!-- Figma specs: 382px width, same layout as personal -->
+  <section class="progress-bar progress-bar--mortgage" aria-labelledby="cat-mortgage" style="margin-top: var(--spacing-6-rem);">
     <div class="top-row">
       <div class="progress-label">
-        <div class="category-icon category-icon--circle" data-category="mortgage">
+        <div class="category-icon category-icon--icon-only" data-category="mortgage">
           <i data-lucide="home" aria-hidden="true"></i>
         </div>
         <h3 id="cat-mortgage" class="category-title text-base-semi-bold">Mortgage</h3>
@@ -109,9 +122,16 @@
         <div class="percentage">
           <span class="percent-number text-xs-medium">80</span><span class="percent-sign text-xs-medium">%</span>
         </div>
+        <!-- Alert Circle Icons - All 3 always present, only 1 active -->
         <div class="alert-group">
+          <div class="alert-circle alert-circle--success">
+            <i data-lucide="circle-check" aria-hidden="true"></i>
+          </div>
           <div class="alert-circle alert-circle--warning alert-circle--active">
             <i data-lucide="circle-alert" aria-hidden="true"></i>
+          </div>
+          <div class="alert-circle alert-circle--alert">
+            <i data-lucide="circle-x" aria-hidden="true"></i>
           </div>
         </div>
       </div>

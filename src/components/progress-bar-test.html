@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress Bar Component - All Categories Test</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../styles/global.css" />
+  <link rel="stylesheet" href="../styles/components.css" />
+</head>
+
+<body style="padding: var(--spacing-8-rem); background-color: var(--bg-bg-subtle);">
+  
+  <header style="margin-bottom: var(--spacing-8-rem);">
+    <h1 class="text-3xl-bold" style="margin-bottom: var(--spacing-2-rem);">Progress Bar Components</h1>
+    <p class="text-base-regular" style="color: var(--fg-text);">
+      All category variants from Figma design
+      <br>
+      <a href="https://www.figma.com/design/zksBuILVajtp60Oca28Vnl/Family-Finance-Manager?node-id=41-12449&m=dev" 
+         style="color: var(--primary-text); text-decoration: underline;">
+        View in Figma
+      </a>
+    </p>
+  </header>
+
+  <div style="display: grid; gap: var(--spacing-6-rem); max-width: 800px;">
+
+    <!-- Personal -->
+    <section class="progress-bar progress-bar--personal" aria-labelledby="cat-personal">
+      <div class="top-row">
+        <div class="progress-label">
+          <div class="category-icon category-icon--icon-only" data-category="personal">
+            <i data-lucide="user-circle" aria-hidden="true"></i>
+          </div>
+          <h3 id="cat-personal" class="category-title text-base-semi-bold">Personal</h3>
+        </div>
+        <div class="budget-total" aria-hidden="true">
+          <span class="budget-amount text-xs-regular">$85</span>
+          <span class="budget-of text-xs-regular">of</span>
+          <span class="budget-max text-xs-regular">$150</span>
+        </div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-track" role="progressbar" aria-label="Personal budget progress" 
+             aria-valuenow="85" aria-valuemin="0" aria-valuemax="150" data-value="85" data-max="150">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="budget-detail">
+        <div class="left-detail">
+          <div class="percentage">
+            <span class="percent-number text-xs-medium">56</span><span class="percent-sign text-xs-medium">%</span>
+          </div>
+          <div class="alert-group">
+            <div class="alert-circle alert-circle--success alert-circle--active">
+              <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--warning">
+              <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--alert">
+              <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="right-detail" aria-hidden="true">
+          <span class="left-amount text-xs-regular">$65</span>
+          <span class="left-text text-xs-regular">left</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Software -->
+    <section class="progress-bar progress-bar--software" aria-labelledby="cat-software">
+      <div class="top-row">
+        <div class="progress-label">
+          <div class="category-icon category-icon--icon-only" data-category="software">
+            <i data-lucide="server" aria-hidden="true"></i>
+          </div>
+          <h3 id="cat-software" class="category-title text-base-semi-bold">Software</h3>
+        </div>
+        <div class="budget-total" aria-hidden="true">
+          <span class="budget-amount text-xs-regular">$120</span>
+          <span class="budget-of text-xs-regular">of</span>
+          <span class="budget-max text-xs-regular">$200</span>
+        </div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-track" role="progressbar" aria-label="Software budget progress" 
+             aria-valuenow="120" aria-valuemin="0" aria-valuemax="200" data-value="120" data-max="200">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="budget-detail">
+        <div class="left-detail">
+          <div class="percentage">
+            <span class="percent-number text-xs-medium">60</span><span class="percent-sign text-xs-medium">%</span>
+          </div>
+          <div class="alert-group">
+            <div class="alert-circle alert-circle--success alert-circle--active">
+              <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--warning">
+              <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--alert">
+              <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="right-detail" aria-hidden="true">
+          <span class="left-amount text-xs-regular">$80</span>
+          <span class="left-text text-xs-regular">left</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Health -->
+    <section class="progress-bar progress-bar--health" aria-labelledby="cat-health">
+      <div class="top-row">
+        <div class="progress-label">
+          <div class="category-icon category-icon--icon-only" data-category="health">
+            <i data-lucide="heart-pulse" aria-hidden="true"></i>
+          </div>
+          <h3 id="cat-health" class="category-title text-base-semi-bold">Health</h3>
+        </div>
+        <div class="budget-total" aria-hidden="true">
+          <span class="budget-amount text-xs-regular">$45</span>
+          <span class="budget-of text-xs-regular">of</span>
+          <span class="budget-max text-xs-regular">$100</span>
+        </div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-track" role="progressbar" aria-label="Health budget progress" 
+             aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" data-value="45" data-max="100">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="budget-detail">
+        <div class="left-detail">
+          <div class="percentage">
+            <span class="percent-number text-xs-medium">45</span><span class="percent-sign text-xs-medium">%</span>
+          </div>
+          <div class="alert-group">
+            <div class="alert-circle alert-circle--success alert-circle--active">
+              <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--warning">
+              <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--alert">
+              <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="right-detail" aria-hidden="true">
+          <span class="left-amount text-xs-regular">$55</span>
+          <span class="left-text text-xs-regular">left</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Entertainment -->
+    <section class="progress-bar progress-bar--entertainment" aria-labelledby="cat-entertainment">
+      <div class="top-row">
+        <div class="progress-label">
+          <div class="category-icon category-icon--icon-only" data-category="entertainment">
+            <i data-lucide="party-popper" aria-hidden="true"></i>
+          </div>
+          <h3 id="cat-entertainment" class="category-title text-base-semi-bold">Entertainment</h3>
+        </div>
+        <div class="budget-total" aria-hidden="true">
+          <span class="budget-amount text-xs-regular">$180</span>
+          <span class="budget-of text-xs-regular">of</span>
+          <span class="budget-max text-xs-regular">$250</span>
+        </div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-track" role="progressbar" aria-label="Entertainment budget progress" 
+             aria-valuenow="180" aria-valuemin="0" aria-valuemax="250" data-value="180" data-max="250">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="budget-detail">
+        <div class="left-detail">
+          <div class="percentage">
+            <span class="percent-number text-xs-medium">72</span><span class="percent-sign text-xs-medium">%</span>
+          </div>
+          <div class="alert-group">
+            <div class="alert-circle alert-circle--success alert-circle--active">
+              <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--warning">
+              <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--alert">
+              <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="right-detail" aria-hidden="true">
+          <span class="left-amount text-xs-regular">$70</span>
+          <span class="left-text text-xs-regular">left</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Auto -->
+    <section class="progress-bar progress-bar--auto" aria-labelledby="cat-auto">
+      <div class="top-row">
+        <div class="progress-label">
+          <div class="category-icon category-icon--icon-only" data-category="auto">
+            <i data-lucide="car" aria-hidden="true"></i>
+          </div>
+          <h3 id="cat-auto" class="category-title text-base-semi-bold">Auto</h3>
+        </div>
+        <div class="budget-total" aria-hidden="true">
+          <span class="budget-amount text-xs-regular">$220</span>
+          <span class="budget-of text-xs-regular">of</span>
+          <span class="budget-max text-xs-regular">$300</span>
+        </div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-track" role="progressbar" aria-label="Auto budget progress" 
+             aria-valuenow="220" aria-valuemin="0" aria-valuemax="300" data-value="220" data-max="300">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="budget-detail">
+        <div class="left-detail">
+          <div class="percentage">
+            <span class="percent-number text-xs-medium">73</span><span class="percent-sign text-xs-medium">%</span>
+          </div>
+          <div class="alert-group">
+            <div class="alert-circle alert-circle--success">
+              <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--warning alert-circle--active">
+              <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--alert">
+              <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="right-detail" aria-hidden="true">
+          <span class="left-amount text-xs-regular">$80</span>
+          <span class="left-text text-xs-regular">left</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food -->
+    <section class="progress-bar progress-bar--food" aria-labelledby="cat-food">
+      <div class="top-row">
+        <div class="progress-label">
+          <div class="category-icon category-icon--icon-only" data-category="food">
+            <i data-lucide="apple" aria-hidden="true"></i>
+          </div>
+          <h3 id="cat-food" class="category-title text-base-semi-bold">Food</h3>
+        </div>
+        <div class="budget-total" aria-hidden="true">
+          <span class="budget-amount text-xs-regular">$450</span>
+          <span class="budget-of text-xs-regular">of</span>
+          <span class="budget-max text-xs-regular">$600</span>
+        </div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-track" role="progressbar" aria-label="Food budget progress" 
+             aria-valuenow="450" aria-valuemin="0" aria-valuemax="600" data-value="450" data-max="600">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="budget-detail">
+        <div class="left-detail">
+          <div class="percentage">
+            <span class="percent-number text-xs-medium">75</span><span class="percent-sign text-xs-medium">%</span>
+          </div>
+          <div class="alert-group">
+            <div class="alert-circle alert-circle--success">
+              <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--warning alert-circle--active">
+              <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--alert">
+              <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="right-detail" aria-hidden="true">
+          <span class="left-amount text-xs-regular">$150</span>
+          <span class="left-text text-xs-regular">left</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- George -->
+    <section class="progress-bar progress-bar--george" aria-labelledby="cat-george">
+      <div class="top-row">
+        <div class="progress-label">
+          <div class="category-icon category-icon--icon-only" data-category="george">
+            <i data-lucide="dog" aria-hidden="true"></i>
+          </div>
+          <h3 id="cat-george" class="category-title text-base-semi-bold">George</h3>
+        </div>
+        <div class="budget-total" aria-hidden="true">
+          <span class="budget-amount text-xs-regular">$35</span>
+          <span class="budget-of text-xs-regular">of</span>
+          <span class="budget-max text-xs-regular">$100</span>
+        </div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-track" role="progressbar" aria-label="George budget progress" 
+             aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" data-value="35" data-max="100">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="budget-detail">
+        <div class="left-detail">
+          <div class="percentage">
+            <span class="percent-number text-xs-medium">35</span><span class="percent-sign text-xs-medium">%</span>
+          </div>
+          <div class="alert-group">
+            <div class="alert-circle alert-circle--success alert-circle--active">
+              <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--warning">
+              <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--alert">
+              <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="right-detail" aria-hidden="true">
+          <span class="left-amount text-xs-regular">$65</span>
+          <span class="left-text text-xs-regular">left</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home Reno -->
+    <section class="progress-bar progress-bar--home" aria-labelledby="cat-home">
+      <div class="top-row">
+        <div class="progress-label">
+          <div class="category-icon category-icon--icon-only" data-category="home-reno">
+            <i data-lucide="wrench" aria-hidden="true"></i>
+          </div>
+          <h3 id="cat-home" class="category-title text-base-semi-bold">Home Reno</h3>
+        </div>
+        <div class="budget-total" aria-hidden="true">
+          <span class="budget-amount text-xs-regular">$850</span>
+          <span class="budget-of text-xs-regular">of</span>
+          <span class="budget-max text-xs-regular">$1000</span>
+        </div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-track" role="progressbar" aria-label="Home Reno budget progress" 
+             aria-valuenow="850" aria-valuemin="0" aria-valuemax="1000" data-value="850" data-max="1000">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="budget-detail">
+        <div class="left-detail">
+          <div class="percentage">
+            <span class="percent-number text-xs-medium">85</span><span class="percent-sign text-xs-medium">%</span>
+          </div>
+          <div class="alert-group">
+            <div class="alert-circle alert-circle--success">
+              <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--warning alert-circle--active">
+              <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--alert">
+              <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="right-detail" aria-hidden="true">
+          <span class="left-amount text-xs-regular">$150</span>
+          <span class="left-text text-xs-regular">left</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Utilities -->
+    <section class="progress-bar progress-bar--utilites" aria-labelledby="cat-utilities">
+      <div class="top-row">
+        <div class="progress-label">
+          <div class="category-icon category-icon--icon-only" data-category="utilities">
+            <i data-lucide="plug" aria-hidden="true"></i>
+          </div>
+          <h3 id="cat-utilities" class="category-title text-base-semi-bold">Utilities</h3>
+        </div>
+        <div class="budget-total" aria-hidden="true">
+          <span class="budget-amount text-xs-regular">$380</span>
+          <span class="budget-of text-xs-regular">of</span>
+          <span class="budget-max text-xs-regular">$400</span>
+        </div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-track" role="progressbar" aria-label="Utilities budget progress" 
+             aria-valuenow="380" aria-valuemin="0" aria-valuemax="400" data-value="380" data-max="400">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="budget-detail">
+        <div class="left-detail">
+          <div class="percentage">
+            <span class="percent-number text-xs-medium">95</span><span class="percent-sign text-xs-medium">%</span>
+          </div>
+          <div class="alert-group">
+            <div class="alert-circle alert-circle--success">
+              <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--warning">
+              <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--alert alert-circle--active">
+              <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="right-detail" aria-hidden="true">
+          <span class="left-amount text-xs-regular">$20</span>
+          <span class="left-text text-xs-regular">left</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mortgage -->
+    <section class="progress-bar progress-bar--mortgage" aria-labelledby="cat-mortgage">
+      <div class="top-row">
+        <div class="progress-label">
+          <div class="category-icon category-icon--icon-only" data-category="mortgage">
+            <i data-lucide="home" aria-hidden="true"></i>
+          </div>
+          <h3 id="cat-mortgage" class="category-title text-base-semi-bold">Mortgage</h3>
+        </div>
+        <div class="budget-total" aria-hidden="true">
+          <span class="budget-amount text-xs-regular">$1450</span>
+          <span class="budget-of text-xs-regular">of</span>
+          <span class="budget-max text-xs-regular">$1500</span>
+        </div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-track" role="progressbar" aria-label="Mortgage budget progress" 
+             aria-valuenow="1450" aria-valuemin="0" aria-valuemax="1500" data-value="1450" data-max="1500">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="budget-detail">
+        <div class="left-detail">
+          <div class="percentage">
+            <span class="percent-number text-xs-medium">97</span><span class="percent-sign text-xs-medium">%</span>
+          </div>
+          <div class="alert-group">
+            <div class="alert-circle alert-circle--success">
+              <i data-lucide="circle-check" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--warning">
+              <i data-lucide="circle-alert" aria-hidden="true"></i>
+            </div>
+            <div class="alert-circle alert-circle--alert alert-circle--active">
+              <i data-lucide="circle-x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="right-detail" aria-hidden="true">
+          <span class="left-amount text-xs-regular">$50</span>
+          <span class="left-text text-xs-regular">left</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Lucide + script to compute percent & width from data-attributes -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=> {
+      // Initialize lucide icons (turn <i data-lucide="..."> into SVG)
+      if (window.lucide) lucide.createIcons();
+
+      // Compute percent for every progress-track on the page
+      document.querySelectorAll('.progress-track').forEach((track) => {
+        const value = Number(track.dataset.value) || 0;
+        const max = Number(track.dataset.max) || 100;
+        const pct = Math.max(0, Math.min(100, (value / max) * 100));
+        const fill = track.querySelector('.progress-fill');
+        if (fill) fill.style.width = pct + '%';   // Visual fill
+        track.setAttribute('aria-valuenow', String(value)); // Accessibility update
+
+        // Update visible percent inside the same progress-bar wrapper
+        const wrapper = track.closest('.progress-bar');
+        const pctEl = wrapper?.querySelector('.percent-number');
+        if (pctEl) pctEl.textContent = String(Math.round(pct));
+      });
+    });
+  </script>
+</body>
+</html>
+

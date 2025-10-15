@@ -1571,7 +1571,7 @@
   --error-on-warning: var(--white);
 
   --data-active-fees: var(--gray-400);
-  --data-active-personal: var(--pink-400);
+  --data-active-personal: var(--pink-300); /* Figma: #f9a8d4 */
   --data-active-software: var(--fuchsia-400);
   --data-active-health: var(--purple-400);
   --data-active-entertainment: var(--blue-400);
@@ -1581,6 +1581,22 @@
   --data-active-home: var(--yellow-400);
   --data-active-utilites: var(--orange-400);
   --data-active-mortgage: var(--colors-red-400);
+
+  /* SEMANTIC - BANK TOKENS */
+  /* Security (SECU) Bank */
+  --bank-secu-solid: #2a91ea;
+  --bank-secu-hover: #1473c4;
+  --bank-secu-active: #105c9e;
+
+  /* Cash App Bank */
+  --bank-cash-app-solid: #00d632;
+  --bank-cash-app-hover: #00b029;
+  --bank-cash-app-active: #008a20;
+
+  /* Apple Cash Bank */
+  --bank-apple-cash-solid: #0a0a0a;
+  --bank-apple-cash-hover: #292929;
+  --bank-apple-cash-active: #333333;
 
 }
 

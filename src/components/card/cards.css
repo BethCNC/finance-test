@@ -766,7 +766,7 @@
 .bank-logo-container {
   width: 100%;
   height: 100%;
-  background: #1477cc; /* Default: SECU Checking */
+  background: var(--bank-secu-hover); /* Default: SECU Checking */
   border-radius: var(--borderradius-rounded-full-rem);
   display: flex;
   align-items: center;
@@ -782,19 +782,19 @@
 
 /* Bank type variants - background colors */
 .bank-logo[data-bank="secu-checking"] .bank-logo-container {
-  background: #1477cc;
+  background: var(--bank-secu-hover);
 }
 
 .bank-logo[data-bank="secu-savings"] .bank-logo-container {
-  background: #0f5999;
+  background: var(--bank-secu-active);
 }
 
 .bank-logo[data-bank="secu-credit"] .bank-logo-container {
-  background: #0a3c66;
+  background: var(--bank-secu-active);
 }
 
 .bank-logo[data-bank="apple-cash"] .bank-logo-container {
-  background: #000000;
+  background: var(--bank-apple-cash-solid);
 }
 
 .bank-logo[data-bank="apple-cash"] .bank-logo-container img {
@@ -803,7 +803,7 @@
 }
 
 .bank-logo[data-bank="cash-app"] .bank-logo-container {
-  background: #00d632;
+  background: var(--bank-cash-app-solid);
 }
 
 .bank-logo[data-bank="cash-app"] .bank-logo-container img {
