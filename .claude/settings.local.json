@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__figma__get_design_context",
+      "mcp__figma__get_screenshot",
+      "mcp__figma__get_metadata",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat(cards): add Figma-extracted card components and update project structure\n\nAdd 10 new card components extracted from Figma design:\n- advisor-card: informational card with icon and description\n- balance-pie-chart: visual chart component for balance display\n- budget-card: budget summary with progress indicator\n- card-info-item: reusable info card with optional icon, label, and value\n- double-chart: dual chart display component\n- goals-card: financial goals tracking card\n- insight-card: insights and recommendations card\n- subscription-card: subscription tracking card\n- transaction-card-horizontal: horizontal transaction layout\n- transaction-card-vertical: vertical transaction layout\n\nAdd Figma extraction tooling:\n- scripts/extract-figma-cards.js: bulk card extraction utility\n- scripts/fetch-node.js: single node fetch utility\n\nUpdate package.json:\n- Add start script (python http.server)\n- Update project metadata and dependencies\n- Add Figma extraction scripts\n\nRemove deprecated components:\n- Old account-balance, alert-circle, button, category-icon, header,\n  icon-button, nav-item, navbar, progress-bar components\n\nAll card components use:\n- Design tokens from global.css\n- Lucide icons (UMD version)\n- Consistent HTML/CSS structure\n- Drop shadow medium on card-info-item\n- 2px stroke width for icons\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(for:*)",
+      "Bash(do)",
+      "Bash(if [ -f \"$file\" ])",
+      "Bash(then)",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(git restore:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat(cards): restore deleted components, update cards with Figma designs, and add Figtree font\n\nRestore accidentally deleted components:\n- Restore button, category-icon, header, icon-button, nav-item, navbar, progress-bar components\n\nUpdate budget and subscription cards to match Figma:\n- Restructure budget-card to use card-info-item components for Spent/Remaining\n- Update subscription-card with centered header and progress bar\n- Add proper content wrapper sections with correct spacing (spacing/6)\n- Update progress bars to 16px height with borders and drop shadows\n- Use correct token colors (bg-bg, primary-border-strong, secondary-text)\n\nTypography improvements:\n- Add Figtree font import (Google Fonts) to all 19 component HTML files\n- Replace manual font styling with text utility classes from global.css\n- Use .text-4xl-bold for large amounts\n- Use .text-base-semi-bold for titles and labels\n- Use .text-xs-regular for percentages\n- Remove redundant CSS font properties in favor of utility classes\n\nIcon and visual updates:\n- Switch all cards from Lucide ES modules to UMD version for reliability\n- Update advisor-card to use UMD Lucide\n- Add drop-shadow-drop-shadow to all card components\n- Update card-info-item with proper 2px icon stroke width\n- Fix icon visibility issues\n\nCard-specific updates:\n- budget-card: 16px progress bar, proper borders, uses card-info-item components\n- subscription-card: fuchsia theme (secondary-solid), 16px rounded corners\n- card-info-item: drop-shadow-md, centered layout, optional icon support\n- All cards: consistent drop shadow and proper design token usage\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

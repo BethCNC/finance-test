@@ -3,30 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transaction Card - Horizontal</title>
+  <title>Transaction Card - Vertical</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/global.css">
-  <link rel="stylesheet" href="./transaction-card-horizontal.css">
+  <link rel="stylesheet" href="../../styles/global.css">
+  <link rel="stylesheet" href="./cards.css">
 </head>
 <body>
-  <div class="transaction-card-horizontal">
+  <div class="transaction-card-vertical">
     <div class="transaction-icon">
         <div class="icon-background">
           <i data-lucide="receipt"></i>
         </div>
     </div>
     
-    <div class="transaction-details">
-      <div class="merchant-name body-md">Shell Gas Station</div>
-      <div class="category body-sm">Auto</div>
-    </div>
-    
-    <div class="transaction-amount">
-      <div class="amount body-md">-$40.88</div>
-      <div class="timestamp body-sm">Yesterday, 5:53 PM</div>
-    </div>
+    <div class="category body-sm">Auto</div>
+    <div class="timestamp body-sm">Yesterday, 5:53 PM</div>
+    <div class="merchant-name body-lg">Shell Gas Station</div>
+    <div class="amount h3">-$40.88</div>
   </div>
 
 <script type="module">
@@ -35,3 +30,4 @@
 </script>
 </body>
 </html>
+
