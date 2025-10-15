@@ -813,52 +813,98 @@
     gap: var(--spacing-1-rem); /* 4px */
   }
 
-/* progress bar — use global data tokens (default / active) */
-/* Tracks use the 'default' (muted) token; fills and accents use 'active' token */
+/* ======================
+   PROGRESS BAR COMPONENT
+   Based on Figma design: node-id=41-12448
+====================== */
 
+/* Main progress bar container */
 .progress-bar {
-  display:flex;
-  flex-direction:column;
-  gap:0.5rem;
-  padding:0.75rem;
-  background:var(--bg-bg-subtle);
-  border-radius:var(--borderradius-rounded-md);
-  width:100%;
-  font-family:var(--font-family-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1-rem); /* 4px between rows */
+  width: 100%;
+  font-family: var(--font-family-base);
 }
 
-/* Track & fill basics */
+/* Top Row: Category label (left) and budget totals (right) */
+.progress-bar .top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2-rem);
+}
+
+.progress-bar .progress-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2-rem); /* 8px between icon and text */
+}
+
+.progress-bar .category-title {
+  margin: 0;
+  color: var(--fg-text);
+}
+
+.progress-bar .budget-total {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--fg-text);
+}
+
+/* Progress Row: Container for the progress track */
+.progress-bar .progress-row {
+  width: 100%;
+}
+
+/* Progress track (background bar) */
 .progress-track {
-  width:100%;
-  height:10px;
-  background:var(--neutral-100);
-  border-radius:999px;
-  overflow:hidden;
-  position:relative;
+  width: 100%;
+  height: 16px;
+  background: var(--bg-bg-active); /* Light gray/blue background */
+  border: var(--borderwidth-width-1) solid var(--fg-border-strong);
+  border-radius: var(--borderradius-rounded-full-rem); /* Fully rounded */
+  overflow: hidden;
+  position: relative;
 }
 
+/* Progress fill (colored bar showing progress) */
 .progress-fill {
-  height:100%;
-  width:0%;
-  border-radius:999px;
-  transition:width 420ms cubic-bezier(.22,.9,.2,1);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
-  background:var(--data-active-personal); /* fallback — overridden by modifiers below */
+  height: 100%;
+  width: 0%;
+  background: var(--data-active-personal); /* fallback — overridden by category modifiers */
+  border: var(--borderwidth-width-1) solid var(--fg-border-strong);
+  border-radius: var(--borderradius-rounded-full-rem);
+  transition: width 420ms cubic-bezier(.22,.9,.2,1);
 }
 
-/* category icon accent */
-.progress-bar .category-icons {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:32px;
-  height:32px;
-  border-radius:8px;
-  color:var(--fg-text);
+/* Bottom Row: Percentage and remaining amount */
+.progress-bar .budget-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-2-rem);
 }
 
-/* percent, alerts, etc. (kept compact) */
-.budget-detail { display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+.progress-bar .left-detail {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1-rem); /* 4px between percentage and alert icons */
+}
+
+.progress-bar .percentage {
+  display: flex;
+  align-items: baseline;
+  color: var(--fg-text);
+}
+
+.progress-bar .right-detail {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--fg-text);
+}
 
 /* -------- Per-category mappings (use global tokens) --------
    Use HTML like: <section class="progress-bar progress-bar--personal"> */
@@ -1422,3 +1468,173 @@
 .card-transaction-item:hover, .card-transaction-item.is-hover { background-color: var(--bg-bg-hover); }
 .card-transaction-item:focus, .card-transaction-item.is-focus { outline: var(--borderwidth-width-2) solid var(--primary-border); outline-offset: 2px; }
 .card-transaction-item:active, .card-transaction-item.is-active { background-color: var(--bg-bg-active); }
+
+/* ======================
+   TABS COMPONENT
+   Based on Figma design: node-id=307-9288, 307-9383
+====================== */
+
+/* Tabs container */
+.tabs {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Base tab trigger (button) */
+.tab-trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1-rem);
+  padding: var(--spacing-1-5-rem) var(--spacing-2-rem);
+  background: transparent;
+  border: none;
+  border-bottom: var(--borderwidth-width-1) solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  font-family: var(--font-family-base);
+  white-space: nowrap;
+}
+
+.tab-trigger span {
+  line-height: 1;
+}
+
+/* Remove button styling defaults */
+.tab-trigger::-moz-focus-inner {
+  border: 0;
+}
+
+/* --------------------------
+   Style: Neutral
+-------------------------- */
+.tabs[data-style="neutral"] .tab-trigger {
+  border-bottom-color: var(--fg-border);
+  color: var(--fg-text);
+}
+
+.tabs[data-style="neutral"] .tab-trigger.active {
+  background-color: var(--bg-bg);
+  color: var(--fg-text);
+  border-bottom-color: var(--fg-border);
+}
+
+.tabs[data-style="neutral"] .tab-trigger:hover {
+  color: var(--fg-text);
+  background-color: var(--bg-bg-hover);
+}
+
+.tabs[data-style="neutral"] .tab-trigger:focus {
+  outline: var(--borderwidth-width-2) solid var(--primary-border);
+  outline-offset: 2px;
+}
+
+/* --------------------------
+   Style: Color
+-------------------------- */
+.tabs[data-style="color"] {
+  display: inline-flex;
+}
+
+.tabs[data-style="color"] .tab-trigger {
+  border: var(--borderwidth-width-1) solid var(--fg-border-strong);
+  border-right: none;
+  border-bottom-color: var(--fg-border-strong);
+  padding: var(--spacing-1-5-rem) var(--spacing-2-rem);
+  color: var(--fg-text-contrast);
+  background-color: transparent;
+}
+
+.tabs[data-style="color"] .tab-trigger:first-child {
+  border-top-left-radius: var(--borderradius-rounded-sm-rem);
+  border-bottom-left-radius: var(--borderradius-rounded-sm-rem);
+  border-left: var(--borderwidth-width-1) solid var(--fg-border-strong);
+}
+
+.tabs[data-style="color"] .tab-trigger:last-child {
+  border-top-right-radius: var(--borderradius-rounded-sm-rem);
+  border-bottom-right-radius: var(--borderradius-rounded-sm-rem);
+  border-right: var(--borderwidth-width-1) solid var(--fg-border-strong);
+}
+
+.tabs[data-style="color"] .tab-trigger.active {
+  background-color: var(--secondary-solid);
+  color: var(--fg-text-contrast);
+  border-color: var(--fg-border-strong);
+}
+
+.tabs[data-style="color"] .tab-trigger:hover {
+  background-color: var(--bg-bg-hover);
+}
+
+.tabs[data-style="color"] .tab-trigger:focus {
+  outline: var(--borderwidth-width-2) solid var(--primary-border);
+  outline-offset: 2px;
+}
+
+/* --------------------------
+   Style: Outline
+-------------------------- */
+.tabs[data-style="outline"] .tab-trigger {
+  border-bottom: var(--borderwidth-width-1) solid var(--fg-text);
+  color: var(--fg-text);
+}
+
+.tabs[data-style="outline"] .tab-trigger.active {
+  border-bottom-color: var(--fg-text-contrast);
+  color: var(--fg-text-contrast);
+}
+
+.tabs[data-style="outline"] .tab-trigger:hover {
+  color: var(--fg-solid-hover);
+  border-bottom-color: var(--fg-solid-hover);
+}
+
+.tabs[data-style="outline"] .tab-trigger:focus {
+  outline: var(--borderwidth-width-2) solid var(--primary-border);
+  outline-offset: 2px;
+  color: var(--fg-solid-hover);
+}
+
+/* --------------------------
+   Style: Outline Color
+-------------------------- */
+.tabs[data-style="outline-color"] .tab-trigger {
+  border-bottom: var(--borderwidth-width-1) solid var(--primary-solid);
+  color: var(--primary-solid);
+}
+
+.tabs[data-style="outline-color"] .tab-trigger.active {
+  border-bottom-color: var(--primary-text);
+  color: var(--primary-text);
+}
+
+.tabs[data-style="outline-color"] .tab-trigger:hover {
+  color: var(--primary-solid-hover);
+  border-bottom-color: var(--primary-solid-hover);
+}
+
+.tabs[data-style="outline-color"] .tab-trigger:focus {
+  outline: var(--borderwidth-width-2) solid var(--primary-border);
+  outline-offset: 2px;
+  color: var(--primary-text);
+}
+
+/* --------------------------
+   Tab Content Container
+-------------------------- */
+.tab-content-container {
+  margin-top: var(--spacing-4-rem);
+}
+
+.tab-content {
+  display: none;
+  padding: var(--spacing-6-rem);
+  background-color: var(--bg-bg);
+  border-radius: var(--borderradius-rounded-md-rem);
+  border: var(--borderwidth-width-1) solid var(--fg-border);
+}
+
+.tab-content.active {
+  display: block;
+}

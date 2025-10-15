@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs Component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/components.css">
+</head>
+<body style="padding: 24px; background: #f5f5f5;">
+
+  <h2 style="font-family: var(--font-family-base); margin-bottom: 24px;">Tab Styles</h2>
+
+  <!-- Style: Neutral -->
+  <div style="margin-bottom: 32px;">
+    <h3 style="font-family: var(--font-family-base); margin-bottom: 12px;">Neutral Style</h3>
+    <div class="tabs" data-style="neutral" data-node-id="307:9363">
+      <button class="tab-trigger active" data-tab="account">
+        <span class="text-sm-medium">Account</span>
+      </button>
+      <button class="tab-trigger" data-tab="password">
+        <span class="text-sm-medium">Password</span>
+      </button>
+      <button class="tab-trigger" data-tab="security">
+        <span class="text-sm-medium">Security</span>
+      </button>
+      <button class="tab-trigger" data-tab="notifications">
+        <span class="text-sm-medium">Notifications</span>
+      </button>
+      <button class="tab-trigger" data-tab="billing">
+        <span class="text-sm-medium">Billing</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Style: Color -->
+  <div style="margin-bottom: 32px;">
+    <h3 style="font-family: var(--font-family-base); margin-bottom: 12px;">Color Style</h3>
+    <div class="tabs" data-style="color" data-node-id="307:9384">
+      <button class="tab-trigger active" data-tab="account">
+        <span class="text-sm-medium">Account</span>
+      </button>
+      <button class="tab-trigger" data-tab="password">
+        <span class="text-sm-medium">Password</span>
+      </button>
+      <button class="tab-trigger" data-tab="security">
+        <span class="text-sm-medium">Security</span>
+      </button>
+      <button class="tab-trigger" data-tab="notifications">
+        <span class="text-sm-medium">Notifications</span>
+      </button>
+      <button class="tab-trigger" data-tab="billing">
+        <span class="text-sm-medium">Billing</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Style: Outline -->
+  <div style="margin-bottom: 32px;">
+    <h3 style="font-family: var(--font-family-base); margin-bottom: 12px;">Outline Style</h3>
+    <div class="tabs" data-style="outline" data-node-id="307:9415">
+      <button class="tab-trigger active" data-tab="account">
+        <span class="text-sm-medium">Account</span>
+      </button>
+      <button class="tab-trigger" data-tab="password">
+        <span class="text-sm-medium">Password</span>
+      </button>
+      <button class="tab-trigger" data-tab="security">
+        <span class="text-sm-medium">Security</span>
+      </button>
+      <button class="tab-trigger" data-tab="notifications">
+        <span class="text-sm-medium">Notifications</span>
+      </button>
+      <button class="tab-trigger" data-tab="billing">
+        <span class="text-sm-medium">Billing</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Style: Outline Color -->
+  <div style="margin-bottom: 32px;">
+    <h3 style="font-family: var(--font-family-base); margin-bottom: 12px;">Outline Color Style</h3>
+    <div class="tabs" data-style="outline-color" data-node-id="307:9442">
+      <button class="tab-trigger active" data-tab="account">
+        <span class="text-sm-medium">Account</span>
+      </button>
+      <button class="tab-trigger" data-tab="password">
+        <span class="text-sm-medium">Password</span>
+      </button>
+      <button class="tab-trigger" data-tab="security">
+        <span class="text-sm-medium">Security</span>
+      </button>
+      <button class="tab-trigger" data-tab="notifications">
+        <span class="text-sm-medium">Notifications</span>
+      </button>
+      <button class="tab-trigger" data-tab="billing">
+        <span class="text-sm-medium">Billing</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Tab Content Example -->
+  <div style="margin-top: 48px;">
+    <h3 style="font-family: var(--font-family-base); margin-bottom: 12px;">Interactive Example with Content</h3>
+
+    <div class="tabs" data-style="color" id="interactive-tabs">
+      <button class="tab-trigger active" data-tab="tab1">
+        <span class="text-sm-medium">Profile</span>
+      </button>
+      <button class="tab-trigger" data-tab="tab2">
+        <span class="text-sm-medium">Settings</span>
+      </button>
+      <button class="tab-trigger" data-tab="tab3">
+        <span class="text-sm-medium">Privacy</span>
+      </button>
+    </div>
+
+    <div class="tab-content-container">
+      <div class="tab-content active" data-content="tab1">
+        <h4 style="font-family: var(--font-family-base); margin-bottom: 8px;">Profile Content</h4>
+        <p style="font-family: var(--font-family-base);">This is the profile tab content.</p>
+      </div>
+      <div class="tab-content" data-content="tab2">
+        <h4 style="font-family: var(--font-family-base); margin-bottom: 8px;">Settings Content</h4>
+        <p style="font-family: var(--font-family-base);">This is the settings tab content.</p>
+      </div>
+      <div class="tab-content" data-content="tab3">
+        <h4 style="font-family: var(--font-family-base); margin-bottom: 8px;">Privacy Content</h4>
+        <p style="font-family: var(--font-family-base);">This is the privacy tab content.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tab switching functionality
+    document.querySelectorAll('.tabs').forEach(tabContainer => {
+      const triggers = tabContainer.querySelectorAll('.tab-trigger');
+
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          // Remove active class from all triggers in this container
+          triggers.forEach(t => t.classList.remove('active'));
+
+          // Add active class to clicked trigger
+          trigger.classList.add('active');
+
+          // If there's associated content, handle that too
+          const tabId = trigger.getAttribute('data-tab');
+          const contentContainer = tabContainer.parentElement.querySelector('.tab-content-container');
+
+          if (contentContainer) {
+            const contents = contentContainer.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+              content.classList.remove('active');
+              if (content.getAttribute('data-content') === tabId) {
+                content.classList.add('active');
+              }
+            });
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

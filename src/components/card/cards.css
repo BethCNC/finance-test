@@ -713,3 +713,195 @@
   object-fit: contain;
 }
 
+/* ==========================================================================
+   Bank Account Card Component
+   ========================================================================== */
+.bank-account-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--white);
+  border: var(--borderwidth-width-2) solid var(--fg-border);
+  border-radius: var(--borderradius-rounded-lg-rem);
+  padding: var(--spacing-4-rem);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3-rem);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.bank-account-card:hover {
+  box-shadow: var(--box-shadow-shadow-sm);
+}
+
+/* State variants - only border color changes */
+.bank-account-card[data-state="default"] {
+  border-color: var(--fg-border);
+}
+
+.bank-account-card[data-state="success"] {
+  border-color: var(--success-solid);
+}
+
+.bank-account-card[data-state="warning"] {
+  border-color: var(--warning-solid);
+}
+
+.bank-account-card[data-state="error"] {
+  border-color: var(--error-solid);
+}
+
+.bank-account-card[data-state="disabled"] {
+  border-style: dashed;
+  border-color: var(--disabled-disabled);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.bank-logo {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.bank-logo-container {
+  width: 100%;
+  height: 100%;
+  background: #1477cc; /* Default: SECU Checking */
+  border-radius: var(--borderradius-rounded-full-rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bank-logo-container img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+}
+
+/* Bank type variants - background colors */
+.bank-logo[data-bank="secu-checking"] .bank-logo-container {
+  background: #1477cc;
+}
+
+.bank-logo[data-bank="secu-savings"] .bank-logo-container {
+  background: #0f5999;
+}
+
+.bank-logo[data-bank="secu-credit"] .bank-logo-container {
+  background: #0a3c66;
+}
+
+.bank-logo[data-bank="apple-cash"] .bank-logo-container {
+  background: #000000;
+}
+
+.bank-logo[data-bank="apple-cash"] .bank-logo-container img {
+  width: 24px;
+  height: 24px;
+}
+
+.bank-logo[data-bank="cash-app"] .bank-logo-container {
+  background: #00d632;
+}
+
+.bank-logo[data-bank="cash-app"] .bank-logo-container img {
+  width: 24px;
+  height: 24px;
+}
+
+.bank-account-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1-rem);
+  padding: var(--spacing-0-5-rem) 0;
+}
+
+.bank-account-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.bank-account-row h3 {
+  margin: 0;
+  color: var(--fg-text);
+}
+
+.bank-account-row .text-lg-bold {
+  color: var(--fg-text);
+}
+
+.bank-account-details {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3-rem);
+}
+
+.bank-account-details .text-base-regular {
+  color: var(--fg-text);
+}
+
+.bank-account-number {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1-rem);
+  color: var(--fg-solid-hover);
+}
+
+.bank-account-owner {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.bank-account-owner .text-base-medium {
+  color: var(--secondary-text);
+}
+
+/* Disabled state text colors */
+.bank-account-card[data-state="disabled"] .bank-account-row h3,
+.bank-account-card[data-state="disabled"] .bank-account-row .text-lg-bold,
+.bank-account-card[data-state="disabled"] .bank-account-details .text-base-regular {
+  color: var(--disabled-on-disabled);
+}
+
+.bank-account-card[data-state="disabled"] .bank-logo-container {
+  opacity: 0.5;
+}
+
+/* ==========================================================================
+   Account Section Component
+   ========================================================================== */
+.account-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3-rem);
+  width: 100%;
+}
+
+.account-section-header {
+  background: var(--bg-bg-active);
+  border-radius: var(--borderradius-rounded-sm-rem);
+  padding: var(--spacing-1-rem) var(--spacing-2-rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.account-section-header h4 {
+  margin: 0;
+  color: var(--fg-text-contrast);
+}
+
+.account-section-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3-rem);
+  padding: 0 var(--spacing-6-rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+

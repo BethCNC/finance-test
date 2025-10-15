@@ -1,22 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Budget</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/global.css"/>
-    <link rel="stylesheet" href="../styles/components.css"/>
- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget - Family Finance Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/global.css">
+  <link rel="stylesheet" href="src/styles/components.css">
+  <link rel="stylesheet" href="src/components/card/cards.css">
 </head>
+<body style="padding: 0; margin: 0; background-color: var(--bg-base); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px;">
 
-<body>
-    <script type="module"> 
-        import { createIcons } from "https://unpkg.com/lucide@latest?module";
-        createIcons(); 
-    </script>
+  <!-- Page Content -->
+  <main style="flex: 1; padding: var(--spacing-6-rem); overflow-y: auto;">
+    <h1 style="font-family: var(--font-family-base); font-size: var(--text-3xl-bold-size-rem); font-weight: var(--text-3xl-bold-weight); margin-bottom: var(--spacing-6-rem);">Budget</h1>
+
+    <!-- Budget content will be added here -->
+    <p style="font-family: var(--font-family-base); color: var(--fg-text);">Your budget overview and categories will be displayed here.</p>
+  </main>
+
+  <!-- More Menu Overlay -->
+  <div class="more-menu-overlay" id="more-menu-overlay"></div>
+
+  <!-- More Menu Bottom Sheet -->
+  <div class="more-menu" id="more-menu" role="dialog" aria-modal="true" aria-labelledby="more-menu-title">
+    <div class="more-menu__handle"></div>
+    <div class="more-menu__header">
+      <h2 id="more-menu-title" class="more-menu__title">More</h2>
+      <button class="more-menu__close" aria-label="Close menu" id="close-more-menu">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="more-menu__content">
+      <button class="more-menu__item" data-page="accounts">
+        <i data-lucide="wallet" class="more-menu__item-icon" aria-hidden="true"></i>
+        <span class="more-menu__item-text">Accounts</span>
+      </button>
+      <button class="more-menu__item" data-page="subscriptions">
+        <i data-lucide="repeat" class="more-menu__item-icon" aria-hidden="true"></i>
+        <span class="more-menu__item-text">Subscriptions</span>
+      </button>
+      <button class="more-menu__item" data-page="monthly-bills">
+        <i data-lucide="calendar" class="more-menu__item-icon" aria-hidden="true"></i>
+        <span class="more-menu__item-text">Monthly Bills</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Bar - Fixed to bottom -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-item" aria-label="Dashboard">
+      <i data-lucide="home" class="nav-item__icon" aria-hidden="true"></i>
+      <span class="nav-item__text">Dashboard</span>
+    </a>
+
+    <a href="transactions.html" class="nav-item" aria-label="Transactions">
+      <i data-lucide="circle-dollar-sign" class="nav-item__icon" aria-hidden="true"></i>
+      <span class="nav-item__text">Transactions</span>
+    </a>
+
+    <a href="budget.html" class="nav-item is-active" aria-label="Budget" aria-current="page">
+      <i data-lucide="pie-chart" class="nav-item__icon" aria-hidden="true"></i>
+      <span class="nav-item__text">Budget</span>
+    </a>
+
+    <a href="advisor.html" class="nav-item" aria-label="Advisor">
+      <i data-lucide="message-circle" class="nav-item__icon" aria-hidden="true"></i>
+      <span class="nav-item__text">Advisor</span>
+    </a>
+
+    <button class="nav-item" aria-label="More" id="more-button">
+      <i data-lucide="menu" class="nav-item__icon" aria-hidden="true"></i>
+      <span class="nav-item__text">More</span>
+    </button>
+  </nav>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // More menu functionality
+    const moreButton = document.getElementById('more-button');
+    const moreMenu = document.getElementById('more-menu');
+    const moreMenuOverlay = document.getElementById('more-menu-overlay');
+    const closeMoreMenu = document.getElementById('close-more-menu');
+
+    function openMoreMenu() {
+      moreMenu.classList.add('is-open');
+      moreMenuOverlay.classList.add('is-visible');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      moreMenu.classList.remove('is-open');
+      moreMenuOverlay.classList.remove('is-visible');
+      document.body.style.overflow = '';
+    }
+
+    moreButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      openMoreMenu();
+    });
+    closeMoreMenu.addEventListener('click', closeMenu);
+    moreMenuOverlay.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && moreMenu.classList.contains('is-open')) {
+        closeMenu();
+      }
+    });
+
+    // Handle more menu navigation
+    document.querySelectorAll('.more-menu__item').forEach(item => {
+      item.addEventListener('click', function() {
+        const page = this.getAttribute('data-page');
+        window.location.href = `${page}.html`;
+      });
+    });
+  </script>
 
 </body>
 </html>

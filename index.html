@@ -1,788 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Finance Dashboard</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/globals.css">
-    <link rel="stylesheet" href="..///styles/components.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Family Finance Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/global.css">
+  <link rel="stylesheet" href="src/styles/components.css">
+  <link rel="stylesheet" href="src/components/card/cards.css">
 </head>
-<body>
+<body style="padding: 0; margin: 0; background-color: var(--bg-base); min-height: 100vh; display: flex; flex-direction: column;">
 
-          	<div class="dashboard-mobile">
-    		<div class="navbar">
-      			<div class="nav-item">
-        				<div class="icon-container">
-          					<div class="state-layer">
-            						<div class="icon">
-              							<img class="vector-icon" alt="">
-              							
-            						</div>
-          					</div>
-        				</div>
-        				<div class="label">Home</div>
-      			</div>
-      			<div class="nav-item">
-        				<div class="icon-container">
-          					<div class="state-layer">
-            						<div class="icon">
-              							<img class="dashboard-mobile-vector-icon" alt="">
-              							
-            						</div>
-          					</div>
-        				</div>
-        				<div class="label">Transactions</div>
-      			</div>
-      			<div class="nav-item">
-        				<div class="icon-container">
-          					<div class="state-layer">
-            						<div class="icon">
-              							<img class="vector-icon2" alt="">
-              							
-            						</div>
-          					</div>
-        				</div>
-        				<div class="label">Budget</div>
-      			</div>
-      			<div class="nav-item">
-        				<div class="icon-container">
-          					<div class="state-layer">
-            						<div class="icon">
-              							<img class="vector-icon" alt="">
-              							
-            						</div>
-          					</div>
-        				</div>
-        				<div class="label">Advisor</div>
-      			</div>
-      			<div class="nav-item">
-        				<div class="icon-container">
-          					<div class="state-layer">
-            						<div class="icon">
-              							<img class="vector-icon4" alt="">
-              							
-            						</div>
-          					</div>
-        				</div>
-        				<div class="label">Settings</div>
-      			</div>
-    		</div>
-    		<div class="content">
-      			<div class="dashboard-mobile-content">
-        				<div class="h2">
-          					<div class="label">Accounts</div>
-        				</div>
-        				<div class="dashboard-mobile-accounts">
-          					<div class="account-balance-card">
-            						<div class="name">
-              							<div class="bryan">Bryan</div>
-            						</div>
-            						<div class="balance">
-              							<div class="label">Checking ...8182</div>
-              							<div class="div">$1212.42</div>
-            						</div>
-            						<div class="details">
-              							<div class="label">$120</div>
-              							<div class="lucide-icons">
-                								<img class="vector-icon5" alt="">
-                								
-              							</div>
-            						</div>
-          					</div>
-          					<div class="account-balance-card">
-            						<div class="name">
-              							<div class="bryan">Bryan</div>
-            						</div>
-            						<div class="balance">
-              							<div class="label">Checking ...8182</div>
-              							<div class="div">$1212.42</div>
-            						</div>
-            						<div class="details">
-              							<div class="label">$120</div>
-              							<div class="lucide-icons">
-                								<img class="vector-icon5" alt="">
-                								
-              							</div>
-            						</div>
-          					</div>
-          					<div class="account-balance-card2">
-            						<div class="name">
-              							<div class="bryan">Beth</div>
-            						</div>
-            						<div class="balance">
-              							<div class="label">Checking ...2763</div>
-              							<div class="div">$1212.42</div>
-            						</div>
-            						<div class="details">
-              							<div class="label">$120</div>
-              							<div class="lucide-icons">
-                								<img class="vector-icon5" alt="">
-                								
-              							</div>
-            						</div>
-          					</div>
-          					<div class="account-balance-card2">
-            						<div class="name">
-              							<div class="bryan">Beth</div>
-            						</div>
-            						<div class="balance">
-              							<div class="label">Apple Cash</div>
-              							<div class="div">$1212.42</div>
-            						</div>
-            						<div class="details">
-              							<div class="label">$120</div>
-              							<div class="lucide-icons">
-                								<img class="vector-icon5" alt="">
-                								
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-      			</div>
-      			<div class="dashboard-mobile-content">
-        				<div class="dashboard-mobile-h2">
-          					<div class="h2">
-            						<div class="label">Monthly Budget</div>
-          					</div>
-        				</div>
-        				<div class="budget-progress">
-          					<div class="account-progress-bar">
-            						<div class="top-row">
-              							<div class="label5">
-                								<div class="category-icons">
-                  									<img class="vector-icon9" alt="">
-                  									
-                								</div>
-                								<div class="bryan">Mortgage</div>
-              							</div>
-              							<div class="budget-dollars">
-                								<div class="of">$85</div>
-                								<div class="of">of</div>
-                								<div class="of">$150</div>
-              							</div>
-            						</div>
-            						<div class="progress">
-              							<div class="dashboard-mobile-progress">
-              							</div>
-            						</div>
-            						<div class="budget-detail">
-              							<div class="dashboard-mobile-budget-dollars">
-                								<div class="percentage">
-                  									<div class="label">56</div>
-                  									<div class="label">%</div>
-                								</div>
-                								<div class="dashboard-mobile-budget-dollars">
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="budget-dollars2">
-                								<div class="of">$65</div>
-                								<div class="of">left</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="account-progress-bar">
-            						<div class="top-row">
-              							<div class="label5">
-                								<div class="category-icons">
-                  									<img class="vector-icon13" alt="">
-                  									
-                								</div>
-                								<div class="bryan">Utilities</div>
-              							</div>
-              							<div class="budget-dollars">
-                								<div class="of">$85</div>
-                								<div class="of">of</div>
-                								<div class="of">$150</div>
-              							</div>
-            						</div>
-            						<div class="progress">
-              							<div class="progress3">
-              							</div>
-            						</div>
-            						<div class="budget-detail">
-              							<div class="dashboard-mobile-budget-dollars">
-                								<div class="percentage">
-                  									<div class="label">56</div>
-                  									<div class="label">%</div>
-                								</div>
-                								<div class="dashboard-mobile-budget-dollars">
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="budget-dollars2">
-                								<div class="of">$65</div>
-                								<div class="of">left</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="account-progress-bar">
-            						<div class="top-row">
-              							<div class="label5">
-                								<div class="category-icons">
-                  									<img class="vector-icon17" alt="">
-                  									
-                								</div>
-                								<div class="bryan">Home Reno</div>
-              							</div>
-              							<div class="budget-dollars">
-                								<div class="of">$85</div>
-                								<div class="of">of</div>
-                								<div class="of">$150</div>
-              							</div>
-            						</div>
-            						<div class="progress">
-              							<div class="progress5">
-              							</div>
-            						</div>
-            						<div class="budget-detail">
-              							<div class="dashboard-mobile-budget-dollars">
-                								<div class="percentage">
-                  									<div class="label">56</div>
-                  									<div class="label">%</div>
-                								</div>
-                								<div class="dashboard-mobile-budget-dollars">
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="budget-dollars2">
-                								<div class="of">$65</div>
-                								<div class="of">left</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="account-progress-bar">
-            						<div class="top-row">
-              							<div class="label5">
-                								<div class="category-icons">
-                  									<img class="vector-icon21" alt="">
-                  									
-                								</div>
-                								<div class="bryan">George</div>
-              							</div>
-              							<div class="budget-dollars">
-                								<div class="of">$85</div>
-                								<div class="of">of</div>
-                								<div class="of">$150</div>
-              							</div>
-            						</div>
-            						<div class="progress">
-              							<div class="progress7">
-              							</div>
-            						</div>
-            						<div class="budget-detail">
-              							<div class="dashboard-mobile-budget-dollars">
-                								<div class="percentage">
-                  									<div class="label">56</div>
-                  									<div class="label">%</div>
-                								</div>
-                								<div class="dashboard-mobile-budget-dollars">
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="budget-dollars2">
-                								<div class="of">$65</div>
-                								<div class="of">left</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="account-progress-bar">
-            						<div class="top-row">
-              							<div class="label5">
-                								<div class="category-icons">
-                  									<img class="dashboard-mobile-vector-icon" alt="">
-                  									
-                								</div>
-                								<div class="bryan">Food</div>
-              							</div>
-              							<div class="budget-dollars">
-                								<div class="of">$85</div>
-                								<div class="of">of</div>
-                								<div class="of">$150</div>
-              							</div>
-            						</div>
-            						<div class="progress">
-              							<div class="progress9">
-              							</div>
-            						</div>
-            						<div class="budget-detail">
-              							<div class="dashboard-mobile-budget-dollars">
-                								<div class="percentage">
-                  									<div class="label">56</div>
-                  									<div class="label">%</div>
-                								</div>
-                								<div class="dashboard-mobile-budget-dollars">
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="budget-dollars2">
-                								<div class="of">$65</div>
-                								<div class="of">left</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="account-progress-bar">
-            						<div class="top-row">
-              							<div class="label5">
-                								<div class="category-icons">
-                  									<img class="vector-icon29" alt="">
-                  									
-                								</div>
-                								<div class="bryan">Auto</div>
-              							</div>
-              							<div class="budget-dollars">
-                								<div class="of">$85</div>
-                								<div class="of">of</div>
-                								<div class="of">$150</div>
-              							</div>
-            						</div>
-            						<div class="progress">
-              							<div class="progress11">
-              							</div>
-            						</div>
-            						<div class="budget-detail">
-              							<div class="dashboard-mobile-budget-dollars">
-                								<div class="percentage">
-                  									<div class="label">56</div>
-                  									<div class="label">%</div>
-                								</div>
-                								<div class="dashboard-mobile-budget-dollars">
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="budget-dollars2">
-                								<div class="of">$65</div>
-                								<div class="of">left</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="account-progress-bar">
-            						<div class="top-row">
-              							<div class="label5">
-                								<div class="category-icons">
-                  									<img class="dashboard-mobile-vector-icon" alt="">
-                  									
-                								</div>
-                								<div class="bryan">Entertainment</div>
-              							</div>
-              							<div class="budget-dollars">
-                								<div class="of">$85</div>
-                								<div class="of">of</div>
-                								<div class="of">$150</div>
-              							</div>
-            						</div>
-            						<div class="progress">
-              							<div class="progress13">
-              							</div>
-            						</div>
-            						<div class="budget-detail">
-              							<div class="dashboard-mobile-budget-dollars">
-                								<div class="percentage">
-                  									<div class="label">56</div>
-                  									<div class="label">%</div>
-                								</div>
-                								<div class="dashboard-mobile-budget-dollars">
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="budget-dollars2">
-                								<div class="of">$65</div>
-                								<div class="of">left</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="account-progress-bar">
-            						<div class="top-row">
-              							<div class="label5">
-                								<div class="category-icons">
-                  									<img class="vector-icon37" alt="">
-                  									
-                								</div>
-                								<div class="bryan">Health</div>
-              							</div>
-              							<div class="budget-dollars">
-                								<div class="of">$85</div>
-                								<div class="of">of</div>
-                								<div class="of">$150</div>
-              							</div>
-            						</div>
-            						<div class="progress">
-              							<div class="progress15">
-              							</div>
-            						</div>
-            						<div class="budget-detail">
-              							<div class="dashboard-mobile-budget-dollars">
-                								<div class="percentage">
-                  									<div class="label">56</div>
-                  									<div class="label">%</div>
-                								</div>
-                								<div class="dashboard-mobile-budget-dollars">
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="budget-dollars2">
-                								<div class="of">$65</div>
-                								<div class="of">left</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="account-progress-bar">
-            						<div class="top-row">
-              							<div class="label5">
-                								<div class="category-icons">
-                  									<img class="dashboard-mobile-vector-icon" alt="">
-                  									
-                								</div>
-                								<div class="bryan">Software</div>
-              							</div>
-              							<div class="budget-dollars">
-                								<div class="of">$85</div>
-                								<div class="of">of</div>
-                								<div class="of">$150</div>
-              							</div>
-            						</div>
-            						<div class="progress">
-              							<div class="progress17">
-              							</div>
-            						</div>
-            						<div class="budget-detail">
-              							<div class="dashboard-mobile-budget-dollars">
-                								<div class="percentage">
-                  									<div class="label">56</div>
-                  									<div class="label">%</div>
-                								</div>
-                								<div class="dashboard-mobile-budget-dollars">
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="budget-dollars2">
-                								<div class="of">$65</div>
-                								<div class="of">left</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="account-progress-bar">
-            						<div class="top-row">
-              							<div class="label5">
-                								<div class="category-icons">
-                  									<img class="dashboard-mobile-vector-icon" alt="">
-                  									
-                								</div>
-                								<div class="bryan">Personal</div>
-              							</div>
-              							<div class="budget-dollars">
-                								<div class="of">$85</div>
-                								<div class="of">of</div>
-                								<div class="of">$150</div>
-              							</div>
-            						</div>
-            						<div class="progress">
-              							<div class="progress19">
-              							</div>
-            						</div>
-            						<div class="budget-detail">
-              							<div class="dashboard-mobile-budget-dollars">
-                								<div class="percentage">
-                  									<div class="label">56</div>
-                  									<div class="label">%</div>
-                								</div>
-                								<div class="dashboard-mobile-budget-dollars">
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="alert-circle-icons">
-                    										<div class="status-sucess">
-                      											<img class="vector-icon10" alt="">
-                      											
-                    										</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="budget-dollars2">
-                								<div class="of">$65</div>
-                								<div class="of">left</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-      			</div>
-      			<div class="dashboard-mobile-content">
-        				<div class="h2">
-          					<div class="label">Savings Goals</div>
-        				</div>
-        				<div class="goals">
-          					<div class="card">
-            						<div class="circle-progress">
-              							<div class="base">
-              							</div>
-              							<div class="ellipse">
-              							</div>
-              							<div class="number">75%</div>
-            						</div>
-            						<div class="name4">
-              							<div class="emergency-fund">Emergency Fund</div>
-            						</div>
-          					</div>
-          					<div class="card">
-            						<div class="circle-progress">
-              							<div class="base">
-              							</div>
-              							<div class="dashboard-mobile-ellipse">
-              							</div>
-              							<div class="number">50%</div>
-            						</div>
-            						<div class="name4">
-              							<div class="emergency-fund">Debt Paydown</div>
-            						</div>
-          					</div>
-          					<div class="card">
-            						<div class="circle-progress">
-              							<div class="base">
-              							</div>
-              							<div class="ellipse2">
-              							</div>
-              							<div class="number">25%</div>
-            						</div>
-            						<div class="name4">
-              							<div class="emergency-fund">Roth IRA</div>
-            						</div>
-          					</div>
-        				</div>
-      			</div>
-      			<div class="dashboard-mobile-content">
-        				<div class="h2">
-          					<div class="label">Smart Insights</div>
-        				</div>
-        				<div class="dashboard-mobile-goals">
-          					<div class="card3">
-            						<div class="lucide-icons">
-              							<img class="vector-icon49" alt="">
-              							
-            						</div>
-            						<div class="your-subscriptions-rose-container">
-              							<p class="your-subscriptions-rose">Your subscriptions rose 12%.</p>
-              							<p class="your-subscriptions-rose">Want to see why?</p>
-            						</div>
-          					</div>
-          					<div class="card3">
-            						<div class="lucide-icons">
-              							<img class="vector-icon49" alt="">
-              							
-            						</div>
-            						<div class="your-subscriptions-rose-container">
-              							<p class="your-subscriptions-rose">Your $83 under budget this month.</p>
-              							<p class="your-subscriptions-rose">Move that to savings?</p>
-            						</div>
-          					</div>
-          					<div class="card5">
-          					</div>
-        				</div>
-      			</div>
-      			<div class="buttons">
-        				<div class="button">
-          					<div class="dashboard-mobile-button">Save More</div>
-        				</div>
-        				<div class="button2">
-          					<div class="dashboard-mobile-button">See Transactions</div>
-        				</div>
-        				<div class="button2">
-          					<div class="button5">
-            						<span>
-              							<p class="your-subscriptions-rose">Ask AI</p>
-              							<p class="your-subscriptions-rose">Advisor</p>
-            						</span>
-          					</div>
-        				</div>
-      			</div>
-    		</div>
-    		<div class="header">
-      			<div class="container">
-        				<div class="logo">
-          					<img class="vector-icon51" alt="">
-          					
-        				</div>
-        				<div class="page-title">
-          					<div class="label">Dashboard</div>
-        				</div>
-        				<div class="lucide-icons">
-          					<img class="vector-icon52" alt="">
-          					
-        				</div>
-      			</div>
-    		</div>
-  	</div>
+  <!-- Header -->
+  <header class="app-header" role="banner" aria-label="Dashboard Header">
+    <div class="header-bar">
+      <div class="brand">
+        <img class="brand__logo brand__logo--symbol"
+          src="assets/logo/symbol.svg"
+          alt="FinanceAI"
+          width="48" height="48"
+          aria-hidden="true"
+        />
+        <img class="brand__logo brand__logo--full"
+          src="assets/logo/full.svg"
+          alt="FinanceAI"
+          width="192" height="48"
+          aria-hidden="true"
+        />
+      </div>
+      <div class="header-title text-3xl-semi-bold">Dashboard</div>
+      <div class="header-actions">
+        <button class="icon-button" aria-label="Open menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
+  <!-- Page Content -->
+  <main style="flex: 1; padding: var(--spacing-6-rem); overflow-y: auto; padding-bottom: 120px;">
 
-<script type="module">
-  import { createIcons } from "https://unpkg.com/lucide@latest?module";
+    <!-- Balance Pie Chart Card -->
+    <section style="margin-bottom: var(--spacing-6-rem);">
+      <div class="balance-pie-chart">
+        <div class="pie-chart">
+          <img src="assets/charts/chart = pie.png" alt="Balance breakdown pie chart" class="chart-image">
+        </div>
+      </div>
+    </section>
 
-  createIcons();
-</script>
+    <!-- Monthly Budget Section -->
+    <section style="margin-bottom: var(--spacing-6-rem);">
+      <h2 class="text-2xl-bold" style="margin-bottom: var(--spacing-6-rem);">Monthly Budget</h2>
+
+      <div style="display: flex; flex-direction: column; gap: var(--spacing-6-rem);">
+        <!-- Mortgage -->
+        <div class="progress-bar" aria-labelledby="cat-mortgage">
+          <div class="top-row">
+            <div class="progress-label">
+              <div class="category-icon category-icon--circle" data-category="mortgage">
+                <i data-lucide="home"></i>
+              </div>
+              <h3 id="cat-mortgage" class="category-title text-base-semi-bold">Mortgage</h3>
+            </div>
+            <div class="budget-total">
+              <span class="budget-amount text-sm-regular">$85</span>
+              <span class="budget-of text-sm-regular">of</span>
+              <span class="budget-max text-sm-regular">$150</span>
+            </div>
+          </div>
+          <div class="progress-row">
+            <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="150" data-value="85" data-max="150">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="budget-detail">
+            <div class="left-detail">
+              <div class="percentage">
+                <span class="percent-number text-xs-regular">56</span><span class="percent-sign text-xs-regular">%</span>
+              </div>
+              <div class="alert-group">
+                <div class="alert-circle alert-circle--success">
+                  <i data-lucide="circle-check"></i>
+                </div>
+              </div>
+            </div>
+            <div class="right-detail">
+              <span class="left-amount text-sm-regular">$65</span>
+              <span class="left-text text-sm-regular">left</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bills -->
+        <div class="progress-bar" aria-labelledby="cat-bills">
+          <div class="top-row">
+            <div class="progress-label">
+              <div class="category-icon category-icon--circle" data-category="utilities">
+                <i data-lucide="plug"></i>
+              </div>
+              <h3 id="cat-bills" class="category-title text-base-semi-bold">Bills</h3>
+            </div>
+            <div class="budget-total">
+              <span class="budget-amount text-sm-regular">$85</span>
+              <span class="budget-of text-sm-regular">of</span>
+              <span class="budget-max text-sm-regular">$150</span>
+            </div>
+          </div>
+          <div class="progress-row">
+            <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="150" data-value="85" data-max="150">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="budget-detail">
+            <div class="left-detail">
+              <div class="percentage">
+                <span class="percent-number text-xs-regular">56</span><span class="percent-sign text-xs-regular">%</span>
+              </div>
+              <div class="alert-group">
+                <div class="alert-circle alert-circle--success">
+                  <i data-lucide="circle-check"></i>
+                </div>
+              </div>
+            </div>
+            <div class="right-detail">
+              <span class="left-amount text-sm-regular">$65</span>
+              <span class="left-text text-sm-regular">left</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Home Reno -->
+        <div class="progress-bar" aria-labelledby="cat-home-reno">
+          <div class="top-row">
+            <div class="progress-label">
+              <div class="category-icon category-icon--circle" data-category="home-reno">
+                <i data-lucide="wrench"></i>
+              </div>
+              <h3 id="cat-home-reno" class="category-title text-base-semi-bold">Home Reno</h3>
+            </div>
+            <div class="budget-total">
+              <span class="budget-amount text-sm-regular">$85</span>
+              <span class="budget-of text-sm-regular">of</span>
+              <span class="budget-max text-sm-regular">$150</span>
+            </div>
+          </div>
+          <div class="progress-row">
+            <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="150" data-value="85" data-max="150">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="budget-detail">
+            <div class="left-detail">
+              <div class="percentage">
+                <span class="percent-number text-xs-regular">56</span><span class="percent-sign text-xs-regular">%</span>
+              </div>
+              <div class="alert-group">
+                <div class="alert-circle alert-circle--success">
+                  <i data-lucide="circle-check"></i>
+                </div>
+              </div>
+            </div>
+            <div class="right-detail">
+              <span class="left-amount text-sm-regular">$65</span>
+              <span class="left-text text-sm-regular">left</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- George -->
+        <div class="progress-bar" aria-labelledby="cat-george">
+          <div class="top-row">
+            <div class="progress-label">
+              <div class="category-icon category-icon--circle" data-category="george">
+                <i data-lucide="dog"></i>
+              </div>
+              <h3 id="cat-george" class="category-title text-base-semi-bold">George</h3>
+            </div>
+            <div class="budget-total">
+              <span class="budget-amount text-sm-regular">$85</span>
+              <span class="budget-of text-sm-regular">of</span>
+              <span class="budget-max text-sm-regular">$150</span>
+            </div>
+          </div>
+          <div class="progress-row">
+            <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="150" data-value="85" data-max="150">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="budget-detail">
+            <div class="left-detail">
+              <div class="percentage">
+                <span class="percent-number text-xs-regular">56</span><span class="percent-sign text-xs-regular">%</span>
+              </div>
+              <div class="alert-group">
+                <div class="alert-circle alert-circle--success">
+                  <i data-lucide="circle-check"></i>
+                </div>
+              </div>
+            </div>
+            <div class="right-detail">
+              <span class="left-amount text-sm-regular">$65</span>
+              <span class="left-text text-sm-regular">left</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food -->
+        <div class="progress-bar" aria-labelledby="cat-food">
+          <div class="top-row">
+            <div class="progress-label">
+              <div class="category-icon category-icon--circle" data-category="food">
+                <i data-lucide="apple"></i>
+              </div>
+              <h3 id="cat-food" class="category-title text-base-semi-bold">Food</h3>
+            </div>
+            <div class="budget-total">
+              <span class="budget-amount text-sm-regular">$85</span>
+              <span class="budget-of text-sm-regular">of</span>
+              <span class="budget-max text-sm-regular">$150</span>
+            </div>
+          </div>
+          <div class="progress-row">
+            <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="150" data-value="85" data-max="150">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="budget-detail">
+            <div class="left-detail">
+              <div class="percentage">
+                <span class="percent-number text-xs-regular">56</span><span class="percent-sign text-xs-regular">%</span>
+              </div>
+              <div class="alert-group">
+                <div class="alert-circle alert-circle--success">
+                  <i data-lucide="circle-check"></i>
+                </div>
+              </div>
+            </div>
+            <div class="right-detail">
+              <span class="left-amount text-sm-regular">$65</span>
+              <span class="left-text text-sm-regular">left</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Auto -->
+        <div class="progress-bar" aria-labelledby="cat-auto">
+          <div class="top-row">
+            <div class="progress-label">
+              <div class="category-icon category-icon--circle" data-category="auto">
+                <i data-lucide="car"></i>
+              </div>
+              <h3 id="cat-auto" class="category-title text-base-semi-bold">Auto</h3>
+            </div>
+            <div class="budget-total">
+              <span class="budget-amount text-sm-regular">$85</span>
+              <span class="budget-of text-sm-regular">of</span>
+              <span class="budget-max text-sm-regular">$150</span>
+            </div>
+          </div>
+          <div class="progress-row">
+            <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="150" data-value="85" data-max="150">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="budget-detail">
+            <div class="left-detail">
+              <div class="percentage">
+                <span class="percent-number text-xs-regular">56</span><span class="percent-sign text-xs-regular">%</span>
+              </div>
+              <div class="alert-group">
+                <div class="alert-circle alert-circle--success">
+                  <i data-lucide="circle-check"></i>
+                </div>
+              </div>
+            </div>
+            <div class="right-detail">
+              <span class="left-amount text-sm-regular">$65</span>
+              <span class="left-text text-sm-regular">left</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entertainment -->
+        <div class="progress-bar" aria-labelledby="cat-entertainment">
+          <div class="top-row">
+            <div class="progress-label">
+              <div class="category-icon category-icon--circle" data-category="entertainment">
+                <i data-lucide="party-popper"></i>
+              </div>
+              <h3 id="cat-entertainment" class="category-title text-base-semi-bold">Entertainment</h3>
+            </div>
+            <div class="budget-total">
+              <span class="budget-amount text-sm-regular">$85</span>
+              <span class="budget-of text-sm-regular">of</span>
+              <span class="budget-max text-sm-regular">$150</span>
+            </div>
+          </div>
+          <div class="progress-row">
+            <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="150" data-value="85" data-max="150">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="budget-detail">
+            <div class="left-detail">
+              <div class="percentage">
+                <span class="percent-number text-xs-regular">56</span><span class="percent-sign text-xs-regular">%</span>
+              </div>
+              <div class="alert-group">
+                <div class="alert-circle alert-circle--success">
+                  <i data-lucide="circle-check"></i>
+                </div>
+              </div>
+            </div>
+            <div class="right-detail">
+              <span class="left-amount text-sm-regular">$65</span>
+              <span class="left-text text-sm-regular">left</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Health -->
+        <div class="progress-bar" aria-labelledby="cat-health">
+          <div class="top-row">
+            <div class="progress-label">
+              <div class="category-icon category-icon--circle" data-category="health">
+                <i data-lucide="heart-pulse"></i>
+              </div>
+              <h3 id="cat-health" class="category-title text-base-semi-bold">Health</h3>
+            </div>
+            <div class="budget-total">
+              <span class="budget-amount text-sm-regular">$85</span>
+              <span class="budget-of text-sm-regular">of</span>
+              <span class="budget-max text-sm-regular">$150</span>
+            </div>
+          </div>
+          <div class="progress-row">
+            <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="150" data-value="85" data-max="150">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="budget-detail">
+            <div class="left-detail">
+              <div class="percentage">
+                <span class="percent-number text-xs-regular">56</span><span class="percent-sign text-xs-regular">%</span>
+              </div>
+              <div class="alert-group">
+                <div class="alert-circle alert-circle--success">
+                  <i data-lucide="circle-check"></i>
+                </div>
+              </div>
+            </div>
+            <div class="right-detail">
+              <span class="left-amount text-sm-regular">$65</span>
+              <span class="left-text text-sm-regular">left</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Software -->
+        <div class="progress-bar" aria-labelledby="cat-software">
+          <div class="top-row">
+            <div class="progress-label">
+              <div class="category-icon category-icon--circle" data-category="software">
+                <i data-lucide="server"></i>
+              </div>
+              <h3 id="cat-software" class="category-title text-base-semi-bold">Software</h3>
+            </div>
+            <div class="budget-total">
+              <span class="budget-amount text-sm-regular">$85</span>
+              <span class="budget-of text-sm-regular">of</span>
+              <span class="budget-max text-sm-regular">$150</span>
+            </div>
+          </div>
+          <div class="progress-row">
+            <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="150" data-value="85" data-max="150">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="budget-detail">
+            <div class="left-detail">
+              <div class="percentage">
+                <span class="percent-number text-xs-regular">56</span><span class="percent-sign text-xs-regular">%</span>
+              </div>
+              <div class="alert-group">
+                <div class="alert-circle alert-circle--success">
+                  <i data-lucide="circle-check"></i>
+                </div>
+              </div>
+            </div>
+            <div class="right-detail">
+              <span class="left-amount text-sm-regular">$65</span>
+              <span class="left-text text-sm-regular">left</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal -->
+        <div class="progress-bar" aria-labelledby="cat-personal">
+          <div class="top-row">
+            <div class="progress-label">
+              <div class="category-icon category-icon--circle" data-category="personal">
+                <i data-lucide="user-circle"></i>
+              </div>
+              <h3 id="cat-personal" class="category-title text-base-semi-bold">Personal</h3>
+            </div>
+            <div class="budget-total">
+              <span class="budget-amount text-sm-regular">$85</span>
+              <span class="budget-of text-sm-regular">of</span>
+              <span class="budget-max text-sm-regular">$150</span>
+            </div>
+          </div>
+          <div class="progress-row">
+            <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="150" data-value="85" data-max="150">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="budget-detail">
+            <div class="left-detail">
+              <div class="percentage">
+                <span class="percent-number text-xs-regular">56</span><span class="percent-sign text-xs-regular">%</span>
+              </div>
+              <div class="alert-group">
+                <div class="alert-circle alert-circle--success">
+                  <i data-lucide="circle-check"></i>
+                </div>
+              </div>
+            </div>
+            <div class="right-detail">
+              <span class="left-amount text-sm-regular">$65</span>
+              <span class="left-text text-sm-regular">left</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Savings Goals Section -->
+    <section style="margin-bottom: var(--spacing-6-rem);">
+      <h2 class="text-2xl-bold" style="margin-bottom: var(--spacing-6-rem);">Savings Goals</h2>
+
+      <div style="display: flex; gap: var(--spacing-3-rem); justify-content: space-between;">
+        <!-- Emergency Fund -->
+        <div class="goals-card">
+          <div class="circular-progress">
+            <svg viewBox="0 0 100 100" class="progress-svg">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="var(--bg-border)" stroke-width="8"/>
+              <circle cx="50" cy="50" r="45" fill="none" stroke="var(--primary-solid)" stroke-width="8"
+                      stroke-dasharray="283" stroke-dashoffset="70.75"
+                      transform="rotate(-90 50 50)" stroke-linecap="round"/>
+            </svg>
+            <div class="progress-text text-xl-bold">75%</div>
+          </div>
+          <div class="goal-label text-sm-medium">Emergency Fund</div>
+        </div>
+
+        <!-- Debt Paydown -->
+        <div class="goals-card">
+          <div class="circular-progress">
+            <svg viewBox="0 0 100 100" class="progress-svg">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="var(--bg-border)" stroke-width="8"/>
+              <circle cx="50" cy="50" r="45" fill="none" stroke="var(--success-solid)" stroke-width="8"
+                      stroke-dasharray="283" stroke-dashoffset="141.5"
+                      transform="rotate(-90 50 50)" stroke-linecap="round"/>
+            </svg>
+            <div class="progress-text text-xl-bold">50%</div>
+          </div>
+          <div class="goal-label text-sm-medium">Debt Paydown</div>
+        </div>
+
+        <!-- Roth IRA -->
+        <div class="goals-card">
+          <div class="circular-progress">
+            <svg viewBox="0 0 100 100" class="progress-svg">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="var(--bg-border)" stroke-width="8"/>
+              <circle cx="50" cy="50" r="45" fill="none" stroke="var(--secondary-solid)" stroke-width="8"
+                      stroke-dasharray="283" stroke-dashoffset="212.25"
+                      transform="rotate(-90 50 50)" stroke-linecap="round"/>
+            </svg>
+            <div class="progress-text text-xl-bold">25%</div>
+          </div>
+          <div class="goal-label text-sm-medium">Roth IRA</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Smart Insights Section -->
+    <section style="margin-bottom: var(--spacing-6-rem);">
+      <h2 class="text-2xl-bold" style="margin-bottom: var(--spacing-6-rem);">Smart Insights</h2>
+
+      <div style="display: flex; flex-direction: column; gap: var(--spacing-6-rem);">
+        <!-- Insight 1 -->
+        <div class="insight-card" style="background: linear-gradient(135deg, var(--secondary-solid-hover) 0%, var(--secondary-solid) 100%);">
+          <div class="insight-content">
+            <p class="insight-text text-base-medium" style="color: var(--fg-text-contrast);">Your subscriptions rose 12%.<br>Want to see why?</p>
+          </div>
+        </div>
+
+        <!-- Insight 2 -->
+        <div class="insight-card" style="background: linear-gradient(135deg, var(--success-solid-hover) 0%, var(--success-solid) 100%);">
+          <div class="insight-content">
+            <p class="insight-text text-base-medium" style="color: var(--fg-text-contrast);">Your $83 under budget this month.<br>Move that to savings?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Action Buttons Section -->
+    <section style="margin-bottom: var(--spacing-6-rem);">
+      <div style="display: flex; gap: var(--spacing-3-rem); justify-content: space-between;">
+        <button class="btn btn--default" style="flex: 1;">
+          <span class="text-sm-semi-bold">Save More</span>
+        </button>
+        <button class="btn btn--color" style="flex: 1;">
+          <span class="text-sm-semi-bold">See Transactions</span>
+        </button>
+        <button class="btn btn--color" style="flex: 1;">
+          <span class="text-sm-semi-bold">Ask AI Advisor</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- More Menu Overlay -->
+  <div class="more-menu-overlay" id="more-menu-overlay"></div>
+
+  <!-- More Menu Bottom Sheet -->
+  <div class="more-menu" id="more-menu" role="dialog" aria-modal="true" aria-labelledby="more-menu-title">
+    <div class="more-menu__handle"></div>
+    <div class="more-menu__header">
+      <h2 id="more-menu-title" class="more-menu__title">More</h2>
+      <button class="more-menu__close" aria-label="Close menu" id="close-more-menu">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="more-menu__content">
+      <button class="more-menu__item" data-page="accounts">
+        <i data-lucide="wallet" class="more-menu__item-icon" aria-hidden="true"></i>
+        <span class="more-menu__item-text">Accounts</span>
+      </button>
+      <button class="more-menu__item" data-page="subscriptions">
+        <i data-lucide="repeat" class="more-menu__item-icon" aria-hidden="true"></i>
+        <span class="more-menu__item-text">Subscriptions</span>
+      </button>
+      <button class="more-menu__item" data-page="monthly-bills">
+        <i data-lucide="calendar" class="more-menu__item-icon" aria-hidden="true"></i>
+        <span class="more-menu__item-text">Monthly Bills</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Bar - Fixed to bottom -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-item is-active" aria-label="Dashboard" aria-current="page">
+      <i data-lucide="home" class="nav-item__icon" aria-hidden="true"></i>
+      <span class="nav-item__text">Dashboard</span>
+    </a>
+
+    <a href="transactions.html" class="nav-item" aria-label="Transactions">
+      <i data-lucide="circle-dollar-sign" class="nav-item__icon" aria-hidden="true"></i>
+      <span class="nav-item__text">Transactions</span>
+    </a>
+
+    <a href="budget.html" class="nav-item" aria-label="Budget">
+      <i data-lucide="pie-chart" class="nav-item__icon" aria-hidden="true"></i>
+      <span class="nav-item__text">Budget</span>
+    </a>
+
+    <a href="advisor.html" class="nav-item" aria-label="Advisor">
+      <i data-lucide="message-circle" class="nav-item__icon" aria-hidden="true"></i>
+      <span class="nav-item__text">Advisor</span>
+    </a>
+
+    <button class="nav-item" aria-label="More" id="more-button">
+      <i data-lucide="menu" class="nav-item__icon" aria-hidden="true"></i>
+      <span class="nav-item__text">More</span>
+    </button>
+  </nav>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Calculate progress bar percentages
+    document.querySelectorAll('.progress-track').forEach((track) => {
+      const value = Number(track.dataset.value) || 0;
+      const max = Number(track.dataset.max) || 100;
+      const pct = Math.max(0, Math.min(100, (value / max) * 100));
+      const fill = track.querySelector('.progress-fill');
+      if (fill) fill.style.width = pct + '%';
+      track.setAttribute('aria-valuenow', String(value));
+
+      const wrapper = track.closest('.progress-bar');
+      const pctEl = wrapper?.querySelector('.percent-number');
+      if (pctEl) pctEl.textContent = String(Math.round(pct));
+    });
+
+    // More menu functionality
+    const moreButton = document.getElementById('more-button');
+    const moreMenu = document.getElementById('more-menu');
+    const moreMenuOverlay = document.getElementById('more-menu-overlay');
+    const closeMoreMenu = document.getElementById('close-more-menu');
+
+    function openMoreMenu() {
+      moreMenu.classList.add('is-open');
+      moreMenuOverlay.classList.add('is-visible');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      moreMenu.classList.remove('is-open');
+      moreMenuOverlay.classList.remove('is-visible');
+      document.body.style.overflow = '';
+    }
+
+    moreButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      openMoreMenu();
+    });
+    closeMoreMenu.addEventListener('click', closeMenu);
+    moreMenuOverlay.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && moreMenu.classList.contains('is-open')) {
+        closeMenu();
+      }
+    });
+
+    // Handle more menu navigation
+    document.querySelectorAll('.more-menu__item').forEach(item => {
+      item.addEventListener('click', function() {
+        const page = this.getAttribute('data-page');
+        window.location.href = `${page}.html`;
+      });
+    });
+  </script>
+
 </body>
 </html>

@@ -7,29 +7,33 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../styles/global.css" />
   <link rel="stylesheet" href="../styles/components.css" />
 </head>
 
-<body>
-  <!-- wrapper for this component -->
+<body style="padding: var(--spacing-6-rem); background-color: var(--bg-base);">
+
+  <!-- Progress Bar Component (Personal Category Example) -->
   <section class="progress-bar" aria-labelledby="cat-personal">
-    <!-- Top Row: icon + title (left) and totals (right ) -->
+
+    <!-- Top Row: icon + title (left) and totals (right) -->
     <div class="top-row">
       <div class="progress-label">
-        <div class="category-icons" aria-hidden="true">
-          <i data-lucide="user" class="icon--user" aria-hidden="true"></i>
+        <!-- Category Icon: 18×18px icon in 30×30px circle -->
+        <div class="category-icon category-icon--circle" data-category="personal">
+          <i data-lucide="user-circle" aria-hidden="true"></i>
         </div>
-        <!-- fixed: id and class are in the opening tag -->
-        <h3 id="cat-personal" class="category-title">Personal</h3>
+        <!-- Category Title -->
+        <h3 id="cat-personal" class="category-title text-base-semi-bold">Personal</h3>
       </div>
 
+      <!-- Budget Totals -->
       <div class="budget-total" aria-hidden="true">
-        <span class="budget-amount">$85</span>
-        <span class="budget-of">of</span>
-        <span class="budget-max">$150</span>
+        <span class="budget-amount text-xs-regular">$85</span>
+        <span class="budget-of text-xs-regular">of</span>
+        <span class="budget-max text-xs-regular">$150</span>
       </div>
     </div>
 
@@ -45,24 +49,25 @@
         data-value="85"
         data-max="150"
       >
-        <!-- Inline width can be used for quick visual testing, but remove for production and let JS calculate -->
-        <div class="progress-fill" style="width:56%"></div>
+        <!-- Progress fill - width calculated by JS -->
+        <div class="progress-fill"></div>
       </div>
     </div>
 
-    <!-- Bottom Row: percent + alert icons left, left-amount right -->
+    <!-- Bottom Row: percent + alert icons left, amount remaining right -->
     <div class="budget-detail">
       <div class="left-detail">
+        <!-- Percentage Display -->
         <div class="percentage">
-          <span class="percent-number">56</span><span class="percent-sign">%</span>
+          <span class="percent-number text-xs-medium">56</span><span class="percent-sign text-xs-medium">%</span>
         </div>
 
-        <!-- Alert Circle Icons (your existing component markup fits here) -->
+        <!-- Alert Circle Icons (16×16px each) -->
         <div class="alert-group">
-          <div class="alert-circle alert-circle--success">
+          <div class="alert-circle alert-circle--success alert-circle--active">
             <i data-lucide="circle-check" aria-hidden="true"></i>
           </div>
-          <div class="alert-circle alert-circle--warning alert-circle--active">
+          <div class="alert-circle alert-circle--warning">
             <i data-lucide="circle-alert" aria-hidden="true"></i>
           </div>
           <div class="alert-circle alert-circle--alert">
@@ -71,30 +76,69 @@
         </div>
       </div>
 
+      <!-- Amount Remaining -->
       <div class="right-detail" aria-hidden="true">
-        <span class="left-amount">$65</span>
-        <span class="left-text">left</span>
+        <span class="left-amount text-xs-regular">$65</span>
+        <span class="left-text text-xs-regular">left</span>
       </div>
     </div>
   </section>
 
-  <!-- Lucide + small script to compute percent & width from data-attributes -->
+  <!-- Example: Mortgage Category -->
+  <section class="progress-bar" aria-labelledby="cat-mortgage" style="margin-top: var(--spacing-6-rem);">
+    <div class="top-row">
+      <div class="progress-label">
+        <div class="category-icon category-icon--circle" data-category="mortgage">
+          <i data-lucide="home" aria-hidden="true"></i>
+        </div>
+        <h3 id="cat-mortgage" class="category-title text-base-semi-bold">Mortgage</h3>
+      </div>
+      <div class="budget-total">
+        <span class="budget-amount text-xs-regular">$1200</span>
+        <span class="budget-of text-xs-regular">of</span>
+        <span class="budget-max text-xs-regular">$1500</span>
+      </div>
+    </div>
+    <div class="progress-row">
+      <div class="progress-track" role="progressbar" aria-valuenow="1200" aria-valuemin="0" aria-valuemax="1500" data-value="1200" data-max="1500">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
+    <div class="budget-detail">
+      <div class="left-detail">
+        <div class="percentage">
+          <span class="percent-number text-xs-medium">80</span><span class="percent-sign text-xs-medium">%</span>
+        </div>
+        <div class="alert-group">
+          <div class="alert-circle alert-circle--warning alert-circle--active">
+            <i data-lucide="circle-alert" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div class="right-detail">
+        <span class="left-amount text-xs-regular">$300</span>
+        <span class="left-text text-xs-regular">left</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lucide + script to compute percent & width from data-attributes -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     document.addEventListener('DOMContentLoaded', ()=> {
-      // initialize lucide icons (turn <i data-lucide="..."> into SVG)
-      if (window.lucide) lucide.replace();
+      // Initialize lucide icons (turn <i data-lucide="..."> into SVG)
+      if (window.lucide) lucide.createIcons();
 
-      // compute percent for every progress-track on the page
+      // Compute percent for every progress-track on the page
       document.querySelectorAll('.progress-track').forEach((track) => {
         const value = Number(track.dataset.value) || 0;
         const max = Number(track.dataset.max) || 100;
         const pct = Math.max(0, Math.min(100, (value / max) * 100));
         const fill = track.querySelector('.progress-fill');
-        if (fill) fill.style.width = pct + '%';   // visual fill
-        track.setAttribute('aria-valuenow', String(value)); // accessibility update
+        if (fill) fill.style.width = pct + '%';   // Visual fill
+        track.setAttribute('aria-valuenow', String(value)); // Accessibility update
 
-        // update visible percent inside the same progress-bar wrapper
+        // Update visible percent inside the same progress-bar wrapper
         const wrapper = track.closest('.progress-bar');
         const pctEl = wrapper?.querySelector('.percent-number');
         if (pctEl) pctEl.textContent = String(Math.round(pct));

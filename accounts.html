@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transactions - Family Finance Manager</title>
+  <title>Accounts - Family Finance Manager</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -15,10 +15,10 @@
 
   <!-- Page Content -->
   <main style="flex: 1; padding: var(--spacing-6-rem); overflow-y: auto;">
-    <h1 style="font-family: var(--font-family-base); font-size: var(--text-3xl-bold-size-rem); font-weight: var(--text-3xl-bold-weight); margin-bottom: var(--spacing-6-rem);">Transactions</h1>
+    <h1 style="font-family: var(--font-family-base); font-size: var(--text-3xl-bold-size-rem); font-weight: var(--text-3xl-bold-weight); margin-bottom: var(--spacing-6-rem);">Accounts</h1>
 
-    <!-- Transaction list will be added here -->
-    <p style="font-family: var(--font-family-base); color: var(--fg-text);">Your recent transactions will be displayed here.</p>
+    <!-- Account sections will be added here -->
+    <p style="font-family: var(--font-family-base); color: var(--fg-text);">Your bank accounts and balances will be displayed here.</p>
   </main>
 
   <!-- More Menu Overlay -->
@@ -56,7 +56,7 @@
       <span class="nav-item__text">Dashboard</span>
     </a>
 
-    <a href="transactions.html" class="nav-item is-active" aria-label="Transactions" aria-current="page">
+    <a href="transactions.html" class="nav-item" aria-label="Transactions">
       <i data-lucide="circle-dollar-sign" class="nav-item__icon" aria-hidden="true"></i>
       <span class="nav-item__text">Transactions</span>
     </a>
@@ -81,6 +81,16 @@
   <script>
     // Initialize Lucide icons
     lucide.createIcons();
+
+    // Set active nav item based on current page
+    const currentPage = 'accounts';
+    document.querySelectorAll('.nav-item, .more-menu__item').forEach(item => {
+      const page = item.getAttribute('data-page') || item.getAttribute('href')?.replace('.html', '').replace('index', 'dashboard');
+      if (page === currentPage) {
+        item.classList.add('is-active');
+        item.setAttribute('aria-current', 'page');
+      }
+    });
 
     // More menu functionality
     const moreButton = document.getElementById('more-button');
