@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-4-rem);
+  filter: var(--drop-shadow-drop-shadow);
 }
 
 .budget-header {
@@ -19,22 +20,13 @@
 }
 
 .budget-title {
-  font-family: var(--font-family-base);
-  font-size: var(--text-sm-regular-size-rem);
-  font-weight: var(--text-sm-regular-weight);
   color: var(--white);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   margin: 0;
 }
 
 .budget-amount {
-  font-family: var(--font-family-base);
-  font-size: var(--text-4xl-bold-size-rem);
-  font-weight: var(--text-4xl-bold-weight);
   color: var(--white);
   margin: 0;
-  line-height: 1.1;
 }
 
 .budget-progress {
@@ -51,9 +43,6 @@
 
 .progress-label,
 .progress-percentage {
-  font-family: var(--font-family-base);
-  font-size: var(--text-sm-regular-size-rem);
-  font-weight: var(--text-sm-regular-weight);
   color: var(--white);
 }
 
@@ -63,6 +52,7 @@
   background: var(--white);
   border-radius: var(--borderradius-rounded-full-rem);
   overflow: hidden;
+  border: var(--borderwidth-width-1) solid var(--fg-border-strong);
 }
 
 .progress-fill {

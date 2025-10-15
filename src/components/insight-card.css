@@ -8,6 +8,7 @@
   display: flex;
   gap: var(--spacing-4-rem);
   align-items: flex-start;
+  filter: var(--drop-shadow-drop-shadow);
   transition: box-shadow 0.2s ease;
 }
 

@@ -10,6 +10,7 @@
   flex-direction: column;
   gap: var(--spacing-3-rem);
   align-items: flex-start;
+  filter: var(--drop-shadow-drop-shadow);
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 

@@ -4,33 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subscription Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/global.css">
   <link rel="stylesheet" href="./subscription-card.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <div class="subscription-card">
-    <div class="subscription-header">
-      <div class="subscription-icon">
-        <div class="icon-background">
-          <i data-lucide="star"></i>
+  <div class="subscription-card" data-node-id="143:5813">
+    <div class="subscription-header" data-node-id="143:5814">
+      <h2 class="subscription-title h6">Total Subscriptions</h2>
+      <div class="subscription-amount h1">$4533.00</div>
+    </div>
+
+    <div class="subscription-content" data-node-id="143:5821">
+      <div class="subscription-progress" data-node-id="143:5822">
+        <div class="progress-header">
+          <span class="progress-label h6">Overall Progress</span>
+          <span class="progress-percentage caption">85%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 85%"></div>
         </div>
       </div>
-      <div class="subscription-info">
-        <h3 class="subscription-name">Netflix Premium</h3>
-        <p class="subscription-category">Entertainment</p>
-      </div>
-    </div>
-    
-    <div class="subscription-details">
-      <div class="subscription-amount">$15.99</div>
-      <div class="subscription-frequency">per month</div>
-      <div class="subscription-status">Active</div>
     </div>
   </div>
 
-<script type="module">
-  import { createIcons } from "https://unpkg.com/lucide@latest?module";
-  createIcons();
+<script>
+  lucide.createIcons();
 </script>
 </body>
 </html>

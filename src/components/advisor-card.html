@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Advisor Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/global.css">
   <link rel="stylesheet" href="./advisor-card.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="advisor-card">
@@ -14,16 +18,15 @@
           <i data-lucide="trending-up"></i>
         </div>
     </div>
-    
+
     <div class="advisor-content">
-      <h3 class="advisor-title">Spending Pattern Detected</h3>
-      <p class="advisor-description">I analyze you spending patterns and provide actionable recommendations to help you achieve your financial goals.</p>
+      <h3 class="advisor-title h5">Spending Pattern Detected</h3>
+      <p class="advisor-description body-md">I analyze you spending patterns and provide actionable recommendations to help you achieve your financial goals.</p>
     </div>
   </div>
 
-<script type="module">
-  import { createIcons } from "https://unpkg.com/lucide@latest?module";
-  createIcons();
+<script>
+  lucide.createIcons();
 </script>
 </body>
 </html>

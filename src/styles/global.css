@@ -2502,6 +2502,77 @@ body {
   font-style: var(--text-9xl-thin-style);
 }
 
+/* SEMANTIC TYPOGRAPHY */
+.h1 {
+  font-family: var(--font-family-base);
+  font-size: var(--text-4xl-semi-bold-size-rem);
+  font-weight: var(--text-4xl-semi-bold-weight);
+  font-style: normal;
+}
+
+.h2 {
+  font-family: var(--font-family-base);
+  font-size: var(--text-3xl-semi-bold-size-rem);
+  font-weight: var(--text-3xl-semi-bold-weight);
+  font-style: normal;
+}
+
+.h3 {
+  font-family: var(--font-family-base);
+  font-size: var(--text-2xl-semi-bold-size-rem);
+  font-weight: var(--text-2xl-semi-bold-weight);
+  font-style: normal;
+}
+
+.h4 {
+  font-family: var(--font-family-base);
+  font-size: var(--text-xl-semi-bold-size-rem);
+  font-weight: var(--text-xl-semi-bold-weight);
+  font-style: normal;
+}
+
+.h5 {
+  font-family: var(--font-family-base);
+  font-size: var(--text-lg-semi-bold-size-rem);
+  font-weight: var(--text-lg-semi-bold-weight);
+  font-style: normal;
+}
+
+.h6 {
+  font-family: var(--font-family-base);
+  font-size: var(--text-base-semi-bold-size-rem);
+  font-weight: var(--text-base-semi-bold-weight);
+  font-style: normal;
+}
+
+.body-lg {
+  font-family: var(--font-family-base);
+  font-size: var(--text-lg-regular-size-rem);
+  font-weight: var(--text-lg-regular-weight);
+  font-style: normal;
+}
+
+.body-md {
+  font-family: var(--font-family-base);
+  font-size: var(--text-base-regular-size-rem);
+  font-weight: var(--text-base-regular-weight);
+  font-style: normal;
+}
+
+.body-sm {
+  font-family: var(--font-family-base);
+  font-size: var(--text-sm-regular-size-rem);
+  font-weight: var(--text-sm-regular-weight);
+  font-style: normal;
+}
+
+.caption {
+  font-family: var(--font-family-base);
+  font-size: var(--text-xs-regular-size-rem);
+  font-weight: var(--text-xs-regular-weight);
+  font-style: normal;
+}
+
 /* SURFACE UTILITIES */
 .shadow-back {
   box-shadow: var(--back-shadow);
