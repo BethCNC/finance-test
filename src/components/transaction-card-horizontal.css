@@ -42,9 +42,6 @@
 }
 
 .merchant-name {
-  font-family: var(--font-family-base);
-  font-size: var(--text-base-medium-size-rem);
-  font-weight: var(--text-base-medium-weight);
   color: var(--gray-800);
   line-height: 1.4;
   white-space: nowrap;
@@ -53,9 +50,6 @@
 }
 
 .category {
-  font-family: var(--font-family-base);
-  font-size: var(--text-sm-regular-size-rem);
-  font-weight: var(--text-sm-regular-weight);
   color: var(--gray-500);
   line-height: 1.4;
 }
@@ -69,17 +63,11 @@
 }
 
 .amount {
-  font-family: var(--font-family-base);
-  font-size: var(--text-base-medium-size-rem);
-  font-weight: var(--text-base-medium-weight);
   color: var(--gray-800);
   line-height: 1.4;
 }
 
 .timestamp {
-  font-family: var(--font-family-base);
-  font-size: var(--text-sm-regular-size-rem);
-  font-weight: var(--text-sm-regular-weight);
   color: var(--gray-500);
   line-height: 1.4;
 }

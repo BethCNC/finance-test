@@ -82,7 +82,6 @@
   font-size: var(--text-xs-regular-size-rem);
   font-weight: var(--text-xs-regular-weight);
   color: var(--gray-600);
-  text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 

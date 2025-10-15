@@ -36,26 +36,17 @@
 
 .category,
 .timestamp {
-  font-family: var(--font-family-base);
-  font-size: var(--text-sm-regular-size-rem);
-  font-weight: var(--text-sm-regular-weight);
   color: var(--gray-500);
   line-height: 1.4;
 }
 
 .merchant-name {
-  font-family: var(--font-family-base);
-  font-size: var(--text-lg-medium-size-rem);
-  font-weight: var(--text-lg-medium-weight);
   color: var(--gray-800);
   line-height: 1.4;
   margin-top: var(--spacing-2-rem);
 }
 
 .amount {
-  font-family: var(--font-family-base);
-  font-size: var(--text-2xl-bold-size-rem);
-  font-weight: var(--text-2xl-bold-weight);
   color: var(--gray-800);
   line-height: 1.2;
   margin-top: auto;
